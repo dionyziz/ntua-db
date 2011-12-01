@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="23cm" height="18cm" viewBox="187 31 441 342" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <g>
+      <ellipse style="fill: #ffffff" cx="536.15" cy="50.2" rx="39.25" ry="18"/>
+      <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="536.15" cy="50.2" rx="39.25" ry="18"/>
+      <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="536.15" y="54.2">score</text>
+    </g>
+    <g>
+      <g>
+        <polygon style="fill: #ffffff" points="365.65,244.31 408.75,218.45 451.85,244.31 408.75,270.17 "/>
+        <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="365.65,244.31 408.75,218.45 451.85,244.31 408.75,270.17 "/>
+        <text style="fill: #000000;text-anchor:end;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="359.65" y="238.31">1</text>
+        <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="457.85" y="238.31">1</text>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="408.75" y="248.31">checks</text>
+      </g>
+      <g>
+        <rect style="fill: #ffffff" x="188.9" y="226.45" width="97.3" height="36"/>
+        <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="188.9" y="226.45" width="97.3" height="36"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="237.55" y="248.45">checktype</text>
+      </g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="286.2,244.45 325.925,244.45 325.925,244.31 365.65,244.31 "/>
+      <g>
+        <rect style="fill: #ffffff" x="560.9" y="226.45" width="66.5" height="36"/>
+        <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="560.9" y="226.45" width="66.5" height="36"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="594.15" y="248.45">plane</text>
+      </g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="451.85,244.31 506.375,244.31 506.375,244.45 560.9,244.45 "/>
+      <g>
+        <rect style="fill: #ffffff" x="379.4" y="335.45" width="58.8" height="36"/>
+        <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="379.4" y="335.45" width="58.8" height="36"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="408.8" y="357.45">tech</text>
+      </g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="408.75,270.17 408.75,302.81 408.8,302.81 408.8,335.45 "/>
+      <g>
+        <ellipse style="fill: #ffffff" cx="535.85" cy="155.2" rx="46.95" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="535.85" cy="155.2" rx="46.95" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="535.85" y="159.2">created</text>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="533.7" cy="104.2" rx="50.8" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="533.7" cy="104.2" rx="50.8" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="533.7" y="108.2">duration</text>
+      </g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="408.75,218.45 406.798,218.45 406.798,50.2 496.9,50.2 "/>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="482.9,104.2 406.798,104.2 406.798,218.45 408.75,218.45 "/>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="488.9,155.2 406.798,155.2 406.798,218.45 408.75,218.45 "/>
+    </g>
+  </g>
+</svg>

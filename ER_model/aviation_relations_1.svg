@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="23cm" height="20cm" viewBox="187 31 445 399" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <g>
+      <g>
+        <polygon style="fill: #ffffff" points="327.9,76.54 401.8,32.2 475.7,76.54 401.8,120.88 "/>
+        <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="327.9,76.54 401.8,32.2 475.7,76.54 401.8,120.88 "/>
+        <text style="fill: #000000;text-anchor:end;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="321.9" y="70.54">N</text>
+        <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="481.7" y="70.54">M</text>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="401.8" y="80.54">specialization</text>
+      </g>
+      <g>
+        <g>
+          <rect style="fill: #ffffff" x="188.9" y="58.2" width="58.8" height="36"/>
+          <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="188.9" y="58.2" width="58.8" height="36"/>
+          <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="218.3" y="80.2">tech</text>
+        </g>
+        <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="247.7,76.2 287.8,76.2 287.8,76.54 327.9,76.54 "/>
+        <g>
+          <rect style="fill: #ffffff" x="564.9" y="58.2" width="66.5" height="36"/>
+          <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="564.9" y="58.2" width="66.5" height="36"/>
+          <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="598.15" y="80.2">types</text>
+        </g>
+        <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="475.7,76.54 520.3,76.54 520.3,76.2 564.9,76.2 "/>
+      </g>
+    </g>
+    <g>
+      <g>
+        <polygon style="fill: #ffffff" points="327.9,313.44 363.3,292.2 398.7,313.44 363.3,334.68 "/>
+        <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="327.9,313.44 363.3,292.2 398.7,313.44 363.3,334.68 "/>
+        <text style="fill: #000000;text-anchor:end;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="321.9" y="307.44"></text>
+        <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="404.7" y="307.44"></text>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="363.3" y="317.44">IS_A</text>
+      </g>
+      <g>
+        <rect style="fill: #ffffff" x="459.4" y="295.7" width="58.8" height="36"/>
+        <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="459.4" y="295.7" width="58.8" height="36"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="488.8" y="317.7">tech</text>
+      </g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="459.4,313.7 429.05,313.7 429.05,313.44 398.7,313.44 "/>
+      <g>
+        <rect style="fill: #ffffff" x="314.4" y="392.7" width="97.3" height="36"/>
+        <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="314.4" y="392.7" width="97.3" height="36"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="363.05" y="414.7">regulator</text>
+      </g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="363.3,334.68 363.3,363.69 363.05,363.69 363.05,392.7 "/>
+      <g>
+        <ellipse style="fill: #ffffff" cx="517.35" cy="410.7" rx="46.95" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="517.35" cy="410.7" rx="46.95" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="517.35" y="414.7">checked</text>
+      </g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="411.7,410.7 411.7,410.7 470.4,410.7 470.4,410.7 "/>
+      <g>
+        <rect style="fill: #ffffff" x="318.4" y="212.7" width="89.6" height="36"/>
+        <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="318.4" y="212.7" width="89.6" height="36"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="363.2" y="234.7">employee</text>
+      </g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="363.2,248.7 363.2,270.45 363.3,270.45 363.3,292.2 "/>
+    </g>
+  </g>
+</svg>

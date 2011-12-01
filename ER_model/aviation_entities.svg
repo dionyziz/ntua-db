@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="27cm" height="21cm" viewBox="187 31 529 418" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <g>
+      <g>
+        <rect style="fill: #ffffff" x="188.9" y="32.2" width="66.5" height="36"/>
+        <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="188.9" y="32.2" width="66.5" height="36"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="222.15" y="54.2">Plane</text>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="320.45" cy="50.2" rx="31.55" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="320.45" cy="50.2" rx="31.55" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="320.45" y="54.2">pid</text>
+        <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="308.9" y1="58.2" x2="332" y2="58.2"/>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="320.45" cy="130.2" rx="31.55" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="320.45" cy="130.2" rx="31.55" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="320.45" y="134.2">tid</text>
+      </g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="255.4,50.2 255.4,50.2 288.9,50.2 288.9,50.2 "/>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="222.15,68.2 222.15,130.2 288.9,130.2 "/>
+    </g>
+    <g>
+      <g>
+        <rect style="fill: #ffffff" x="488.9" y="32.2" width="58.8" height="36"/>
+        <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="488.9" y="32.2" width="58.8" height="36"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="518.3" y="54.2">type</text>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="640.45" cy="50.2" rx="31.55" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="640.45" cy="50.2" rx="31.55" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="640.45" y="54.2">tid</text>
+        <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="628.9" y1="58.2" x2="652" y2="58.2"/>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="639.7" cy="110.2" rx="50.8" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="639.7" cy="110.2" rx="50.8" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="639.7" y="114.2">capacity</text>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="632" cy="170.2" rx="43.1" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="632" cy="170.2" rx="43.1" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="632" y="174.2">weight</text>
+      </g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="547.7,50.2 547.7,50.2 608.9,50.2 608.9,50.2 "/>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="518.3,68.2 518.3,110.2 588.9,110.2 "/>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="518.3,68.2 518.3,170.2 588.9,170.2 "/>
+    </g>
+    <g>
+      <g>
+        <rect style="fill: #ffffff" x="488.9" y="232.2" width="89.6" height="36"/>
+        <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="488.9" y="232.2" width="89.6" height="36"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="533.7" y="254.2">employee</text>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="660.45" cy="250.2" rx="31.55" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="660.45" cy="250.2" rx="31.55" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="660.45" y="254.2">umn</text>
+        <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="648.9" y1="258.2" x2="672" y2="258.2"/>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="660.45" cy="310.2" rx="31.55" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="660.45" cy="310.2" rx="31.55" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="660.45" y="314.2">ssn</text>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="664.3" cy="370.2" rx="35.4" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="664.3" cy="370.2" rx="35.4" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="664.3" y="374.2">addr</text>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="672" cy="430.2" rx="43.1" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="672" cy="430.2" rx="43.1" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="672" y="434.2">salary</text>
+      </g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="578.5,250.2 578.5,250.2 628.9,250.2 628.9,250.2 "/>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="533.7,268.2 533.7,430.2 628.9,430.2 "/>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="628.9,370.2 533.7,370.2 533.7,268.2 "/>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="628.9,310.2 533.7,310.2 533.7,268.2 "/>
+    </g>
+    <g>
+      <g>
+        <rect style="fill: #ffffff" x="188.9" y="232.2" width="97.3" height="36"/>
+        <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="188.9" y="232.2" width="97.3" height="36"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="237.55" y="254.2">checktype</text>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="372" cy="250.2" rx="43.1" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="372" cy="250.2" rx="43.1" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="372" y="254.2">chckid</text>
+        <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="348.9" y1="258.2" x2="395.1" y2="258.2"/>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="364.3" cy="310.2" rx="35.4" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="364.3" cy="310.2" rx="35.4" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="364.3" y="314.2">name</text>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="379.7" cy="370.2" rx="50.8" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="379.7" cy="370.2" rx="50.8" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="379.7" y="374.2">maxscore</text>
+      </g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="286.2,250.2 286.2,250.2 328.9,250.2 328.9,250.2 "/>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="237.55,268.2 237.55,370.2 328.9,370.2 "/>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="328.9,310.2 237.55,310.2 237.55,268.2 "/>
+    </g>
+  </g>
+</svg>
