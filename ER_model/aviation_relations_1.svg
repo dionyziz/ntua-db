@@ -1,62 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
-<svg width="23cm" height="20cm" viewBox="187 31 445 399" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <g>
-    <g>
-      <g>
-        <polygon style="fill: #ffffff" points="327.9,76.54 401.8,32.2 475.7,76.54 401.8,120.88 "/>
-        <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="327.9,76.54 401.8,32.2 475.7,76.54 401.8,120.88 "/>
-        <text style="fill: #000000;text-anchor:end;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="321.9" y="70.54">N</text>
-        <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="481.7" y="70.54">M</text>
-        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="401.8" y="80.54">specialization</text>
-      </g>
-      <g>
-        <g>
-          <rect style="fill: #ffffff" x="188.9" y="58.2" width="58.8" height="36"/>
-          <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="188.9" y="58.2" width="58.8" height="36"/>
-          <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="218.3" y="80.2">tech</text>
-        </g>
-        <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="247.7,76.2 287.8,76.2 287.8,76.54 327.9,76.54 "/>
-        <g>
-          <rect style="fill: #ffffff" x="564.9" y="58.2" width="66.5" height="36"/>
-          <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="564.9" y="58.2" width="66.5" height="36"/>
-          <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="598.15" y="80.2">types</text>
-        </g>
-        <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="475.7,76.54 520.3,76.54 520.3,76.2 564.9,76.2 "/>
-      </g>
-    </g>
-    <g>
-      <g>
-        <polygon style="fill: #ffffff" points="327.9,313.44 363.3,292.2 398.7,313.44 363.3,334.68 "/>
-        <polygon style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="327.9,313.44 363.3,292.2 398.7,313.44 363.3,334.68 "/>
-        <text style="fill: #000000;text-anchor:end;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="321.9" y="307.44"></text>
-        <text style="fill: #000000;text-anchor:start;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="404.7" y="307.44"></text>
-        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="363.3" y="317.44">IS_A</text>
-      </g>
-      <g>
-        <rect style="fill: #ffffff" x="459.4" y="295.7" width="58.8" height="36"/>
-        <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="459.4" y="295.7" width="58.8" height="36"/>
-        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="488.8" y="317.7">tech</text>
-      </g>
-      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="459.4,313.7 429.05,313.7 429.05,313.44 398.7,313.44 "/>
-      <g>
-        <rect style="fill: #ffffff" x="314.4" y="392.7" width="97.3" height="36"/>
-        <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="314.4" y="392.7" width="97.3" height="36"/>
-        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="363.05" y="414.7">regulator</text>
-      </g>
-      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="363.3,334.68 363.3,363.69 363.05,363.69 363.05,392.7 "/>
-      <g>
-        <ellipse style="fill: #ffffff" cx="517.35" cy="410.7" rx="46.95" ry="18"/>
-        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="517.35" cy="410.7" rx="46.95" ry="18"/>
-        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="517.35" y="414.7">checked</text>
-      </g>
-      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="411.7,410.7 411.7,410.7 470.4,410.7 470.4,410.7 "/>
-      <g>
-        <rect style="fill: #ffffff" x="318.4" y="212.7" width="89.6" height="36"/>
-        <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="318.4" y="212.7" width="89.6" height="36"/>
-        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="363.2" y="234.7">employee</text>
-      </g>
-      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="363.2,248.7 363.2,270.45 363.3,270.45 363.3,292.2 "/>
-    </g>
-  </g>
-</svg>
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="61 49 437 596" width="437pt" height="596pt"><metadata xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:date>2011-12-02 11:51Z</dc:date><!-- Produced by OmniGraffle Professional 5.0 --></metadata><defs><font-face font-family="Helvetica" font-size="18" units-per-em="1000" underline-position="-75.683594" underline-thickness="49.316406" slope="0" x-height="522.94922" cap-height="717.28516" ascent="770.01953" descent="-229.98047" font-weight="500"><!--NSCTFontDescriptor &lt;0x1a4646d0&gt; = {
+    NSFontNameAttribute = Helvetica;
+    NSFontSizeAttribute = 18;
+}--><font-face-src><font-face-name name="Helvetica"/></font-face-src></font-face><font-face font-family="Helvetica" font-size="14" units-per-em="1000" underline-position="-75.683594" underline-thickness="49.316406" slope="0" x-height="522.94922" cap-height="717.28516" ascent="770.01953" descent="-229.98047" font-weight="500"><!--NSCTFontDescriptor &lt;0x1a26d630&gt; = {
+    NSFontNameAttribute = Helvetica;
+    NSFontSizeAttribute = 14;
+}--><font-face-src><font-face-name name="Helvetica"/></font-face-src></font-face><font-face font-family="Helvetica" font-size="15" units-per-em="1000" underline-position="-75.683594" underline-thickness="49.316406" slope="0" x-height="522.94922" cap-height="717.28516" ascent="770.01953" descent="-229.98045" font-weight="500"><!--NSCTFontDescriptor &lt;0x1a433650&gt; = {
+    NSFontNameAttribute = Helvetica;
+    NSFontSizeAttribute = 15;
+}--><font-face-src><font-face-name name="Helvetica"/></font-face-src></font-face></defs><g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1"><title>Canvas 1</title><rect fill="white" width="559" height="783"/><g><title>Layer 1</title><rect x="72.227844" y="83.818344" width="81" height="36" fill="white"/><rect x="72.227844" y="83.818344" width="81" height="36" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(77.227844 90.818344)" fill="black"><tspan font-family="Helvetica" font-size="18" font-weight="500" x="18.48877" y="18" textLength="34.02246">tech</tspan></text><path d="M 279.5 60.960205 L 353.1289 101.818344 L 279.5 142.67648 L 205.87109 101.818344 Z" fill="white"/><path d="M 279.5 60.960205 L 353.1289 101.818344 L 279.5 142.67648 L 205.87109 101.818344 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(230.7509 92.501175)" fill="black"><tspan font-family="Helvetica" font-size="14" font-weight="500" x="8.197754" y="14" textLength="84.04785">specialization</tspan></text><rect x="405.77216" y="83.818344" width="81" height="36" fill="white"/><rect x="405.77216" y="83.818344" width="81" height="36" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(410.77216 90.818344)" fill="black"><tspan font-family="Helvetica" font-size="18" font-weight="500" x="13.9887695" y="18" textLength="43.02246">types</tspan></text><line x1="153.22784" y1="101.818344" x2="205.87109" y2="101.818344" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1"/><line x1="353.12897" y1="101.818344" x2="405.77216" y2="101.818344" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1"/><rect x="222.43552" y="241.77695" width="114.12897" height="50.122742" fill="white"/><rect x="222.43552" y="241.77695" width="114.12897" height="50.122742" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(227.43552 257.83832)" fill="black"><tspan font-family="Helvetica" font-size="15" font-weight="500" x="19.544952" y="15" textLength="65.039062">employee</tspan></text><path d="M 156.50612 347.8302 L 279.5 457.5586 L 402.4939 347.8302 Z" fill="white"/><path d="M 156.50612 347.8302 L 279.5 457.5586 L 402.4939 347.8302 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(223.00308 369.74869)" fill="black"><tspan font-family="Helvetica" font-size="18" font-weight="500" fill="black" x="36.985222" y="18" textLength="39.023438">IS_A</tspan></text><rect x="301.86499" y="492.45505" width="100.628906" height="42.384064" fill="white"/><rect x="301.86499" y="492.45505" width="100.628906" height="42.384064" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(306.86496 502.6471)" fill="black"><tspan font-family="Helvetica" font-size="18" font-weight="500" x="28.303238" y="18" textLength="34.02246">tech</tspan></text><rect x="156.50613" y="492.45505" width="100.629" height="42.384125" fill="white"/><rect x="156.50613" y="492.45505" width="100.629" height="42.384125" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(161.50613 502.6471)" fill="black"><tspan font-family="Helvetica" font-size="18" font-weight="500" x="9.793503" y="18" textLength="71.041992">regulator</tspan></text><line x1="206.82063" y1="492.45505" x2="205.87109" y2="395.56403" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1"/><line x1="353.1289" y1="396.9187" x2="352.18442" y2="491.95505" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1"/><line x1="280.85468" y1="291.89972" x2="279.5" y2="347.83017" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1"/><ellipse cx="206.82063" cy="605.05518" rx="50.31457" ry="27.96532" fill="white"/><ellipse cx="206.82063" cy="605.05518" rx="50.31457" ry="27.96532" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(171.56903 596.55524)" fill="black"><tspan font-family="Helvetica" font-size="14" font-weight="500" x="9.179333" y="14" textLength="52.14453">checked</tspan></text><line x1="206.42668" y1="576.59082" x2="205.87109" y2="536.44983" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1"/></g></g></svg>
