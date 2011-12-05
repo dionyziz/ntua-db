@@ -1,6 +1,6 @@
 all: db_intro.pdf
 db_intro.pdf: db_intro.tex title/* 
-		pdflatex -shell-escape db_intro.tex
+		xelatex -shell-escape db_intro.tex
 clean:
 		rm db_intro.{aux,log,pdf}
 spell:

@@ -1,14 +1,10 @@
-\documentclass[11pt,a4paper]{book}
-\usepackage[english,greek]{babel}
-\usepackage[utf8x]{inputenc}
-\usepackage{amssymb,latexsym,amsmath,ucs,amsthm,setspace,graphicx}
-\newtheorem*{lemma}{Λήμμα}
+\documentclass[11pt,a4paper]{article}
+\usepackage{xgreek}
+\usepackage{xltxtra}
+\usepackage{setspace}
+\usepackage{graphicx}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
-\newcommand{\defeq}{\overset{\underset{\mathrm{def}}{}}{=}}
-\makeatletter
-\def\imod#1{\allowbreak\mkern10mu({\operator@font mod}\,\,#1)}
-\makeatother
-\raggedbottom
+\setmainfont[Mapping=TeX-text]{DejaVu Serif:style=book}
 \begin{document}
 \include{title/title}
 \end{document}
