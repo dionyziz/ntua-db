@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper]{article}
+\documentclass[a4paper]{article}
 \usepackage{xgreek}
 \usepackage{xltxtra}
 \usepackage{setspace}
@@ -14,27 +14,58 @@
 και συσχετίσεων (relations).
 
 \subsection{Οντότητες (entities)}
+\begin{itemize}
+\item Το αεροπλάνο \emph{(plane)}. Κάθε αεροπλάνο που εξυπηρετείται από τον αερολιμένα.
+Προσδιορίζεται από δύο ιδιότιτες το \emph{registration number(αριθμός
+εγγραφής)} που έχει το όνομα \emph{pid} στη βάση μας και είναι το πρωτεύον
+κλειδί, και τον τύπο του, \emph{tid}, που αποτελεί ξένο κλειδί.
+\item Τύπος αεροπλάνου \emph{(type)}. Οι τύποι αεροπλάνων που μπορεί να εξυπηρετήσει το
+αεροδρόμιο. Κάθε τύπος έχει ένα \emph{tid} ως πρωτεύον κλειδί, αριθμό επιβατών
+\emph{(capacity)}, και το βάρος του \emph{(weight)}.
+\item Εργαζόμενος \emph{(employee)}. Κάθε άτομο που εργάζεται στο συγκεκριμένο αεροδρόμιο. Η
+οντρότητα αυτή έχει ως πρωτεύον κλειδί τον αριθμό μέλους στο εργατικό
+σωματείο \emph{(umn)}. Ακόμη έχει τον αριθμό κοινωνικής ασφάλισης \emph{(ssn)},
+διεύθυνση \emph{(addr)} και μισθό του εργαζομένου \emph{(salary)} εάν τα γνωρίζουμε.
+\item Τύπος ελέγχου \emph{(checktype)}. Πρόκειται για κάθε δυνατό τύπο ελέγχου όπως
+ορίζει η FAA. Κάθε τύπος ελέγχου έχει έναν κωδικό αριθμό \emph{(chckid)} που
+αποτελεί και πρωτεύον κλειδί ένα όνομα \emph{(name)} και τη μέγιστη δυνατή
+βαθμολογία \emph{(maxscore)}.
+\end{itemize}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth]{files/aviation_entities.png}\\
-\caption{Οντότητες στο μοντέλο της βάσης}
+\includegraphics[width=0.75\textwidth]{files/aviation_entities.png}\\
+\caption{Οντότητες στο μοντέλο της βάσης.}
 \end{figure}
 
 \pagebreak
 \subsection{Συσχετίσεις (relations)}
+\begin{itemize}
+\item Η συσχέτιση \emph{ειδικεύεται} συνδέει τον κάθε τεχνικό με τον τύπο
+αεροπλάνου όπου ο τεχνικός έχει εξειδίκευση. Η συσχέτιση είναι Ν:Μ καθώς ένας
+τεχνικός μπορεί να ειδικεύεται σε περισσότερα από ένα αεροσκάφη και πολλοί
+τεχνικοί να έχουν ειδίκευση στον ίδιο τύπο αεροσκάφους.
+\item Η συσχέτιση \emph{IS\_A} συνδέει τους τεχνικούς και τους ελεγκτές
+εναέριας κυκλοφορίας με την οντότητα εργαζόμενος.
+\item Η συσχέτιση ελέγχει συνδέει τους τεχνικούς με το αεροπλάνο και τον τύπο
+του ελέγχου. Πρόκειτε για μια συσχέτιση Ν:Μ:Κ πολλοί τεχνικοί μπορούν να
+ελέγξουν πολλά αεροσκάφη κάνοντας διαφορετικούς ελέγχους σε κάθε περίπτωση.
+\end{itemize}
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\textwidth]{files/aviation_relations_1a.png}\\
+\caption{Συσχέτηση τεχνικού και τύπου αεροπλάνου.}
 \end{figure}
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{files/aviation_relations_1b.png}\\
+\caption{Συσχέτηση των τεχνικών και ελεγκτών με τους εργαζόμενους.}
 \end{figure}
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth]{files/aviation_relations_2.png}\\
+\includegraphics[width=0.9\textwidth]{files/aviation_relations_2.png}\\
+\caption{Συσχέτιση μεταξύ τύπων ελέγχου, τεχνικών και αεροσκαφών.}
 \end{figure}
 \pagebreak
 
