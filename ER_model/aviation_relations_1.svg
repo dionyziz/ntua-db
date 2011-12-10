@@ -1,12 +1,433 @@
-<?xml version="1.0"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewBox="61 49 437 596" width="437pt" height="596pt"><metadata xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:date>2011-12-02 11:51Z</dc:date><!-- Produced by OmniGraffle Professional 5.0 --></metadata><defs><font-face font-family="Helvetica" font-size="18" units-per-em="1000" underline-position="-75.683594" underline-thickness="49.316406" slope="0" x-height="522.94922" cap-height="717.28516" ascent="770.01953" descent="-229.98047" font-weight="500"><!--NSCTFontDescriptor &lt;0x1a4646d0&gt; = {
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   viewBox="61 49 437 596"
+   width="437pt"
+   height="596pt"
+   id="svg3241"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="aviation_relations_1.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1918"
+     inkscape:window-height="1063"
+     id="namedview3351"
+     showgrid="false"
+     inkscape:zoom="13.454961"
+     inkscape:cx="283.39211"
+     inkscape:cy="309.57096"
+     inkscape:window-x="1024"
+     inkscape:window-y="15"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g3271" />
+  <metadata
+     id="metadata3243">
+    <dc:date>2011-12-02 11:51Z</dc:date>
+    <!-- Produced by OmniGraffle Professional 5.0 -->
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3245">
+    <font-face
+       font-family="Helvetica"
+       font-size="18"
+       units-per-em="1000"
+       underline-position="-75.683594"
+       underline-thickness="49.316406"
+       slope="0"
+       x-height="522.94922"
+       cap-height="717.28516"
+       ascent="770.01953"
+       descent="-229.98047"
+       font-weight="500"
+       id="font-face3247">
+      <!--NSCTFontDescriptor &lt;0x1a4646d0&gt; = {
     NSFontNameAttribute = Helvetica;
     NSFontSizeAttribute = 18;
-}--><font-face-src><font-face-name name="Helvetica"/></font-face-src></font-face><font-face font-family="Helvetica" font-size="14" units-per-em="1000" underline-position="-75.683594" underline-thickness="49.316406" slope="0" x-height="522.94922" cap-height="717.28516" ascent="770.01953" descent="-229.98047" font-weight="500"><!--NSCTFontDescriptor &lt;0x1a26d630&gt; = {
+}-->
+      <font-face-src
+         id="font-face-src3249">
+        <font-face-name
+           name="Helvetica"
+           id="font-face-name3251" />
+      </font-face-src>
+    </font-face>
+    <font-face
+       font-family="Helvetica"
+       font-size="14"
+       units-per-em="1000"
+       underline-position="-75.683594"
+       underline-thickness="49.316406"
+       slope="0"
+       x-height="522.94922"
+       cap-height="717.28516"
+       ascent="770.01953"
+       descent="-229.98047"
+       font-weight="500"
+       id="font-face3253">
+      <!--NSCTFontDescriptor &lt;0x1a26d630&gt; = {
     NSFontNameAttribute = Helvetica;
     NSFontSizeAttribute = 14;
-}--><font-face-src><font-face-name name="Helvetica"/></font-face-src></font-face><font-face font-family="Helvetica" font-size="15" units-per-em="1000" underline-position="-75.683594" underline-thickness="49.316406" slope="0" x-height="522.94922" cap-height="717.28516" ascent="770.01953" descent="-229.98045" font-weight="500"><!--NSCTFontDescriptor &lt;0x1a433650&gt; = {
+}-->
+      <font-face-src
+         id="font-face-src3255">
+        <font-face-name
+           name="Helvetica"
+           id="font-face-name3257" />
+      </font-face-src>
+    </font-face>
+    <font-face
+       font-family="Helvetica"
+       font-size="15"
+       units-per-em="1000"
+       underline-position="-75.683594"
+       underline-thickness="49.316406"
+       slope="0"
+       x-height="522.94922"
+       cap-height="717.28516"
+       ascent="770.01953"
+       descent="-229.98045"
+       font-weight="500"
+       id="font-face3259">
+      <!--NSCTFontDescriptor &lt;0x1a433650&gt; = {
     NSFontNameAttribute = Helvetica;
     NSFontSizeAttribute = 15;
-}--><font-face-src><font-face-name name="Helvetica"/></font-face-src></font-face></defs><g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1"><title>Canvas 1</title><rect fill="white" width="559" height="783"/><g><title>Layer 1</title><rect x="72.227844" y="83.818344" width="81" height="36" fill="white"/><rect x="72.227844" y="83.818344" width="81" height="36" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(77.227844 90.818344)" fill="black"><tspan font-family="Helvetica" font-size="18" font-weight="500" x="18.48877" y="18" textLength="34.02246">tech</tspan></text><path d="M 279.5 60.960205 L 353.1289 101.818344 L 279.5 142.67648 L 205.87109 101.818344 Z" fill="white"/><path d="M 279.5 60.960205 L 353.1289 101.818344 L 279.5 142.67648 L 205.87109 101.818344 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(230.7509 92.501175)" fill="black"><tspan font-family="Helvetica" font-size="14" font-weight="500" x="8.197754" y="14" textLength="84.04785">specialization</tspan></text><rect x="405.77216" y="83.818344" width="81" height="36" fill="white"/><rect x="405.77216" y="83.818344" width="81" height="36" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(410.77216 90.818344)" fill="black"><tspan font-family="Helvetica" font-size="18" font-weight="500" x="13.9887695" y="18" textLength="43.02246">types</tspan></text><line x1="153.22784" y1="101.818344" x2="205.87109" y2="101.818344" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1"/><line x1="353.12897" y1="101.818344" x2="405.77216" y2="101.818344" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1"/><rect x="222.43552" y="241.77695" width="114.12897" height="50.122742" fill="white"/><rect x="222.43552" y="241.77695" width="114.12897" height="50.122742" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(227.43552 257.83832)" fill="black"><tspan font-family="Helvetica" font-size="15" font-weight="500" x="19.544952" y="15" textLength="65.039062">employee</tspan></text><path d="M 156.50612 347.8302 L 279.5 457.5586 L 402.4939 347.8302 Z" fill="white"/><path d="M 156.50612 347.8302 L 279.5 457.5586 L 402.4939 347.8302 Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(223.00308 369.74869)" fill="black"><tspan font-family="Helvetica" font-size="18" font-weight="500" fill="black" x="36.985222" y="18" textLength="39.023438">IS_A</tspan></text><rect x="301.86499" y="492.45505" width="100.628906" height="42.384064" fill="white"/><rect x="301.86499" y="492.45505" width="100.628906" height="42.384064" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(306.86496 502.6471)" fill="black"><tspan font-family="Helvetica" font-size="18" font-weight="500" x="28.303238" y="18" textLength="34.02246">tech</tspan></text><rect x="156.50613" y="492.45505" width="100.629" height="42.384125" fill="white"/><rect x="156.50613" y="492.45505" width="100.629" height="42.384125" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(161.50613 502.6471)" fill="black"><tspan font-family="Helvetica" font-size="18" font-weight="500" x="9.793503" y="18" textLength="71.041992">regulator</tspan></text><line x1="206.82063" y1="492.45505" x2="205.87109" y2="395.56403" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1"/><line x1="353.1289" y1="396.9187" x2="352.18442" y2="491.95505" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1"/><line x1="280.85468" y1="291.89972" x2="279.5" y2="347.83017" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1"/><ellipse cx="206.82063" cy="605.05518" rx="50.31457" ry="27.96532" fill="white"/><ellipse cx="206.82063" cy="605.05518" rx="50.31457" ry="27.96532" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/><text transform="translate(171.56903 596.55524)" fill="black"><tspan font-family="Helvetica" font-size="14" font-weight="500" x="9.179333" y="14" textLength="52.14453">checked</tspan></text><line x1="206.42668" y1="576.59082" x2="205.87109" y2="536.44983" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="1"/></g></g></svg>
+}-->
+      <font-face-src
+         id="font-face-src3261">
+        <font-face-name
+           name="Helvetica"
+           id="font-face-name3263" />
+      </font-face-src>
+    </font-face>
+  </defs>
+  <g
+     id="g3265"
+     stroke-dasharray="none"
+     stroke-opacity="1"
+     stroke="none"
+     fill-opacity="1"
+     fill="none">
+    <title
+       id="title3267">Canvas 1</title>
+    <g
+       id="g3271">
+      <title
+         id="title3273">Layer 1</title>
+      <rect
+         x="72.227844"
+         y="83.818344"
+         width="81"
+         height="36"
+         id="rect3275"
+         fill="white" />
+      <rect
+         x="72.227844"
+         y="83.818344"
+         width="81"
+         height="36"
+         id="rect3277"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         stroke-width="1"
+         stroke="black" />
+      <text
+         transform="translate(77.227844 90.818344)"
+         id="text3279"
+         fill="black">
+        <tspan
+           font-size="18"
+           font-weight="500"
+           x="18.48877"
+           y="18"
+           textLength="34.02246"
+           id="tspan3281"
+           font-family="Helvetica">tech</tspan>
+      </text>
+      <path
+         d="M 279.5 60.960205 L 353.1289 101.818344 L 279.5 142.67648 L 205.87109 101.818344 Z"
+         id="path3283"
+         fill="white" />
+      <path
+         d="M 279.5 60.960205 L 353.1289 101.818344 L 279.5 142.67648 L 205.87109 101.818344 Z"
+         id="path3285"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         stroke-width="1"
+         stroke="black" />
+      <text
+         transform="translate(230.7509 92.501175)"
+         id="text3287"
+         fill="black">
+        <tspan
+           font-size="14"
+           font-weight="500"
+           x="8.197754"
+           y="14"
+           textLength="84.04785"
+           id="tspan3289"
+           font-family="Helvetica">specialization</tspan>
+      </text>
+      <rect
+         x="405.77216"
+         y="83.818344"
+         width="81"
+         height="36"
+         id="rect3291"
+         fill="white" />
+      <rect
+         x="405.77216"
+         y="83.818344"
+         width="81"
+         height="36"
+         id="rect3293"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         stroke-width="1"
+         stroke="black" />
+      <text
+         transform="translate(410.77216,90.818344)"
+         id="text3295"
+         style="fill:#000000">
+        <tspan
+           font-size="18"
+           font-weight="500"
+           x="13.98877"
+           y="18"
+           textLength="43.02246"
+           id="tspan3297"
+           style="font-size:18px;font-weight:500;font-family:Helvetica">type</tspan>
+      </text>
+      <line
+         x1="153.22784"
+         y1="101.818344"
+         x2="205.87109"
+         y2="101.818344"
+         id="line3299"
+         stroke-linejoin="miter"
+         stroke-linecap="butt"
+         stroke-width="1"
+         stroke="black" />
+      <line
+         x1="353.12897"
+         y1="101.818344"
+         x2="405.77216"
+         y2="101.818344"
+         id="line3301"
+         stroke-linejoin="miter"
+         stroke-linecap="butt"
+         stroke-width="1"
+         stroke="black" />
+      <rect
+         x="222.43552"
+         y="241.77695"
+         width="114.12897"
+         height="50.122742"
+         id="rect3303"
+         fill="white" />
+      <rect
+         x="222.43552"
+         y="241.77695"
+         width="114.12897"
+         height="50.122742"
+         id="rect3305"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         stroke-width="1"
+         stroke="black" />
+      <text
+         transform="translate(227.43552 257.83832)"
+         id="text3307"
+         fill="black">
+        <tspan
+           font-size="15"
+           font-weight="500"
+           x="19.544952"
+           y="15"
+           textLength="65.039062"
+           id="tspan3309"
+           font-family="Helvetica">employee</tspan>
+      </text>
+      <path
+         d="M 193.40429,347.8302 279.5,457.5586 365.59573,347.8302 z"
+         id="path3313"
+         inkscape:connector-curvature="0"
+         style="stroke:#000000;stroke-width:0.83666003;stroke-linecap:round;stroke-linejoin:round" />
+      <text
+         transform="translate(223.00308 369.74869)"
+         id="text3315"
+         fill="black">
+        <tspan
+           font-size="18"
+           font-weight="500"
+           x="36.985222"
+           y="18"
+           textLength="39.023438"
+           id="tspan3317"
+           font-family="Helvetica"
+           fill="black">IS_A</tspan>
+      </text>
+      <rect
+         x="301.86499"
+         y="492.45505"
+         width="100.628906"
+         height="42.384064"
+         id="rect3319"
+         fill="white" />
+      <rect
+         x="301.86499"
+         y="492.45505"
+         width="100.628906"
+         height="42.384064"
+         id="rect3321"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         stroke-width="1"
+         stroke="black" />
+      <text
+         transform="translate(306.86496 502.6471)"
+         id="text3323"
+         fill="black">
+        <tspan
+           font-size="18"
+           font-weight="500"
+           x="28.303238"
+           y="18"
+           textLength="34.02246"
+           id="tspan3325"
+           font-family="Helvetica">tech</tspan>
+      </text>
+      <rect
+         x="156.50613"
+         y="492.45505"
+         width="100.629"
+         height="42.384125"
+         id="rect3327"
+         fill="white" />
+      <rect
+         x="156.50613"
+         y="492.45505"
+         width="100.629"
+         height="42.384125"
+         id="rect3329"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         stroke-width="1"
+         stroke="black" />
+      <text
+         transform="translate(161.50613 502.6471)"
+         id="text3331"
+         fill="black">
+        <tspan
+           font-size="18"
+           font-weight="500"
+           x="9.793503"
+           y="18"
+           textLength="71.041992"
+           id="tspan3333"
+           font-family="Helvetica">regulator</tspan>
+      </text>
+      <line
+         x1="280.85468"
+         y1="291.89972"
+         x2="279.5"
+         y2="347.83017"
+         id="line3339"
+         stroke-linejoin="miter"
+         stroke-linecap="butt"
+         stroke-width="1"
+         stroke="black" />
+      <ellipse
+         cx="206.82063"
+         cy="605.05518"
+         rx="50.31457"
+         ry="27.96532"
+         id="ellipse3341"
+         fill="white" />
+      <ellipse
+         cx="206.82063"
+         cy="605.05518"
+         rx="50.31457"
+         ry="27.96532"
+         id="ellipse3343"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         stroke-width="1"
+         stroke="black" />
+      <text
+         transform="translate(171.56903 596.55524)"
+         id="text3345"
+         fill="black">
+        <tspan
+           font-size="14"
+           font-weight="500"
+           x="9.179333"
+           y="14"
+           textLength="52.14453"
+           id="tspan3347"
+           font-family="Helvetica">checked</tspan>
+      </text>
+      <line
+         x1="206.42668"
+         y1="576.59082"
+         x2="205.87109"
+         y2="536.44983"
+         id="line3349"
+         stroke-linejoin="miter"
+         stroke-linecap="butt"
+         stroke-width="1"
+         stroke="black" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+         d="m 199.73134,554.31881 48.86388,-74.15455"
+         id="path3462"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:connection-start="#rect3327"
+         inkscape:connection-start-point="d4"
+         transform="matrix(0.8,0,0,0.8,61,49)"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 347.05862,554.45494 297.60378,479.30633"
+         id="path3464"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         transform="matrix(0.8,0,0,0.8,61,49)"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:#ffffff"
+         d="m 220.58778,441.70207 -52.41084,-66.80762 52.81461,-0.30959 c 29.04803,-0.17028 76.27253,-0.17028 104.94335,0 l 52.12873,0.30959 -52.01164,66.28676 c -28.60641,36.45772 -52.24603,66.52115 -52.5325,66.80763 -0.28647,0.28646 -24.10574,-29.54258 -52.93171,-66.28677 z m 62.55242,-15.07948 c 0,-0.66064 -3.17107,-1.18915 -7.13492,-1.18915 -3.96384,0 -7.13491,0.52851 -7.13491,1.18915 0,0.66064 3.17107,1.18915 7.13491,1.18915 3.96385,0 7.13492,-0.52851 7.13492,-1.18915 z m -29.72881,-11.39605 c 0,-6.68356 -0.38476,-8.89051 -1.48644,-8.52623 -0.9589,0.31707 -1.61044,3.51751 -1.83583,9.01774 -0.28867,7.04452 -0.0303,8.52623 1.48644,8.52623 1.49361,0 1.83583,-1.681 1.83583,-9.01774 z m 15.36119,6.34215 c 1.3675,-3.60579 -0.0968,-5.8962 -4.77712,-7.47203 -4.88218,-1.64382 -5.94307,-4.12221 -1.76453,-4.12221 1.68959,0 3.07198,0.53512 3.07198,1.18916 0,0.65403 0.80268,1.18915 1.78373,1.18915 2.84318,0 2.06373,-3.49087 -1.10146,-4.93303 -6.79614,-3.09653 -13.27392,3.13186 -7.83651,7.53481 1.46361,1.18515 3.33898,2.15483 4.16749,2.15483 0.82851,0 2.1352,0.75767 2.90375,1.68372 1.12079,1.35046 0.87332,1.85005 -1.25022,2.52404 -1.8135,0.57558 -3.09207,0.23246 -4.05845,-1.08915 -1.69233,-2.3144 -4.12155,-2.54047 -4.12155,-0.38356 0,2.76247 2.75801,4.39986 7.41107,4.39986 3.63245,0 4.76299,-0.54288 5.57182,-2.67559 z m 17.59052,0.29729 c 0.41078,-1.57081 1.62203,-2.37831 3.56746,-2.37831 1.94544,0 3.15669,0.8075 3.56745,2.37831 0.34208,1.30807 1.36221,2.3783 2.26698,2.3783 2.12864,0 2.11233,-0.16411 -0.96733,-9.72614 -3.58377,-11.12725 -5.73208,-10.94813 -9.68457,0.8075 -2.513,7.47425 -2.70495,8.91864 -1.18528,8.91864 0.99734,0 2.09322,-1.07023 2.43529,-2.3783 l 0,0 z"
+         id="path3042"
+         inkscape:connector-curvature="0"
+         transform="matrix(0.8,0,0,0.8,61,49)" />
+      <path
+         style="fill:#ffffff"
+         d="m 287.49545,416.62185 c 0.37213,-1.09616 2.55908,-7.11335 2.58564,-7.11416 0.0204,-6.2e-4 0.5696,1.57891 1.22036,3.51006 0.65077,1.93116 1.19783,3.553 1.21569,3.6041 0.0256,0.0731 -0.50832,0.0929 -2.51037,0.0929 -2.00156,0 -2.53614,-0.0198 -2.51132,-0.0929 z"
+         id="path3044"
+         inkscape:connector-curvature="0"
+         transform="matrix(0.8,0,0,0.8,61,49)" />
+    </g>
+  </g>
+</svg>

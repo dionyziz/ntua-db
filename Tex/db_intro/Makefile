@@ -1,6 +1,6 @@
 all: db_intro.pdf
-db_intro.pdf: db_intro.tex title/* 
-		xelatex -shell-escape db_intro.tex
+%.pdf: %.tex title/* files/*
+		xelatex -shell-escape $<
 clean:
 		rm db_intro.{aux,log,pdf}
 spell:
