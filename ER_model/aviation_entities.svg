@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
-<svg width="27cm" height="21cm" viewBox="187 31 529 418" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="27cm" height="27cm" viewBox="187 31 530 533" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g>
     <g>
       <g>
@@ -50,38 +50,6 @@
     </g>
     <g>
       <g>
-        <rect style="fill: #ffffff" x="488.9" y="232.2" width="89.6" height="36"/>
-        <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="488.9" y="232.2" width="89.6" height="36"/>
-        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="533.7" y="254.2">employee</text>
-      </g>
-      <g>
-        <ellipse style="fill: #ffffff" cx="660.45" cy="250.2" rx="31.55" ry="18"/>
-        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="660.45" cy="250.2" rx="31.55" ry="18"/>
-        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="660.45" y="254.2">umn</text>
-        <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="648.9" y1="258.2" x2="672" y2="258.2"/>
-      </g>
-      <g>
-        <ellipse style="fill: #ffffff" cx="660.45" cy="310.2" rx="31.55" ry="18"/>
-        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="660.45" cy="310.2" rx="31.55" ry="18"/>
-        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="660.45" y="314.2">ssn</text>
-      </g>
-      <g>
-        <ellipse style="fill: #ffffff" cx="664.3" cy="370.2" rx="35.4" ry="18"/>
-        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="664.3" cy="370.2" rx="35.4" ry="18"/>
-        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="664.3" y="374.2">addr</text>
-      </g>
-      <g>
-        <ellipse style="fill: #ffffff" cx="672" cy="430.2" rx="43.1" ry="18"/>
-        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="672" cy="430.2" rx="43.1" ry="18"/>
-        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="672" y="434.2">salary</text>
-      </g>
-      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="578.5,250.2 578.5,250.2 628.9,250.2 628.9,250.2 "/>
-      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="533.7,268.2 533.7,430.2 628.9,430.2 "/>
-      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="628.9,370.2 533.7,370.2 533.7,268.2 "/>
-      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="628.9,310.2 533.7,310.2 533.7,268.2 "/>
-    </g>
-    <g>
-      <g>
         <rect style="fill: #ffffff" x="188.9" y="232.2" width="97.3" height="36"/>
         <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="188.9" y="232.2" width="97.3" height="36"/>
         <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="237.55" y="254.2">checktype</text>
@@ -105,6 +73,50 @@
       <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="286.2,250.2 286.2,250.2 328.9,250.2 328.9,250.2 "/>
       <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="237.55,268.2 237.55,370.2 328.9,370.2 "/>
       <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="328.9,310.2 237.55,310.2 237.55,268.2 "/>
+    </g>
+    <g>
+      <g>
+        <rect style="fill: #ffffff" x="488.9" y="232.2" width="89.6" height="36"/>
+        <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="488.9" y="232.2" width="89.6" height="36"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="533.7" y="254.2">employee</text>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="660.45" cy="250.2" rx="31.55" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="660.45" cy="250.2" rx="31.55" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="660.45" y="254.2">umn</text>
+        <line style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x1="648.9" y1="258.2" x2="672" y2="258.2"/>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="660.45" cy="310.2" rx="31.55" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="660.45" cy="310.2" rx="31.55" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="660.45" y="314.2">ssn</text>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="665.4" cy="485" rx="35.4" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="665.4" cy="485" rx="35.4" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="665.4" y="489">addr</text>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="673.1" cy="545" rx="43.1" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="673.1" cy="545" rx="43.1" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.8;font-family:monospace;font-style:normal;font-weight:normal" x="673.1" y="549">salary</text>
+      </g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="578.5,250.2 578.5,250.2 628.9,250.2 628.9,250.2 "/>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="533.7,268.2 533.7,545 630,545 "/>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="630,485 533.7,485 533.7,268.2 "/>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="628.9,310.2 533.7,310.2 533.7,268.2 "/>
+      <g>
+        <ellipse style="fill: #ffffff" cx="665.4" cy="365" rx="35.4" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="665.4" cy="365" rx="35.4" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="665.4" y="369">name</text>
+      </g>
+      <g>
+        <ellipse style="fill: #ffffff" cx="669.25" cy="425" rx="39.25" ry="18"/>
+        <ellipse style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" cx="669.25" cy="425" rx="39.25" ry="18"/>
+        <text style="fill: #000000;text-anchor:middle;font-size:12.7998;font-family:monospace;font-style:normal;font-weight:normal" x="669.25" y="429">phone</text>
+      </g>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="630,365 533.7,365 533.7,268.2 "/>
+      <polyline style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" points="630,425 533.7,425 533.7,268.2 "/>
     </g>
   </g>
 </svg>
