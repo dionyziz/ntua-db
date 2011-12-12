@@ -30,15 +30,28 @@
 σωματείο \emph{(umn)}. Ακόμη έχει αριθμό κοινωνικής ασφάλισης
 \emph{(ssn)}, όνομα \emph{(name)}, τηλέφωνο \emph{(phone)},
 διεύθυνση \emph{(addr)} και μισθό του εργαζομένου \emph{(salary)} εάν τα γνωρίζουμε.
+\begin{itemize}
+\item Η οντότητα \emph{employee} είναι υπερτύπος (superclass) των οντοτήτων
+\emph{tech} και \emph{regulator}, οι οποίες κληρονομούν τις ιδιότητές
+(attributes) της.
+\end{itemize}
 \item Τύπος ελέγχου \emph{(checktype)}. Πρόκειται για κάθε δυνατό τύπο ελέγχου όπως
 ορίζει η FAA. Κάθε τύπος ελέγχου έχει έναν κωδικό αριθμό \emph{(chckid)} που
 αποτελεί και πρωτεύον κλειδί ένα όνομα \emph{(name)} και τη μέγιστη δυνατή
 βαθμολογία \emph{(maxscore)}.
+
+\pagebreak
+Ακολουθούν τα σχήματα οντοτήτων του ER-μοντέλου.
 \end{itemize}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.75\textwidth]{../../ER_model/aviation_entities.png}\\
-\caption{Οντότητες στο μοντέλο της βάσης.}
+\includegraphics[width=0.85\textwidth]{../../ER_model/aviation_entities_a.png}\\
+\caption{Οντότητες αεροσκαφών και τύπων.}
+\end{figure}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.85\textwidth]{../../ER_model/aviation_entities_b.png}\\
+\caption{Οντότητες τύπων ελέγχου και εργαζομένων.}
 \end{figure}
 
 \pagebreak
@@ -54,6 +67,7 @@
 του ελέγχου. Πρόκειται για μια συσχέτιση Ν:Μ:Κ. Πολλοί τεχνικοί μπορούν να
 ελέγξουν πολλά αεροσκάφη κάνοντας διαφορετικούς ελέγχους σε κάθε περίπτωση.
 \end{itemize}
+
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.7\textwidth]{../../ER_model/aviation_relations_1a.png}\\
@@ -91,8 +105,8 @@
 \begin{itemize}
 \item plane (\underline{\textbf{pid}}, tid)
 \item employee (\underline{\textbf{umn}}, \textbf{ssn}, \textbf{name}, phone, addr, salary)
-\tab \item tech(\textit{umn*})
-\tab \item regulator (\textit{umn*}, checked)
+\tab \item tech(\underline{\textit{umn*}})
+\tab \item regulator (\underline{\textit{umn*}}, checked)
 \item type (\underline{\textbf{tid}}, capacity, weight)
 \item checktype (\underline{\textbf{chckid}}, \textbf{name}, maxscore)\\
 \end{itemize}
@@ -119,13 +133,14 @@ duration, score)
 
 Στο σχεσιακό μοντέλο συναντήσαμε το πρόβλημα αδυναμίας απεικόνισης
 γενίκευσης οντοτήτων (superclass-subclass) και κάλυψης, όπως συνέβη με την
-οντότητα employee που είναι γενίκευση των tech και regulator.\\
+οντότητα employee που είναι γενίκευση των tech και regulator.
+
 Μας δόθηκε όμως η δυνατότητα να εκφράσουμε περιορισμούς με τη χρήση FK, όπως
-γίνονται φανεροί από το διάγραμμα του σχήματος που ακολουθεί.\\
+γίνονται φανεροί από το διάγραμμα του σχήματος που ακολουθεί.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.855555\textwidth]{../../R_model/r-db.png}\\
+\includegraphics[width=0.9\textwidth]{../../R_model/r-db.png}
 \caption{Διάγραμμα σχεσιακού μοντέλου}
 \end{figure}
 
