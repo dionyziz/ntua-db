@@ -9,12 +9,6 @@ CREATE TABLE types (
     capacity INT,
     weight INT
 );
-CREATE TABLE employees (
-    umn INT NOT NULL PRIMARY KEY,
-    ssn INT UNIQUE,
-    addr TEXT,
-    salary INT
-);
 CREATE TABLE techs (
     umn INT NOT NULL PRIMARY KEY REFERENCES employees(umn)
 );
@@ -36,9 +30,18 @@ CREATE TABLE checktypes (
 CREATE TABLE checks (
     chkid INT NOT NULL REFERENCES checktypes(chkid),
     pid INT NOT NULL REFERENCES planes(pid),
+    umn INT NOT NULL REFERENCES techs(umn),
     created DATE,
     duration INT NOT NULL,
-    umn INT NOT NULL REFERENCES techs(umn),
-    score INT NOT NULL
+    score INT NOT NULL,
+    PRIMARY KEY (chkid,pid,umn)
+);
+CREATE TABLE employees (
+    umn INT NOT NULL PRIMARY KEY,
+    ssn INT UNIQUE,
+    name TEXT NOT NULL,
+    phone INT,
+    addr TEXT,
+    salary INT
 );
 COMMIT;
