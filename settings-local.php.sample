@@ -1,0 +1,10 @@
+<?php
+    return array(
+        'db' => array(
+            'username' => 'aviation',
+            'password' => 'password',
+            'hostname' => 'localhost',
+            'database' => 'aviation'
+        )
+    );
+?>
