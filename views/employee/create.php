@@ -1,7 +1,7 @@
 Πληκτρολογήστε τις πληροφορίες του νέου εργαζομένου:
-<form action='/aviation/employee/create' method='post'>
+<form action='aviation/employee/create' method='post'>
     <div>
-        <label>ΑMKA:</label> <input type='text' name='ssn' value='<?php
+        <label>ΑΦΜ:</label> <input type='text' name='ssn' value='<?php
         echo htmlspecialchars( $ssn );
         ?>' <?php
         if ( isset( $errors[ 'nossn' ] ) ) {
