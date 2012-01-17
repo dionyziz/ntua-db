@@ -1,5 +1,5 @@
 Πληκτρολογήστε τις πληροφορίες του νέου εργαζομένου:
-<form action='type/create' method='post'>
+<form action='aviation/employee/create' method='post'>
     <div>
         <label>Αριθμός κοινωνικής ασφάλισης (SSN):</label> <input type='text' name='ssn' value='<?php
         echo htmlspecialchars( $ssn );
