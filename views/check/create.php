@@ -10,7 +10,7 @@
         <?php
         foreach ( $checktypes as $checktype ) {
             ?><option value='<?php
-            echo $checktype[ 'tid' ];
+            echo $checktype[ 'chkid' ];
             ?>'<?php
             echo htmlspecialchars( $checktype[ 'name' ] );
             ?></option><?php

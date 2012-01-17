@@ -7,7 +7,8 @@
         }
         public function createView( $errors, $chkid, $pid, $umn, $created, $duration, $score) {
             $errors = array_flip( explode( ',', $errors ) );
-            view( 'check/create', compact( 'errors', 'chkid', 'pid', 'umn', 'created', 'duration', 'score' ) );
+            $checktypes = checktypeListing();
+            view( 'check/create', compact( 'errors', 'chkid', 'pid', 'umn', 'created', 'duration', 'score' , 'checktypes') );
         }
         public function create( $chkid, $pid, $umn, $created, $duration, $score) {
             $errors = array();
