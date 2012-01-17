@@ -11,16 +11,16 @@
         public function create( $ssn, $name, $phone, $addr, $salary ) {
             $errors = array();
 			if ( empty( $ssn ) ) {
-                $errors[] = 'ssn';
+                $errors[] = 'nossn';
             }
             if ( empty( $name ) ) {
                 $errors[] = 'noname';
             }
             if ( empty( $phone ) ) {
-                $errors[] = 'phone';
+                $errors[] = 'nophone';
             }
             if ( empty( $addr ) ) {
-                $errors[] = 'addr';
+                $errors[] = 'noaddr';
             }
 			if ( empty( $salary ) ) {
                 $errors[] = 'nosalary';
