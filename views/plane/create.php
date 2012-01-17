@@ -10,13 +10,21 @@
         ?> />
     </div>
     <div>
-        <label>Κωδικός τύπου:</label> <input type='text' name='tid' value='<?php
-        echo htmlspecialchars( $ );
-        ?>' <?php
+    <label>Κωδικός τύπου:</label> <select name='tid'
+        <?php
         if ( isset( $errors[ 'notid' ] ) ) {
             ?> class='error' <?php
         }
-        ?> />
+        ?> >
+        <?php
+        $types = typeListing();
+        foreach ( $types as $type) {
+            echo '<option>'.type.'</option>';
+        }
+
+        ?>
+
+
     </div>
     <input type='submit' value='Δημιουργία νέου αεροσκάφους' />
 </form>
