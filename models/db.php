@@ -23,6 +23,8 @@
     THE SOFTWARE.
     */
 
+    class DBException extends Exception {};
+
     global $settings;
 
     mysql_connect( 'localhost', $settings[ 'db' ][ 'username' ], $settings[ 'db' ][ 'password' ] ) or die( mysql_error() );
@@ -54,7 +56,7 @@
         $finalsql = strtr( $sql, $bind );
         $res = mysql_query( $finalsql );
         if ( $res === false ) {
-            throw new Exception(
+            throw new DBException(
                 "SQL query failed with the following error:\n\""
                 . mysql_error()
                 . "\"\n\nThe query given was:\n"
