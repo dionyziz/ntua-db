@@ -28,7 +28,7 @@
             if ( !empty( $errors ) ) {
                 Redirect( 'employee/create?errors=' . implode( ',', $errors ) . '&ssn=' . $ssn . '&name=' . $name . '&phone=' . $phone . '&addr=' . $addr . '&salary=' . $salary );
             }
-            employeeCreate( $ssn, $name, $phone, $addr, $salary );
+            employeeCreate( $ssn, $name, $phone, $addr, $salary, $errors );
         }
     }
 ?>

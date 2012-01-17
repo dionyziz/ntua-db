@@ -7,6 +7,9 @@
         if ( isset( $errors[ 'nossn' ] ) ) {
             ?> class='error' <?php
         }
+        if ( isset( $errors[ 'duplicatessn' ] ) ) {
+            ?> class='error' <?php
+        }
         ?> />
     </div>
 	<div>
