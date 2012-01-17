@@ -1,4 +1,4 @@
-Πληκτρολογήστε τις πληροφορίες του νέου τύπου:
+Πληκτρολογήστε τις πληροφορίες του νέου τύπου αεροσκάφους:
 <form action='type/create' method='post'>
     <div>
         <label>Όνομα:</label> <input type='text' name='name' value='<?php
@@ -27,5 +27,5 @@
         }
         ?> />
     </div>
-    <input type='submit' value='Δημιουργία νέου τύπου' />
+    <input type='submit' value='Δημιουργία νέου τύπου αεροσκάφους' />
 </form>
