@@ -5,6 +5,7 @@
             'password' => 'password',
             'hostname' => 'localhost',
             'database' => 'aviation'
-        )
+        ),
+        'url' => 'http://dionyziz.kamibu.com/aviation/'
     );
 ?>
