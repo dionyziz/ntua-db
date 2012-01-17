@@ -13,15 +13,17 @@
     <label>Όνομα τύπου:</label> <select name='tid'
         <?php
         if ( isset( $errors[ 'notid' ] ) ) {
-            ?> class='error' <?php
+            ?> class='error'<?php
         }
-        ?> >
+        ?>>
         <?php
-        $types = typeListing();
-        foreach ( $types as $type) {
-            echo '<option value=' . $type[ 'tid' ] . '>' . $type[ 'name' ] .'</option>';
+        foreach ( $types as $type ) {
+            ?><option value='<?php
+            echo $type[ 'tid' ];
+            ?>'><?php
+            echo htmlspecialchars( $type[ 'name' ] );
+            ?></option><?php
         }
-
         ?>
         </select>
     </div>

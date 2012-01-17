@@ -6,7 +6,8 @@
         }
         public function createView( $errors, $pid, $tid ) {
             $errors = array_flip( explode( ',', $errors ) );
-            view( 'plane/create', compact( 'errors', 'pid', 'tid' ) );
+            $types = typeListing();
+            view( 'plane/create', compact( 'errors', 'pid', 'tid', 'types' ) );
         }
         public function create( $pid, $tid ) {
             $errors = array();
