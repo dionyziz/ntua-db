@@ -4,9 +4,9 @@
             $employees = employeeListing();
             view( 'employee/listing', array( 'employees' => $employees ) );
         }
-        public function createView( $errors, ,$ssn, $name, $phone, $addr, $salary ) {
+        public function createView( $errors, $ssn, $name, $phone, $addr, $salary ) {
             $errors = array_flip( explode( ',', $errors ) );
-            view( 'type/create', compact( 'errors', 'ssn', 'name', 'phone', 'addr', 'salary' ) );
+            view( 'employee/create', compact( 'errors', 'ssn', 'name', 'phone', 'addr', 'salary' ) );
         }
         public function create( $ssn, $name, $phone, $addr, $salary ) {
             $errors = array();
@@ -26,9 +26,9 @@
                 $errors[] = 'nosalary';
             }
             if ( !empty( $errors ) ) {
-                Redirect( 'type/create?errors=' . implode( ',', $errors ) . '&ssn=' . $ssn .'&name=' . $name . '&phone=' . $phone . '&addr=' . $addr . '&salary=' . $salary );
+                Redirect( 'employee/create?errors=' . implode( ',', $errors ) . '&ssn=' . $ssn .'&name=' . $name . '&phone=' . $phone . '&addr=' . $addr . '&salary=' . $salary );
             }
-            typeCreate( $ssn, $name, $phone, $addr, $salary );
+            employeeCreate( $ssn, $name, $phone, $addr, $salary );
         }
     }
 ?>
