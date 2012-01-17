@@ -5,7 +5,7 @@
                 checktypes
             SET
                 name = :name,
-                maxscore = :maxscore,
+                maxscore = :maxscore",
             compact( 'name', 'maxscore' )
         );
     }
