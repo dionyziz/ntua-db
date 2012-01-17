@@ -10,7 +10,7 @@
         ?> />
     </div>
     <div>
-    <label>Κωδικός τύπου:</label> <select name='tid'
+    <label>Όνομα τύπου:</label> <select name='tid'
         <?php
         if ( isset( $errors[ 'notid' ] ) ) {
             ?> class='error' <?php
@@ -19,12 +19,11 @@
         <?php
         $types = typeListing();
         foreach ( $types as $type) {
-            echo '<option value='.$type['tid'].'>'.$type['name'].'</option>';
+            echo '<option value=' . $type[ 'tid' ] . '>' . $type[ 'name' ] .'</option>\n';
         }
 
         ?>
-
-
+        </select>
     </div>
     <input type='submit' value='Δημιουργία νέου αεροσκάφους' />
 </form>
