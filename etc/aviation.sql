@@ -39,8 +39,10 @@ CREATE TABLE techs (
 );
 CREATE TABLE types (
     tid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR( 32 ) NOT NULL,
     capacity INT,
-    weight INT
+    weight INT,
+    icon VARCHAR(32)
 );
 CREATE TABLE users (
     uid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

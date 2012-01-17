@@ -4,19 +4,7 @@
 -->
 <html>
     <head>
-        <title><?php
-        if ( $loggedin ) {
-            if ( $name != NULL ) {
-                echo $name . "'";
-            }
-            else {
-                echo $_SESSION[ 'user' ][ 'name' ] . "'";
-            }
-        }
-        else {
-            echo "Your";
-        }
-        ?> life</title>
+        <title>Διεθνής Αερολιμένας Αθηνών - Ελευθέριος Βενιζέλος</title>
         <base href="<?php
         global $settings;
         echo $settings[ 'url' ];

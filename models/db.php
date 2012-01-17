@@ -25,8 +25,8 @@
 
     global $settings;
 
-    mysql_connect( 'localhost', $settings[ 'db' ][ 'user' ], $settings[ 'db' ][ 'password' ] ) or die( mysql_error() );
-    mysql_select_db( $settings[ 'db' ][ 'name' ] ) or die( mysql_error() );
+    mysql_connect( 'localhost', $settings[ 'db' ][ 'username' ], $settings[ 'db' ][ 'password' ] ) or die( mysql_error() );
+    mysql_select_db( $settings[ 'db' ][ 'database' ] ) or die( mysql_error() );
 
     mysql_query( "SET NAMES UTF8;" );
 

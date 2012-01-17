@@ -6,7 +6,7 @@
             'password' => 'password',
             'database' => 'aviation'
         ),
-        'url' => 'http://dionyziz.kamibu.com/aviation'
+        'url' => 'http://dionyziz.kamibu.com/aviation/'
     );
 
     foreach ( $settingsLocal as $key => $setting ) {

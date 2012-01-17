@@ -39,6 +39,11 @@
     }
     global $settings;
     $settings = include 'settings.php';
-    include 'models/db.php';
-    // TODO: include other models here
+    $models = opendir( 'models' );
+    while ( ( $file = readdir( $models ) ) !== false ) {
+        if ( substr( $file, 0, 1 ) == '.' ) {
+            continue;
+        }
+        include 'models/' . $file;
+    }
 ?>
