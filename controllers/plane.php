@@ -1,5 +1,5 @@
 <?php
-    class TypeController {
+    class PlaneController {
         public function Listing() {
             $planes = planeListing();
             view( 'plane/listing', array( 'planes' => $planes ) );

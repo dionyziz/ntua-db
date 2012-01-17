@@ -19,7 +19,7 @@
         <?php
         $types = typeListing();
         foreach ( $types as $type) {
-            echo '<option>'.type.'</option>';
+            echo '<option>'.$type.'</option>';
         }
 
         ?>
