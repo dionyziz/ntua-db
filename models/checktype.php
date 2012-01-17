@@ -1,5 +1,5 @@
 <?php
-    function checktypeCreate( $name, $maxscore, $capacity ) {
+    function checktypeCreate( $name, $maxscore ) {
         db(
             "INSERT INTO
                 checktypes
