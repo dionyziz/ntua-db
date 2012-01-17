@@ -3,12 +3,13 @@
         public function Listing() {
             $checks = checkListing();
             $checktypes = checktypeListing();
-            view( 'check/listing', array( 'checks' => $checks , 'checktypes' => $checktypes ) );
+            view( 'check/listing', array( 'checks' => $checks , 'checktypes' => $checktypes , 'planes' => $planes ) );
         }
         public function createView( $errors, $chkid, $pid, $umn, $created, $duration, $score) {
             $errors = array_flip( explode( ',', $errors ) );
             $checktypes = checktypeListing();
-            view( 'check/create', compact( 'errors', 'chkid', 'pid', 'umn', 'created', 'duration', 'score' , 'checktypes') );
+            $planes = planeListing();
+            view( 'check/create', compact( 'errors', 'chkid', 'pid', 'umn', 'created', 'duration', 'score', 'checktypes', 'planes') );
         }
         public function create( $chkid, $pid, $umn, $created, $duration, $score) {
             $errors = array();
