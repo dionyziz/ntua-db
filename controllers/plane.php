@@ -2,7 +2,8 @@
     class PlaneController {
         public function Listing() {
             $planes = planeListing();
-            view( 'plane/listing', array( 'planes' => $planes ) );
+            $types = typeListing();
+            view( 'plane/listing', array( 'planes' => $planes , 'types' => $types ) );
         }
         public function createView( $errors, $pid, $tid ) {
             $errors = array_flip( explode( ',', $errors ) );
