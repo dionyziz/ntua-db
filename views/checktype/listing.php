@@ -7,18 +7,18 @@
     </thead>
     <tbody>
         <?php
-            foreach ( $types as $type ) {
+            foreach ( $checktypes as $checktype ) {
                 ?>
                 <tr>
 
                     <td>
                         <?php
-                        echo $type[ 'name' ];
+                        echo $checktype[ 'name' ];
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo $type[ 'maxscore' ];
+                        echo $checktype[ 'maxscore' ];
                         ?>
                     </td>
                 </tr>

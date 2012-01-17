@@ -1,5 +1,5 @@
 Πληκτρολογήστε τις πληροφορίες του νέου τύπου ελέγχου:
-<form action='type/create' method='post'>
+<form action='checktype/create' method='post'>
     <div>
         <label>Όνομα Ελέγχου:</label> <input type='text' name='name' value='<?php
         echo htmlspecialchars( $name );
