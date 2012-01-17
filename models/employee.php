@@ -7,7 +7,7 @@
                 name = :name,
                 phone = :phone,
                 addr = :addr,
-				salary = :salary,",
+				salary = :salary",
             compact( 'ssn', 'name', 'phone', 'addr', 'salary' )
         );
     }
