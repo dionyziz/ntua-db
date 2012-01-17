@@ -19,13 +19,22 @@
         </select>
     </div>
     <div>
-        <label>Κωδικός αεροσκάφους:</label> <input type='text' name='pid' value='<?php
-        echo htmlspecialchars( $pid );
-        ?>' <?php
+        <label>Κωδικός αεροσκάφους:</label> <select name='pid'
+        <?php
         if ( isset( $errors[ 'nopid' ] ) ) {
             ?> class='error' <?php
         }
-        ?> />
+        ?>>
+        <?php
+        foreach ( $planes as $plane ) {
+            ?><option value='<?php
+            echo $plane[ 'pid' ];
+            ?>'><?php
+            echo htmlspecialchars( $plane[ 'pid' ] );
+            ?></option><?php
+        }
+        ?>
+        </select>
     </div>
     <div>
         <label>Κωδικός τεχνικού:</label> <input type='text' name='umn' value='<?php
