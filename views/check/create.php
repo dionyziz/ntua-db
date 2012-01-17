@@ -11,7 +11,7 @@
         foreach ( $checktypes as $checktype ) {
             ?><option value='<?php
             echo $checktype[ 'chkid' ];
-            ?>'<?php
+            ?>'><?php
             echo htmlspecialchars( $checktype[ 'name' ] );
             ?></option><?php
         }
