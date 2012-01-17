@@ -1,5 +1,5 @@
 <?php
-    class checktypeController {
+    class ChecktypeController {
         public function Listing() {
             $checktypes = checktypeListing();
             view( 'checktype/listing', array( 'checktypes' => $checktypes ) );
