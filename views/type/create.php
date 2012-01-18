@@ -1,5 +1,29 @@
-Πληκτρολογήστε τις πληροφορίες του νέου τύπου αεροσκάφους:
-<form action='type/create' method='post'>
+<?php
+if ( empty( $tid ) ) {
+    ?><h2>Δημιουργία νέου τύπου αεροσκάφους</h2><?php
+}
+else {
+    ?><h2>Επεξεργασία τύπου αεροσκάφους <?php
+    echo htmlspecialchars( $name );
+    ?></h2><?php
+}
+?>
+Πληκτρολογήστε τις πληροφορίες του τύπου αεροσκάφους:
+<form action='type/<?php
+    if ( empty( $tid ) ) {
+        ?>create<?php
+    }
+    else {
+        ?>update<?php
+    }
+    ?>' method='post'>
+    <?php
+    if ( !empty( $tid ) ) {
+        ?><input type='hidden' name='tid' value='<?php
+        echo $tid;
+        ?>' /><?php
+    }
+    ?>
     <div>
         <label>Όνομα:</label> <input type='text' name='name' value='<?php
         echo htmlspecialchars( $name );
@@ -27,5 +51,5 @@
         }
         ?> />
     </div>
-    <input type='submit' value='Δημιουργία νέου τύπου αεροσκάφους' />
+    <input type='submit' value='Αποθήκευση' />
 </form>

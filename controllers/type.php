@@ -1,28 +1,54 @@
 <?php
-    class TypeController {
-        public function Listing() {
+    class TypeController extends Controller {
+        public static function Listing() {
             $types = typeListing();
             view( 'type/listing', array( 'types' => $types ) );
         }
-        public function createView( $errors, $name, $weight, $capacity ) {
+        public static function createView( $errors, $tid, $name, $weight, $capacity ) {
+            if ( !empty( $tid ) ) {
+                $type = typeItem( $tid );
+                if ( $type === false ) {
+                    throw new Exception( 'The type you are trying to edit does not exist' );
+                }
+                if ( empty( $name ) ) {
+                    $name = $type[ 'name' ];
+                }
+                if ( empty( $weight ) ) {
+                    $weight = $type[ 'weight' ];
+                }
+                if ( empty( $capacity ) ) {
+                    $capacity = $type[ 'capacity' ];
+                }
+            }
             $errors = array_flip( explode( ',', $errors ) );
-            view( 'type/create', compact( 'errors', 'name', 'weight', 'capacity' ) );
+            view( 'type/create', compact( 'errors', 'tid', 'name', 'weight', 'capacity' ) );
         }
-        public function create( $name, $weight, $capacity ) {
-            $errors = array();
-            if ( empty( $name ) ) {
-                $errors[] = 'noname';
-            }
-            if ( empty( $weight ) ) {
-                $errors[] = 'noweight';
-            }
-            if ( empty( $capacity ) ) {
-                $errors[] = 'nocapacity';
-            }
+        public static function create( $name, $weight, $capacity ) {
+            $vars = compact( 'name', 'weight', 'capacity' );
+            $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
-                Redirect( 'type/create?errors=' . implode( ',', $errors ) . '&name=' . $name . '&weight=' . $weight . '&capacity=' . $capacity );
+                Redirect( 'type/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
             typeCreate( $name, $weight, $capacity );
+            Redirect( 'type/listing' );
+        }
+        public static function delete( $tid ) {
+            $vars = compact( 'tid' );
+            $errors = Controller::validateInput( $vars );
+            if ( !empty( $errors ) ) {
+                Redirect( 'type/listing' );
+            }
+            typeDelete( $tid );
+            Redirect( 'type/listing' );
+        } 
+        public static function update( $tid, $name, $weight, $capacity ) {
+            $vars = compact( 'tid', 'name', 'weight', 'capacity' );
+            $errors = Controller::validateInput( $vars );
+            if ( !empty( $errors ) ) {
+                Redirect( 'type/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
+            }
+            typeUpdate( $tid, $name, $weight, $capacity );
+            Redirect( 'type/listing' );
         }
     }
 ?>
