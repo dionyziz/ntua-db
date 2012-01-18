@@ -14,3 +14,10 @@
         <meta charset="utf-8" />
     </head>
     <body>
+        <h1><a href=''><img src='images/logo.gif' alt='Athens International Airport'></a></h1>
+        <ul id='navigation'>
+            <li><a href='plane/listing'>Αεροσκάφη</a></li>
+            <li><a href='check/listing'>Έλεγχοι</a></li>
+            <li><a href='employee/listing'>Εργαζόμενοι</a></li>
+        </ul>
+        <div id='universe'>
