@@ -1,29 +1,22 @@
 <table>
     <thead>
         <tr>
-            <th>Εικονίδιο</th>
+            <th>Όνομα Ελέγχου</th>
             <th>Κωδικός αεροσκάφους</th>
-            <th>Όνομα τύπου</th>
-            <th>Χωρητικότητα</th>
-            <th>Βάρος</th>
+            <th>Κωδικός τεχνικού</th>
+            <th>Ημερομηνία διεξαγωγής</th>
+            <th>Χρόνος διεξαγωγής</th>
+            <th>Σκορ</th>
+            <th>Μέγιστο σκορ</th>
         </tr>
     </thead>
     <tbody>
         <?php
-            foreach ( $planes as $plane ) {
-                $type = $types[ $plane[ 'tid' ] ]
+            foreach ( $checks as $check ) {
+                $type = $types[ $checks[ 'chkid' ] ];
                 ?>
                 <tr>
-                    <td>
-                        <?php
-                        echo $type[ 'icon' ];
-                        ?>
-                    </td>
-                    <td>
-                        <?php
-                        echo $plane[ 'pid' ];
-                        ?>
-                    </td>
+
                     <td>
                         <?php
                         echo $type[ 'name' ];
@@ -31,12 +24,27 @@
                     </td>
                     <td>
                         <?php
-                        echo $type[ 'capacity' ];
+                        echo $check[ 'pid' ];
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo $type[ 'weight' ];
+                        echo $check[ 'umn' ];
+                        ?>
+                    </td>
+                    <td>
+                        <?php
+                        echo $check[ 'created' ];
+                        ?>
+                    </td>
+                    <td>
+                        <?php
+                        echo $check[ 'score' ];
+                        ?>
+                    </td>
+                    <td>
+                        <?php
+                        echo $type[ 'maxscore' ];
                         ?>
                     </td>
                 </tr>

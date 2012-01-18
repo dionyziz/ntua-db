@@ -18,7 +18,7 @@
         );
         $rows = array();
         while ( $row = mysql_fetch_array( $res ) ) {
-            $rows[] = $row;
+            $rows[ $row[ 'chkid' ] ] = $row;
         }
         return $rows;
     }
