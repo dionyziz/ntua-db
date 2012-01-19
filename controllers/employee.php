@@ -1,5 +1,5 @@
 <?php
-    class EmployeeController {
+    class EmployeeController extends Controller{
         public static function Listing() {
             $employees = employeeListing();
             view( 'employee/listing', array( 'employees' => $employees ) );
