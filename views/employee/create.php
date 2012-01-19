@@ -24,6 +24,18 @@ else {
         ?>' /><?php
     }
     ?>
+	<div>
+        <label>UMN:</label> <input type='text' name='umn' value='<?php
+        echo htmlspecialchars( $umn );
+        ?>' <?php
+        if ( isset( $errors[ 'noumn' ] ) ) {
+            ?> class='error' <?php
+        }
+        if ( isset( $errors[ 'duplicateumn' ] ) ) {
+            ?> class='error' <?php
+        }
+        ?> />
+    </div>
     <div>
         <label>ΑΦΜ:</label> <input type='text' name='ssn' value='<?php
         echo htmlspecialchars( $ssn );

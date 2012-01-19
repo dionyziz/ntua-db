@@ -29,13 +29,13 @@
             $errors = array_flip( explode( ',', $errors ) );
             view( 'employee/create', compact( 'errors', 'umn', 'ssn', 'name', 'phone', 'addr', 'salary' ) );
         }
-        public static function create( $ssn, $name, $phone, $addr, $salary ) {
-			$vars = compact( 'ssn', 'name', 'phone', 'addr', 'salary' );
+        public static function create( $umn, $ssn, $name, $phone, $addr, $salary ) {
+			$vars = compact( 'umn', 'ssn', 'name', 'phone', 'addr', 'salary' );
 			$errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
                 Redirect( 'employee/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
-            employeeCreate( $ssn, $name, $phone, $addr, $salary, $errors );
+            employeeCreate( $umn, $ssn, $name, $phone, $addr, $salary, $errors );
 			Redirect( 'employee/listing' );
         }
         public static function delete( $umn ) {
