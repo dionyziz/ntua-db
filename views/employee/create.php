@@ -1,5 +1,29 @@
+<?php
+if ( empty( $umn ) ) {
+    ?><h2>Δημιουργία νέου εργαζομένου</h2><?php
+}
+else {
+    ?><h2>Επεξεργασία εργαζομένου <?php
+    echo htmlspecialchars( $name );
+    ?></h2><?php
+}
+?>
 Πληκτρολογήστε τις πληροφορίες του νέου εργαζομένου:
-<form action='employee/create' method='post'>
+<form action='employee/<?php
+    if ( empty( $umn ) ) {
+        ?>create<?php
+    }
+    else {
+        ?>update<?php
+    }
+    ?>' method='post'>
+    <?php
+    if ( !empty( $umn ) ) {
+        ?><input type='hidden' name='umn' value='<?php
+        echo $umn;
+        ?>' /><?php
+    }
+    ?>
     <div>
         <label>ΑΦΜ:</label> <input type='text' name='ssn' value='<?php
         echo htmlspecialchars( $ssn );
@@ -48,5 +72,5 @@
         }
         ?> />
     </div>
-    <input type='submit' value='Δημιουργία νέου εργαζομένου' />
+    <input type='submit' value='Αποθήκευση' />
 </form>
