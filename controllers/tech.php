@@ -15,13 +15,7 @@
             view( 'tech/create', compact( 'errors', 'umn' ) );
         }
         public static function create() {
-			$vars = compact();
-			$errors = Controller::validateInput( $vars );
-            if ( !empty( $errors ) ) {
-                Redirect( 'tech/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
-            }
-            techCreate( $umn );
-			Redirect( 'tech/listing' );
+			Redirect( 'employee/create' );
         }
         public static function delete( $umn ) {
             $vars = compact( 'umn' );
