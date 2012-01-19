@@ -17,7 +17,8 @@
             }
         }
         public static function create( $pid, $tid ) {
-            $vars = compact( 'pid', 'tid' );
+            $types = typeListing();
+            $vars = compact( 'pid', 'tid', 'types' );
             if ( !empty( $errors ) ) {
                 Redirect( 'plane/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
