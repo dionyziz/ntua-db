@@ -1,27 +1,47 @@
 <?php
-    class PlaneController {
-        public function Listing() {
+    class PlaneController extends Controller {
+        public static function Listing() {
             $planes = planeListing();
             $types = typeListing();
             view( 'plane/listing', array( 'planes' => $planes , 'types' => $types ) );
         }
-        public function createView( $errors, $pid, $tid ) {
+        public static function createView( $errors, $pid, $tid ) {
+            if ( !empty( $pid ) ) {
+                $plane = planeItem( $pid );
+                if ( $plane === false ) {
+                    throw new Exception( 'The plane you are trying to edit does not exist' );
+                }
+            }
             $errors = array_flip( explode( ',', $errors ) );
             $types = typeListing();
             view( 'plane/create', compact( 'errors', 'pid', 'tid', 'types' ) );
         }
-        public function create( $pid, $tid ) {
-            $errors = array();
-            if ( empty( $pid ) ) {
-                $errors[] = 'nopid';
-            }
-            if ( empty( $pid ) ) {
-                $errors[] = 'notid';
-            }
+        public static function create( $pid, $tid ) {
+            $types = typeListing();
+            $vars = compact( 'pid', 'tid', 'types' );
             if ( !empty( $errors ) ) {
-                Redirect( 'plane/create?errors=' . implode( ',', $errors ) . '&pid=' . $pid . '&tid=' . $tid );
+                Redirect( 'plane/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
             planeCreate( $pid, $tid );
+            Redirect( 'plane/listing' );
+        }
+        public static function delete( $pid ) {
+            $vars = compact( 'pid' );
+            $errors = Controller::validateInput( $vars );
+            if ( !empty( $errors ) ) {
+                Redirect( 'plane/listing' );
+            }
+            planeDelete( $pid );
+            Redirect( 'plane/listing' );
+        } 
+        public static function update( $pid, $tid ) {
+            $vars = compact( 'pid', 'tid' );
+            $errors = Controller::validateInput( $vars );
+            if ( !empty( $errors ) ) {
+                Redirect( 'plane/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
+            }
+            planeUpdate( $pid, $tid );
+            Redirect( 'plane/listing' );
         }
     }
 
