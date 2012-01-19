@@ -45,5 +45,6 @@
             }
             checktypeUpdate ( $chkid, $name, $maxscore );
             Redirect( 'checktype/listing' );
+		}
     }
 ?>
