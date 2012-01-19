@@ -1,10 +1,11 @@
 <?php
-    function employeeCreate( $ssn, $name, $phone, $addr, $salary, $errors ) {
+    function employeeCreate( $umn, $ssn, $name, $phone, $addr, $salary, $errors ) {
                 try{
                     db(
                         "INSERT INTO
                             employees
                         SET
+							umn = :umn,
                             ssn = :ssn,
                             name = :name,
                             phone = :phone,
@@ -14,7 +15,7 @@
                     );
                 }
                 catch ( DBException $e ) {
-                    $errors[] = 'duplicatessn';
+                    $errors[] = 'duplicate';
                     Redirect( 'employee/create?errors=' . implode( ',', $errors ) . '&name=' . $name . '&phone=' . $phone . '&addr=' . $addr . '&salary=' . $salary );
                 }
     }
@@ -47,6 +48,7 @@
             "UPDATE
                 employees
             SET
+				umn = :umn
 				ssn = :ssn,
                 name = :name,
                 phone = :phone,

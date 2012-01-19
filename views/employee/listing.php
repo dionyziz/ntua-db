@@ -1,6 +1,7 @@
 <table>
     <thead>
         <tr>
+			<th>UMN</th>
             <th>ΑΦΜ</th>
             <th>Όνομα εργαζομένου</th>
             <th>Τηλέφωνο</th>
