@@ -50,7 +50,7 @@
 				ssn = :ssn,
                 name = :name,
                 phone = :phone,
-                addr = :addr.
+                addr = :addr,
 				salary = :salary
             WHERE
                 umn = :umn
