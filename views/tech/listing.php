@@ -11,41 +11,41 @@
     </thead>
     <tbody>
         <?php
-            foreach ( $employees as $employee ) {
+            foreach ( $techs as $tech ) {
                 ?>
                 <tr>
                     <td>
                         <?php
-                        echo htmlspecialchars( $employee[ 'ssn' ] );
+                        echo htmlspecialchars( $tech[ 'ssn' ] );
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo htmlspecialchars( $employee[ 'name' ] );
+                        echo htmlspecialchars( $tech[ 'name' ] );
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo $employee[ 'phone' ];
+                        echo $tech[ 'phone' ];
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo htmlspecialchars( $employee[ 'addr' ] );
+                        echo htmlspecialchars( $tech[ 'addr' ] );
                         ?>
                     </td>
 					<td>
                         <?php
-                        echo $employee[ 'salary' ];
+                        echo $tech[ 'salary' ];
                         ?>
                     </td>
 					<td>
-                        <a href='employee/create?umn=<?php
-                        echo $employee[ 'umn' ];
+                        <a href='tech/create?umn=<?php
+                        echo $tech[ 'umn' ];
                         ?>' class='update' title='Επεξεργασία'>Επεξεργασία εργαζομένου</a>
-                        <form action='employee/delete' method='post' class='delete'>
+                        <form action='tech/delete' method='post' class='delete'>
                             <input type='hidden' name='umn' value='<?php
-                            echo $employee[ 'umn' ];
+                            echo $tech[ 'umn' ];
                             ?> ' />
                             <input type='submit' value='Διαγραφή εργαζομένου' title='Διαγραφή'/>
                         </form>
