@@ -15,6 +15,11 @@
             foreach ( $employees as $employee ) {
                 ?>
                 <tr>
+					<td>
+                        <?php
+                        echo htmlspecialchars( $employee[ 'umn' ] );
+                        ?>
+                    </td>
                     <td>
                         <?php
                         echo htmlspecialchars( $employee[ 'ssn' ] );
