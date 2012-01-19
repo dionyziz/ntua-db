@@ -6,7 +6,7 @@
         }
         public function createView( $errors, $umn, $ssn, $name, $phone, $addr, $salary ) {
 			if ( !empty( $umn ) ) {
-                $employee = employeeItem( $tid );
+                $employee = employeeItem( $umn );
                 if ( $employee === false ) {
                     throw new Exception( 'The employee you are trying to edit does not exist' );
                 }
