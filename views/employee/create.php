@@ -84,7 +84,7 @@ else {
 	        foreach ( $occup as $occups => value ) {
 				echo '<option value="'.$value.'">'.$value.'</option>';
 	        }
-	        echo '</select>'
+	        echo '</select>';
 			?>
 			
 	</div>
