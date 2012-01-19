@@ -65,8 +65,8 @@
     $filename = 'controllers/' . $resource . '.php';
     if ( !file_exists( $filename ) ) {
         // die( 'File not found: ' . $filename );
-        $resource = 'session';
-        $method = 'createView';
+        $resource = 'plane';
+        $method = 'listing';
         $filename = 'controllers/' . $resource . '.php';
     }
     include $filename;

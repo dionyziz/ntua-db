@@ -1,11 +1,11 @@
 <table>
     <thead>
         <tr>
-            <th>Εικονίδιο</th>
+            <th class='icon'>Εικονίδιο</th>
             <th>Όνομα τύπου</th>
             <th>Χωρητικότητα</th>
             <th>Βάρος</th>
-            <th>Ενημέρωση</th>
+            <th class='update'>Ενημέρωση</th>
         </tr>
     </thead>
     <tbody>
@@ -36,12 +36,12 @@
                     <td>
                         <a href='type/create?tid=<?php
                         echo $type[ 'tid' ];
-                        ?>'>Επεξεργασία τύπου</a>
-                        <form action='type/delete' method='post'>
+                        ?>' class='update' title='Επεξεργασία'>Επεξεργασία τύπου</a>
+                        <form action='type/delete' method='post' class='delete'>
                             <input type='hidden' name='tid' value='<?php
                             echo $type[ 'tid' ];
                             ?> ' />
-                            <input type='submit' value='Διαγραφή τύπου' />
+                            <input type='submit' value='Διαγραφή τύπου' title='Διαγραφή' />
                         </form>
                     </td>
                 </tr>
