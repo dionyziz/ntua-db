@@ -6,6 +6,7 @@
             <th>Όνομα τύπου</th>
             <th>Χωρητικότητα</th>
             <th>Βάρος</th>
+            <th class='update'>Ενημέρωση</th>
         </tr>
     </thead>
     <tbody>
@@ -38,6 +39,17 @@
                         <?php
                         echo $type[ 'weight' ];
                         ?>
+                    </td>
+                    <td>
+                        <a href='plane/create?pid=<?php
+                        echo $plane[ 'pid' ];
+                        ?>' class='update' title='Επεξεργασία'>Επεξεργασία αεροσκάφους</a>
+                        <form action='plane/delete' method='post' class='delete'>
+                            <input type='hidden' name='pid' value='<?php
+                            echo $plane[ 'pid' ];
+                            ?> ' />
+                            <input type='submit' value='Διαγραφή αεροσκάφους' title='Διαγραφή' />
+                        </form>
                     </td>
                 </tr>
                 <?php

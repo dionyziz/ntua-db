@@ -23,6 +23,24 @@
             }
             planeCreate( $pid, $tid );
         }
+        public static function delete( $pid ) {
+            $vars = compact( 'pid' );
+            $errors = Controller::validateInput( $vars );
+            if ( !empty( $errors ) ) {
+                Redirect( 'plane/listing' );
+            }
+            planeDelete( $pid );
+            Redirect( 'plane/listing' );
+        } 
+        public static function update( $pid, $tid ) {
+            $vars = compact( 'pid', 'tid' );
+            $errors = Controller::validateInput( $vars );
+            if ( !empty( $errors ) ) {
+                Redirect( 'plane/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
+            }
+            planeUpdate( $pid, $tid );
+            Redirect( 'plane/listing' );
+        }
     }
 
 ?>
