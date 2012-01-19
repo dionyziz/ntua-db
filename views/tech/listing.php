@@ -1,74 +1,58 @@
-<?php
-    function employeeCreate( $ssn, $name, $phone, $addr, $salary, $errors ) {
-                try{
-                    db(
-                        "INSERT INTO
-                            employees
-                        SET
-                            ssn = :ssn,
-                            name = :name,
-                            phone = :phone,
-                            addr = :addr,
-                            salary = :salary",
-                            compact( 'ssn', 'name', 'phone', 'addr', 'salary' )
-                    );
-                }
-                catch ( DBException $e ) {
-                    $errors[] = 'duplicatessn';
-                    Redirect( 'employee/create?errors=' . implode( ',', $errors ) . '&name=' . $name . '&phone=' . $phone . '&addr=' . $addr . '&salary=' . $salary );
-                }
-    }
-
-    function employeeListing() {
-        $res = db(
-            "SELECT
-                *
-            FROM
-                employees"
-        );
-        $rows = array();
-        while ( $row = mysql_fetch_array( $res ) ) {
-            $rows[ $row[ 'umn' ] ] = $row;
-        }
-        return $rows;
-    }
-	function employeeDelete( $umn ) {
-        db(
-            "DELETE FROM
-                employees
-            WHERE
-                umn = :umn
-            LIMIT 1",
-            compact( 'umn' )
-        );
-    }
-    function employeeUpdate( $umn, $ssn, $name, $phone, $addr, $salary ) {
-        db(
-            "UPDATE
-                employees
-            SET
-				ssn = :ssn,
-                name = :name,
-                phone = :phone,
-                addr = :addr,
-				salary = :salary
-            WHERE
-                umn = :umn
-            LIMIT 1",
-            compact( 'umn', 'ssn', 'name', 'phone', 'addr', 'salary' )
-        );
-    }
-    function employeeItem( $umn ) {
-        $res = db(
-            "SELECT
-                *
-            FROM
-                employees
-            WHERE
-                umn = :umn
-            LIMIT 1",
-            compact( 'umn' )
-        );
-        return mysql_fetch_array( $res );
-    }
-?>
+<table>
+    <thead>
+        <tr>
+            <th>ΑΦΜ</th>
+            <th>Όνομα εργαζομένου</th>
+            <th>Τηλέφωνο</th>
+            <th>Διεύθυνση</th>
+			<th>Μισθός</th>
+			<th class='update'>Ενημέρωση</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php
+            foreach ( $employees as $employee ) {
+                ?>
+                <tr>
+                    <td>
+                        <?php
+                        echo htmlspecialchars( $employee[ 'ssn' ] );
+                        ?>
+                    </td>
+                    <td>
+                        <?php
+                        echo htmlspecialchars( $employee[ 'name' ] );
+                        ?>
+                    </td>
+                    <td>
+                        <?php
+                        echo $employee[ 'phone' ];
+                        ?>
+                    </td>
+                    <td>
+                        <?php
+                        echo htmlspecialchars( $employee[ 'addr' ] );
+                        ?>
+                    </td>
+					<td>
+                        <?php
+                        echo $employee[ 'salary' ];
+                        ?>
+                    </td>
+					<td>
+                        <a href='employee/create?umn=<?php
+                        echo $employee[ 'umn' ];
+                        ?>' class='update' title='Επεξεργασία'>Επεξεργασία εργαζομένου</a>
+                        <form action='employee/delete' method='post' class='delete'>
+                            <input type='hidden' name='umn' value='<?php
+                            echo $employee[ 'umn' ];
+                            ?> ' />
+                            <input type='submit' value='Διαγραφή εργαζομένου' title='Διαγραφή'/>
+                        </form>
+                    </td>
+                </tr>
+                <?php
+            }
+        ?>
+    </tbody>
+</table>
