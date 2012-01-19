@@ -15,28 +15,39 @@
                 <tr>
                     <td>
                         <?php
-                        echo $employee[ 'ssn' ];
+                        echo htmlspecialchars( $employee[ 'ssn' ] );
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo $employee[ 'name' ];
+                        echo htmlspecialchars( $employee[ 'name' ] );
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo $employee[ 'phone' ];
+                        echo htmlspecialchars( $employee[ 'phone' ] );
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo $employee[ 'addr' ];
+                        echo htmlspecialchars( $employee[ 'addr' ] );
                         ?>
                     </td>
 					<td>
                         <?php
-                        echo $employee[ 'salary' ];
+                        echo htmlspecialchars( $employee[ 'salary' ] );
                         ?>
+                    </td>
+					<td>
+                        <a href='employee/create?umn=<?php
+                        echo $employee[ 'umn' ];
+                        ?>'>Επεξεργασία τύπου</a>
+                        <form action='employee/delete' method='post'>
+                            <input employee='hidden' name='umn' value='<?php
+                            echo $employee[ 'umn' ];
+                            ?> ' />
+                            <input employee='submit' value='Διαγραφή εργαζομένου' />
+                        </form>
                     </td>
                 </tr>
                 <?php
