@@ -1,5 +1,94 @@
+body {
+    font-family: 'Trebuchet MS', Verdana, sans-serif;
+    margin: 0;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+thead tr {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+tr {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+th {
+    color: white;
+    background-color: #333;
+    text-align: left;
+}
+tr:nth-child(even) {
+    background-color: #eee;;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+th.icon, th.update {
+    color: transparent;
+    width: 50px;
+    font-size: 0;
+    overflow: hidden;
+}
+th, td {
+    padding: 5px;
+}
 input.error {
     color: red;
     font-weight: bold;
     border: 2px solid red;
+}
+a.update, form.delete input {
+    background: transparent url( '../images/edit.png' ) no-repeat;
+    border: none;
+    color: transparent;
+    display: block;
+    width: 16px;
+    height: 16px;
+    float: left;
+    padding: 0 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+form.delete input {
+    background-image: url( '../images/delete.png' );
+}
+#universe {
+    clear: both;
+    margin: 5px;
+}
+h1 {
+    margin: 0;
+    float: left;
+    position: relative;
+    left: -6px;
+}
+ul#navigation {
+    float: right;
+    padding: 5px;
+    margin: 0;
+    list-style: none;
+}
+ul#navigation li {
+    float: left;
+}
+a { 
+    color: #3b5998;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+#copy {
+    color: #555;
+    font-size: 80%;
+    padding: 20px 5px;
+    text-align: center;
+}
+#navigation a {
+    padding: 5px;
+}
+#navigation a:hover {
+    background-color: #e5e5ff;
 }
