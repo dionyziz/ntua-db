@@ -37,7 +37,7 @@
             "UPDATE
                 planes
             SET
-                tid = :tid,
+                tid = :tid
             WHERE
                 pid = :pid
             LIMIT 1",

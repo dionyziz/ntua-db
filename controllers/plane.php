@@ -1,5 +1,5 @@
 <?php
-    class PlaneController {
+    class PlaneController extends Controller {
         public function Listing() {
             $planes = planeListing();
             $types = typeListing();
