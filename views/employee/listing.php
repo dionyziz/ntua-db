@@ -25,7 +25,7 @@
                     </td>
                     <td>
                         <?php
-                        echo htmlspecialchars( $employee[ 'phone' ] );
+                        echo $employee[ 'phone' ];
                         ?>
                     </td>
                     <td>
@@ -35,7 +35,7 @@
                     </td>
 					<td>
                         <?php
-                        echo htmlspecialchars( $employee[ 'salary' ] );
+                        echo $employee[ 'salary' ];
                         ?>
                     </td>
 					<td>
@@ -43,10 +43,10 @@
                         echo $employee[ 'umn' ];
                         ?>'>Επεξεργασία τύπου</a>
                         <form action='employee/delete' method='post'>
-                            <input employee='hidden' name='umn' value='<?php
+                            <input type='hidden' name='umn' value='<?php
                             echo $employee[ 'umn' ];
                             ?> ' />
-                            <input employee='submit' value='Διαγραφή εργαζομένου' />
+                            <input type='submit' value='Διαγραφή εργαζομένου' />
                         </form>
                     </td>
                 </tr>
