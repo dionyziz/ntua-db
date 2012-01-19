@@ -22,7 +22,7 @@
                 Redirect( 'plane/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
             planeCreate( $pid, $tid );
-            Redirect( 'type/listing' );
+            Redirect( 'plane/listing' );
         }
         public static function delete( $pid ) {
             $vars = compact( 'pid' );
