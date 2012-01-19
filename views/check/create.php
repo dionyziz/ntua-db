@@ -1,5 +1,22 @@
+<?php
+if ( empty( $chkid ) ) {
+    ?><h2>Δημιουργία νέου ελέγχου</h2><?php
+}
+else {
+    ?><h2>Επεξεργασία ελέγχου<?php
+    echo htmlspecialchars( $name );
+    ?></h2><?php
+}
+?>
 Πληκτρολογήστε τις πληροφορίες του νέου ελέγχου:
-<form action='check/create' method='post'>
+<form action='check/<?php
+    if ( empty( $tid ) ) {
+        ?>create<?php
+    }
+    else {
+        ?>update<?php
+    }
+    ?>' method='post'>
     <div>
     <label>Όνομα Ελέγχου:</label> <select name='chkid'
         <?php
@@ -10,8 +27,12 @@
         <?php
         foreach ( $checktypes as $checktype ) {
             ?><option value='<?php
-            echo $checktype[ 'chkid' ];
-            ?>'><?php
+            echo htmlspecialchars( $checktype[ 'chkid' ] );
+            ?>'<?php
+            if ( $chkid == $checktype[ 'chkid' ] ) {
+                echo ' SELECTED';
+            }
+            ?>><?php
             echo htmlspecialchars( $checktype[ 'name' ] );
             ?></option><?php
         }
@@ -28,8 +49,12 @@
         <?php
         foreach ( $planes as $plane ) {
             ?><option value='<?php
-            echo $plane[ 'pid' ];
-            ?>'><?php
+            echo htmlspecialchars( $plane[ 'pid' ] );
+            ?>'<?php
+            if ( $pid == $plane[ 'pid' ] ) {
+                echo ' SELECTED';
+            }
+            ?>><?php
             echo htmlspecialchars( $plane[ 'pid' ] );
             ?></option><?php
         }
