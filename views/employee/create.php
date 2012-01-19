@@ -4,7 +4,7 @@ if ( empty( $umn ) ) {
 }
 else {
     ?><h2>Επεξεργασία εργαζομένου <?php
-    echo htmlspecialchars( $ssn );
+    echo htmlspecialchars( $name );
     ?></h2><?php
 }
 ?>
