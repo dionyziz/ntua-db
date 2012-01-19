@@ -80,8 +80,8 @@ else {
 	        }
 	        ?>>
 	        <?php
-			$occup = array ('Technician','Regulator', 'Other' );
-	        foreach ( $occup as $occups => value ) {
+			$occup = array ( 'Technician','Regulator', 'Other' );
+	        foreach ( $occup as $occups => $value ) {
 				echo '<option value="'.$value.'">'.$value.'</option>';
 	        }
 	        echo '</select>';
