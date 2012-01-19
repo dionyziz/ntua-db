@@ -11,10 +11,10 @@
                 if ( $plane === false ) {
                     throw new Exception( 'The plane you are trying to edit does not exist' );
                 }
-                $errors = array_flip( explode( ',', $errors ) );
-                $types = typeListing();
-                view( 'plane/create', compact( 'errors', 'pid', 'tid', 'types' ) );
             }
+            $errors = array_flip( explode( ',', $errors ) );
+            $types = typeListing();
+            view( 'plane/create', compact( 'errors', 'pid', 'tid', 'types' ) );
         }
         public static function create( $pid, $tid ) {
             $types = typeListing();
