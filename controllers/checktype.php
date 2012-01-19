@@ -16,6 +16,7 @@
                 if ( empty( $maxscore ) ) {
                     $maxscore = $checktype[ 'maxscore' ];
                 }
+			}
             $errors = array_flip( explode( ',', $errors ) );
             view( 'checktype/create', compact( 'errors', 'chkid', 'name', 'maxscore' ) );
         }
