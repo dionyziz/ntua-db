@@ -1,40 +1,42 @@
 <?php
-    class CheckController {
-        public function Listing() {
+    class CheckController extends Controller {
+        public static function Listing() {
             $checks = checkListing();
             $checktypes = checktypeListing();
             view( 'check/listing', array( 'checks' => $checks , 'checktypes' => $checktypes , 'planes' => $planes ) );
         }
-        public function createView( $errors, $chkid, $pid, $umn, $created, $duration, $score) {
+        public static function createView( $errors, $chkid, $pid, $umn, $created, $duration, $score) {
             $errors = array_flip( explode( ',', $errors ) );
             $checktypes = checktypeListing();
             $planes = planeListing();
             view( 'check/create', compact( 'errors', 'chkid', 'pid', 'umn', 'created', 'duration', 'score', 'checktypes', 'planes') );
         }
-        public function create( $chkid, $pid, $umn, $created, $duration, $score) {
-            $errors = array();
-            if ( empty( $chkid ) ) {
-                $errors[] = 'nochkid';
-            }
-            if ( empty( $pid ) ) {
-                $errors[] = 'nopid';
-            }
-            if ( empty( $umn ) ) {
-                $errors[] = 'noumn';
-            }
-            if ( empty( $created ) ) {
-                $errors[] = 'nocreated';
-            }
-            if ( empty( $duration ) ) {
-                $errors[] = 'noduration';
-            }
-            if ( empty( $score ) ) {
-                $errors[] = 'noscore';
-            }
+        public static function create( $chkid, $pid, $umn, $created, $duration, $score ) {
+            $vars = compact( 'chkid', 'pid', 'umn', 'created', 'duration', 'score' );
+            $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
-                Redirect( 'check/create?errors=' . implode( ',', $errors ) . '&chkid' . $chkid . '&pid' . $pid . '&umn' . $umn . '&created' . $created . '&duration' . $duration . '&score' . $score );
+                Redirect( 'check/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
             checkCreate( $chkid, $pid, $umn, $created, $duration, $score);
+            Redirect( 'check/listing' );
+        }
+        public static function delete( $chkid, $pid, $umn ) {
+            $vars = compact( 'chkid' );
+            $errors = Controller::validateInput( $vars );
+            if ( !empty( $errors ) ) {
+                Redirect( 'check/listing' );
+            }
+            checkDelete( $chkid , $pid, $umn);
+            Redirect( 'check/listing' );
+        } 
+        public static function update( $chkid, $pid, $umn, $created, $duration, $score ) {
+            $vars = compact( 'chkid', 'pid', 'umn', 'created', 'duration', 'score' );
+            $errors = Controller::validateInput( $vars );
+            if ( !empty( $errors ) ) {
+                Redirect( 'check/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
+            }
+            checkUpdate( $chkid, $pid, $umn, $created, $duration, $score );
+            Redirect( 'check/listing' );
         }
     }
 ?>

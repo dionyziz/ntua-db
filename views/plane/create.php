@@ -43,7 +43,7 @@ else {
         <?php
         foreach ( $types as $type ) {
             ?><option value='<?php
-            echo $type[ 'tid' ];
+            echo htmlspecialchars( $type[ 'tid' ] );
             ?>'<?php
             if ( $tid == $type[ 'tid' ] ) {
                 echo ' SELECTED';
