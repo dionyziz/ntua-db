@@ -5,13 +5,13 @@
                         "INSERT INTO
                             employees
                         SET
-							umn = :umn,
+			    umn = :umn,
                             ssn = :ssn,
                             name = :name,
                             phone = :phone,
                             addr = :addr,
                             salary = :salary",
-                            compact( 'ssn', 'name', 'phone', 'addr', 'salary' )
+                            compact( 'umn', 'ssn', 'name', 'phone', 'addr', 'salary' )
                     );
                 }
                 catch ( DBException $e ) {
@@ -48,8 +48,8 @@
             "UPDATE
                 employees
             SET
-				umn = :umn
-				ssn = :ssn,
+                umn = :umn,
+                ssn = :ssn,
                 name = :name,
                 phone = :phone,
                 addr = :addr,

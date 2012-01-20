@@ -5,18 +5,18 @@
             view( 'employee/listing', array( 'employees' => $employees ) );
         }
         public function createView( $errors, $umn, $ssn, $name, $phone, $addr, $salary, $occup ) {
-			if ( !empty( $umn ) ) {
+            if ( !empty( $umn ) ) {
                 $employee = employeeItem( $umn );
-                if ( $employee === false ) {
-                    throw new Exception( 'The employee you are trying to edit does not exist' );
-                }
-				if ( empty( $ssn ) ) {
+//                if ( $employee === false ) {
+//                    throw new Exception( 'The employee you are trying to edit does not exist' );
+//                }
+                if ( empty( $ssn ) ) {
                     $ssn = $employee[ 'ssn' ];
                 }
                 if ( empty( $name ) ) {
                     $name = $employee[ 'name' ];
                 }
-				if ( empty( $phone ) ) {
+                if ( empty( $phone ) ) {
                     $phone = $employee[ 'phone' ];
                 }
                 if ( empty( $addr ) ) {
@@ -30,20 +30,20 @@
             view( 'employee/create', compact( 'errors', 'umn', 'ssn', 'name', 'phone', 'addr', 'salary', 'occup' ) );
         }
         public static function create( $umn, $ssn, $name, $phone, $addr, $salary, $occup ) {
-			$vars = compact( 'umn', 'ssn', 'name', 'phone', 'addr', 'salary', 'occup' );
-			$errors = Controller::validateInput( $vars );
+            $vars = compact( 'umn', 'ssn', 'name', 'phone', 'addr', 'salary', 'occup' );
+            $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
                 Redirect( 'employee/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
             employeeCreate( $umn, $ssn, $name, $phone, $addr, $salary, $errors );
-			if ( $occup == 'Technician' ) {
-			    techCreate( $umn );
-                Redirect( 'tech/listing' );
-			//} elseif ( $occup == 'Regulator' ) {
-			//    regulatorCreate ( $umn );
-			//    Redirect( 'regulator/listing' );
-			} 
-			Redirect( 'employee/listing' );
+            if ( $occup == 'Technician' ) {
+                    techCreate( $umn );
+            Redirect( 'tech/listing' );
+            //} elseif ( $occup == 'Regulator' ) {
+            //    regulatorCreate ( $umn );
+            //    Redirect( 'regulator/listing' );
+            }
+            Redirect( 'employee/listing' );
         }
         public static function delete( $umn ) {
             $vars = compact( 'umn' );
@@ -54,7 +54,7 @@
             employeeDelete( $umn );
             Redirect( 'employee/listing' );
         }
-		public static function update( $umn, $ssn, $name, $phone, $addr, $salary ) {
+        public static function update( $umn, $ssn, $name, $phone, $addr, $salary ) {
             $vars = compact( 'umn', 'ssn', 'name', 'phone', 'addr', 'salary' );
             $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
