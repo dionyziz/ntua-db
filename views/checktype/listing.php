@@ -3,7 +3,7 @@
         <tr>
             <th>Όνομα ελέγχου</th>
             <th>Μέγιστο σκορ</th>
-			<th class='update'>Ενημέρωση</th>
+            <th class='update'>Ενημέρωση</th>
         </tr>
     </thead>
     <tbody>
@@ -22,7 +22,7 @@
                         echo htmlspecialchars( $checktype[ 'maxscore' ] );
                         ?>
                     </td>
-					<td>
+                    <td>
                         <a href='checktype/create?chkid=<?php
                         echo $checktype[ 'chkid' ];
                         ?>' class='update' title='Επεξεργασία'>Επεξεργασία τύπου ελέγχου</a>

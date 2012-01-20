@@ -12,12 +12,11 @@
     <tbody>
         <?php
             foreach ( $planes as $plane ) {
-                $type = $types[ $plane[ 'tid' ] ]
                 ?>
                 <tr>
                     <td>
                         <?php
-                        echo $type[ 'icon' ];
+                        echo $plane[ 'icon' ];
                         ?>
                     </td>
                     <td>
@@ -27,17 +26,17 @@
                     </td>
                     <td>
                         <?php
-                        echo $type[ 'name' ];
+                        echo $plane[ 'name' ];
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo $type[ 'capacity' ];
+                        echo $plane[ 'capacity' ];
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo $type[ 'weight' ];
+                        echo $plane[ 'weight' ];
                         ?>
                     </td>
                     <td>

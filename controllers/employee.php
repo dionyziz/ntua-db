@@ -37,10 +37,10 @@
             employeeCreate( $umn, $ssn, $name, $phone, $addr, $salary, $errors );
             if ( $occ == 'Technician' ) {
                 techCreate( $umn );
-                Redirect( 'employee/listing?occupation=tech' );
-            //} elseif ( $occ == 'Regulator' ) {
-            //    regulatorCreate ( $umn );
-            //    Redirect( 'employee/listing?regulator=yes' );
+                Redirect( 'tech/listing' );
+            } elseif ( $occ == 'Regulator' ) {
+                regulatorCreate ( $umn );
+                Redirect( 'regulator/listing' );
             } else {
                 Redirect( 'employee/listing' ); }
         }

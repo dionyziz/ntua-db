@@ -2,7 +2,7 @@
     function planeCreate( $pid, $tid ) {
         db(
             "INSERT INTO
-                planes 
+                planes
             SET
                 pid = :pid,
                 tid = :tid",
@@ -12,9 +12,13 @@
     function planeListing() {
         $res = db(
             "SELECT
-                *
+                t.*, p.*
             FROM
-                planes"
+                planes p
+            INNER JOIN
+                types t
+            ON
+                t.tid = p.tid"
         );
         $rows = array();
         while ( $row = mysql_fetch_array( $res ) ) {
@@ -47,11 +51,15 @@
     function planeItem( $pid ) {
         $res = db(
             "SELECT
-                *
+                t.*, p.*
             FROM
-                planes
+                planes p
+            INNER JOIN
+                types t
+            ON
+                p.tid = t.tid
             WHERE
-                pid = :pid
+                p.pid = :pid
             LIMIT 1",
             compact( 'pid' )
         );
