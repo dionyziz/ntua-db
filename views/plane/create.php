@@ -14,6 +14,7 @@ else {
         ?>create<?php
     }
     else {
+        $update = True;
         ?>update<?php
     }
     ?>' method='post'>
@@ -30,6 +31,9 @@ else {
         ?>' <?php
         if ( isset( $errors[ 'nopid' ] ) ) {
             ?> class='error' <?php
+        }
+        if ( $update ) {
+            ?> class='update' disabled='disabled'<?
         }
         ?> />
     </div>
