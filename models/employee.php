@@ -5,7 +5,11 @@
                         "INSERT INTO
                             employees
                         SET
+<<<<<<< Updated upstream
 			    umn = :umn,
+=======
+                            umn = :umn,
+>>>>>>> Stashed changes
                             ssn = :ssn,
                             name = :name,
                             phone = :phone,
@@ -33,7 +37,7 @@
         }
         return $rows;
     }
-	function employeeDelete( $umn ) {
+    function employeeDelete( $umn ) {
         db(
             "DELETE FROM
                 employees
@@ -53,7 +57,7 @@
                 name = :name,
                 phone = :phone,
                 addr = :addr,
-				salary = :salary
+                salary = :salary
             WHERE
                 umn = :umn
             LIMIT 1",

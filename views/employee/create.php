@@ -87,7 +87,7 @@ else {
 	<div>
 		<label>Απασχόληση:</label> <select name=''
 	        <?php
-	        if ( isset( $errors[ 'noocc' ] ) ) {
+	        if ( isset( $errors[ 'nooccup' ] ) ) {
 	            ?> class='error'<?php
 	        }
 	        ?>>
