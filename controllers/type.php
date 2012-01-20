@@ -1,6 +1,6 @@
 <?php
     class TypeController extends Controller {
-        public static function Listing() {
+        public static function listing() {
             $types = typeListing();
             view( 'type/listing', array( 'types' => $types ) );
         }

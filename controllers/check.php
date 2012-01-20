@@ -1,6 +1,6 @@
 <?php
     class CheckController extends Controller {
-        public static function Listing() {
+        public static function listing() {
             $checks = checkListing();
             $checktypes = checktypeListing();
             $techs = employeeListing( 'tech' );
