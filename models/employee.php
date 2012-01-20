@@ -28,7 +28,7 @@
         );
         $rows = array();
         while ( $row = mysql_fetch_array( $res ) ) {
-            $rows[ 'umn' ] = $row;
+            $rows[ $row[ 'umn' ] ] = $row;
         }
         return $rows;
     }
