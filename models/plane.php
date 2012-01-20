@@ -51,13 +51,15 @@
     function planeItem( $pid ) {
         $res = db(
             "SELECT
-                t.name,p.*
+                t.*, p.*
             FROM
                 planes p
             INNER JOIN
                 types t
             ON
                 p.pid = t.pid
+            WHERE
+                p.pid = :pid
             LIMIT 1",
             compact( 'pid' )
         );
