@@ -37,7 +37,6 @@
                              e.umn = c.umn
                          ORDER BY c.pid",
             );
-        );
         $rows = array();
         while ( $row = mysql_fetch_array( $res ) ) {
             $rows[] = $row;
