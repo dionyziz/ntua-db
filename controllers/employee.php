@@ -1,6 +1,7 @@
 <?php
     class EmployeeController extends Controller{
-        public static function Listing() {
+        public static function Listing( $occ ) {
+            if ()
             $employees = employeeListing();
             view( 'employee/listing', array( 'employees' => $employees ) );
         }
