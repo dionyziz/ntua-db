@@ -8,7 +8,7 @@
             if ( !empty( $umn ) ) {
                 $employee = employeeItem( $umn );
                 if ( $employee === false ) {
-                    throw new Exception( 'The employee you are trying to edit does not exist' );/                }
+                    throw new Exception( 'The employee you are trying to edit does not exist' ); }
                 if ( empty( $ssn ) ) {
                     $ssn = $employee[ 'ssn' ];
                 }
@@ -41,7 +41,8 @@
             //} elseif ( $occ == 'Regulator' ) {
             //    regulatorCreate ( $umn );
             //    Redirect( 'employee/listing?regulator=yes' );
-            } else Redirect( 'employee/listing' );
+            } else {
+                Redirect( 'employee/listing' ); }
         }
         public static function delete( $umn ) {
             $vars = compact( 'umn' );
