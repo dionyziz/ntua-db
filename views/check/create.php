@@ -3,8 +3,12 @@ if ( empty( $chkid ) ) {
     ?><h2>Δημιουργία νέου ελέγχου</h2><?php
 }
 else {
-    ?><h2>Επεξεργασία ελέγχου<?php
-    echo htmlspecialchars( $name );
+    ?><h2>Επεξεργασία ελέγχου <?php
+    echo htmlspecialchars( $checktypes[ $chkid ][ 'name' ] );
+    ?>, στο σκάφος <?php
+    echo htmlspecialchars( $pid );
+    ?>, από τον τεχνικό <?php
+    echo htmlspecialchars( $umn );
     ?></h2><?php
 }
 ?>

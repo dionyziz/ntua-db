@@ -5,7 +5,22 @@
             $checktypes = checktypeListing();
             view( 'check/listing', array( 'checks' => $checks , 'checktypes' => $checktypes , 'planes' => $planes ) );
         }
-        public static function createView( $errors, $chkid, $pid, $umn, $created, $duration, $score) {
+        public static function createView( $errors, $chkid, $pid, $umn, $created, $duration, $score ) {
+            if ( !empty( $chkid ) ) {
+                $check = checkItem( $chkid, $pid, $umn );
+                if  ( $check === false ) {
+                    throw new Exception( 'The check you are trying to edit does not exist' );
+                }
+                if ( empty ( $created ) ) {
+                    $created = $check[ 'created' ];
+                }
+                if ( empty ( $duration ) ) {
+                    $duration = $check[ 'duration' ];
+                }
+                if ( empty ( $score ) ) {
+                    $score = $check[ 'score' ];
+                }
+            }
             $errors = array_flip( explode( ',', $errors ) );
             $checktypes = checktypeListing();
             $planes = planeListing();
