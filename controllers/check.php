@@ -2,9 +2,7 @@
     class CheckController extends Controller {
         public static function listing() {
             $checks = checkListing();
-            $checktypes = checktypeListing();
-            $techs = techListing();
-            view( 'check/listing', array( 'checks' => $checks , 'checktypes' => $checktypes , 'planes' => $planes , 'techs' => $techs ) );
+            view( 'check/listing', array( 'checks' => $checks ) );
         }
         public static function createView( $errors, $chkid, $pid, $umn, $created, $duration, $score ) {
             if ( !empty( $chkid ) ) {

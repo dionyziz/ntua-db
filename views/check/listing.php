@@ -13,14 +13,12 @@
     <tbody>
         <?php
             foreach ( $checks as $check ) {
-                $type = $types[ $checks[ 'chkid' ] ];
-                $tech = $techs[ $umn ];
                 ?>
                 <tr>
 
                     <td>
                         <?php
-                        echo $type[ 'name' ];
+                        echo $check[ 'checkTypeName' ];
                         ?>
                     </td>
                     <td>
@@ -30,7 +28,7 @@
                     </td>
                     <td>
                         <?php
-                        echo $tech[ 'name' ];
+                        echo $check[ 'techName' ];
                         ?>
                     </td>
                     <td>
@@ -45,7 +43,7 @@
                     </td>
                     <td>
                         <?php
-                        echo $type[ 'maxscore' ];
+                        echo $check[ 'maxscore' ];
                         ?>
                     </td>
                     <td>
