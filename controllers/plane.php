@@ -10,6 +10,9 @@
                 if ( $plane === false ) {
                     throw new Exception( 'The plane you are trying to edit does not exist' );
                 }
+                if ( empty( $tid ) ) {
+                    $tid = $plane[ 'tid' ];
+                }
             }
             $types = typeListing();
             $errors = array_flip( explode( ',', $errors ) );
