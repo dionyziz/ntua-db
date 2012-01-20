@@ -16,10 +16,28 @@
     function checkListing() {
         $res = db(
             "SELECT
-                *
-            FROM
-                checks"
-        );
+                e.name AS techName, t.name AS planeTypeName, ct.name AS  checkTypeName, ct.maxscore, c.*
+             FROM 
+                 checks c
+             INNER JOIN 
+                 planes p
+             ON 
+                 c.pid = p.pid
+                 INNER JOIN
+                     types t
+                 ON
+                     p.tid = t.tid
+                     INNER JOIN
+                         checktypes ct
+                     ON
+                         c.chkid = ct.chkid
+                         INNER JOIN
+                             employees e
+                         ON
+                             e.umn = c.umn
+                         ORDER BY c.pid",
+            compact( 'chkid', 'pid', 'umn' )
+            );
         $rows = array();
         while ( $row = mysql_fetch_array( $res ) ) {
             $rows[] = $row;
@@ -40,7 +58,7 @@
             compact( 'chkid', 'pid', 'umn' )
         );
     }
-    function checkUpdate( $chkid , $pid , $umn ) {
+    function checkUpdate( $chkid, $pid, $umn, $created, $duration, $score ) {
         db(
             "UPDATE
                 checks

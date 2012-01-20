@@ -3,25 +3,46 @@ if ( empty( $chkid ) ) {
     ?><h2>Δημιουργία νέου ελέγχου</h2><?php
 }
 else {
-    ?><h2>Επεξεργασία ελέγχου<?php
-    echo htmlspecialchars( $name );
+    ?><h2>Επεξεργασία ελέγχου <?php
+    echo htmlspecialchars( $checktypes[ $chkid ][ 'name' ] );
+    ?>, στο σκάφος <?php
+    echo htmlspecialchars( $pid );
+    ?>, από τον τεχνικό <?php
+    echo htmlspecialchars( $umn );
     ?></h2><?php
 }
 ?>
-Πληκτρολογήστε τις πληροφορίες του νέου ελέγχου:
+Πληκτρολογήστε τις πληροφορίες του ελέγχου:
 <form action='check/<?php
-    if ( empty( $tid ) ) {
+    if ( empty( $chkid ) || empty( $pid ) || empty( $umn ) ) {
         ?>create<?php
     }
     else {
+        $update=True;
         ?>update<?php
     }
     ?>' method='post'>
+    <?php
+    if ( $update ) {
+        ?><input type='hidden' name='chkid' value='<?php
+        echo $chkid;
+        ?>' />
+        <input type='hidden' name='pid' value='<?php
+        echo $pid;
+        ?>' />
+        <input type='hidden' name='umn' value='<?php
+        echo $umn;
+        ?>' /><?php
+    }
+    ?>
     <div>
     <label>Όνομα Ελέγχου:</label> <select name='chkid'
         <?php
         if ( isset( $errors[ 'nochkid' ] ) ) {
             ?> class='error' <?php
+        }
+        if ( $update ) {
+            ?> class='update' disabled='disabled'<?php
         }
         ?>>
         <?php
@@ -45,6 +66,9 @@ else {
         if ( isset( $errors[ 'nopid' ] ) ) {
             ?> class='error' <?php
         }
+        if ( $update ) {
+            ?> class='update' disabled='disabled'<?php
+        }
         ?>>
         <?php
         foreach ( $planes as $plane ) {
@@ -62,11 +86,14 @@ else {
         </select>
     </div>
     <div>
-        <label>Κωδικός τεχνικού:</label> <input type='text' name='umn' value='<?php
-        echo htmlspecialchars( $umn );
+        <label>Όνομα τεχνικού:</label> <input type='text' name='umn' value='<?php
+        echo htmlspecialchars( $techs[ $umn ][ 'name' ] );
         ?>' <?php
         if ( isset( $errors[ 'noumn' ] ) ) {
             ?> class='error' <?php
+        }
+        if ( $update ) {
+            ?> class='update' disabled='disabled'<?php
         }
         ?> />
     </div>
@@ -97,5 +124,5 @@ else {
         }
         ?> />
     </div>
-    <input type='submit' value='Δημιουργία νέου ελέγχου' />
+    <input type='submit' value='Αποθήκευση' />
 </form>

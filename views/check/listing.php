@@ -3,7 +3,7 @@
         <tr>
             <th>Όνομα Ελέγχου</th>
             <th>Κωδικός αεροσκάφους</th>
-            <th>Κωδικός τεχνικού</th>
+            <th>Όνομα τεχνικού</th>
             <th>Ημερομηνία διεξαγωγής</th>
             <th>Σκορ</th>
             <th>Μέγιστο σκορ</th>
@@ -13,13 +13,12 @@
     <tbody>
         <?php
             foreach ( $checks as $check ) {
-                $type = $types[ $checks[ 'chkid' ] ];
                 ?>
                 <tr>
 
                     <td>
                         <?php
-                        echo $type[ 'name' ];
+                        echo $check[ 'checkTypeName' ];
                         ?>
                     </td>
                     <td>
@@ -29,7 +28,7 @@
                     </td>
                     <td>
                         <?php
-                        echo $check[ 'umn' ];
+                        echo $check[ 'techName' ];
                         ?>
                     </td>
                     <td>
@@ -44,12 +43,16 @@
                     </td>
                     <td>
                         <?php
-                        echo $type[ 'maxscore' ];
+                        echo $check[ 'maxscore' ];
                         ?>
                     </td>
                     <td>
                         <a href='check/create?chkid=<?php
                         echo $check[ 'chkid' ];
+                        ?>&pid=<?php
+                        echo $check[ 'pid' ];
+                        ?>&umn=<?php
+                        echo $check[ 'umn' ];
                         ?>' class='update' title='Επεξεργασία'>Επεξεργασία ελέγχου</a>
                         <form action='check/delete' method='post' class='delete'>
                             <input type='hidden' name='chkid' value='<?php
