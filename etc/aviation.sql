@@ -17,7 +17,7 @@ CREATE TABLE employees (
     umn INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     ssn INT UNIQUE,
     name TEXT NOT NULL,
-    phone INT,
+    phone VARCHAR(32),
     addr TEXT,
     salary INT
 );
