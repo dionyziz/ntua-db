@@ -40,7 +40,7 @@
             }
             typeDelete( $tid );
             Redirect( 'type/listing' );
-        } 
+        }
         public static function update( $tid, $name, $weight, $capacity ) {
             $vars = compact( 'tid', 'name', 'weight', 'capacity' );
             $errors = Controller::validateInput( $vars );

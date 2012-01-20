@@ -37,7 +37,7 @@
             WHERE
                 ( :occ = 'tech' AND t.umn IS NOT NULL )
                 OR ( :occ = 'regulator' AND r.umn IS NOT NULL )
-                OR ( :occ = '' ) 
+                OR ( :occ = '' )
             ORDER BY umn ",
             compact( 'occ' )
         );

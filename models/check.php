@@ -17,11 +17,11 @@
         $res = db(
             "SELECT
                 e.name AS techName, t.name AS planeTypeName, ct.name AS  checkTypeName, ct.maxscore, c.*
-             FROM 
+             FROM
                  checks c
-             INNER JOIN 
+             INNER JOIN
                  planes p
-             ON 
+             ON
                  c.pid = p.pid
                  INNER JOIN
                      types t

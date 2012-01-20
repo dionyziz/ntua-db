@@ -22,7 +22,7 @@
         }
         return $rows;
     }
-	function checktypeDelete( $chkid ) {
+    function checktypeDelete( $chkid ) {
         db(
             "DELETE FROM
                 checktypes
@@ -37,7 +37,7 @@
             "UPDATE
                 checktypes
             SET
-				name = :name,
+                name = :name,
                 maxscore = :maxscore
             WHERE
                 chkid = :chkid

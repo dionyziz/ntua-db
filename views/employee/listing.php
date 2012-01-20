@@ -40,7 +40,7 @@
                 echo htmlspecialchars( $employee[ 'addr' ] );
                 ?>
             </td>
-                                <td>
+            <td>
                 <?php
                 echo $employee[ 'salary' ];
                 ?>

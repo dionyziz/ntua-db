@@ -6,46 +6,51 @@
             <th>Τηλέφωνο</th>
             <th>Διεύθυνση</th>
             <th>Μισθός</th>
+            <th>Τελευταίος Έλεγχος</th>
             <th class='update'>Ενημέρωση</th>
         </tr>
     </thead>
     <tbody>
         <?php
-            foreach ( $techs as $tech ) {
+            foreach ( $regulators as $regulator ) {
                 ?>
                 <tr>
                     <td>
                         <?php
-                        echo htmlspecialchars( $tech[ 'ssn' ] );
+                        echo htmlspecialchars( $regulator[ 'ssn' ] );
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo htmlspecialchars( $tech[ 'name' ] );
+                        echo htmlspecialchars( $regulator[ 'name' ] );
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo $tech[ 'phone' ];
+                        echo $regulator[ 'phone' ];
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo htmlspecialchars( $tech[ 'addr' ] );
+                        echo htmlspecialchars( $regulator[ 'addr' ] );
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo $tech[ 'salary' ];
+                        echo $regulator[ 'salary' ];
                         ?>
                     </td>
                     <td>
-                        <a href='tech/create?umn=<?php
-                        echo $tech[ 'umn' ];
+                        <?php
+                        echo $regulator[ 'checked' ];
+                        ?>
+                    <td>
+                        <a href='regulator/create?umn=<?php
+                        echo $regulator[ 'umn' ];
                         ?>' class='update' title='Επεξεργασία'>Επεξεργασία εργαζομένου</a>
-                        <form action='tech/delete' method='post' class='delete'>
+                        <form action='regulator/delete' method='post' class='delete'>
                             <input type='hidden' name='umn' value='<?php
-                            echo $tech[ 'umn' ];
+                            echo $regulator[ 'umn' ];
                             ?> ' />
                             <input type='submit' value='Διαγραφή εργαζομένου' title='Διαγραφή'/>
                         </form>

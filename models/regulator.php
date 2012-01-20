@@ -1,32 +1,33 @@
 <?php
-    function techCreate( $umn ) {
+    function regulatorCreate( $umn, $checked ) {
         db(
             "INSERT INTO
-                techs
+                regulators
             SET
-                umn = :umn",
+                umn = :umn
+                checked = :checked",
             compact( 'umn' )
         );
     }
-    function techListing() {
-        return employeeListing( 'tech' );
+    function regulatorListing() {
+        return employeeListing( 'regulator' );
     }
-    function techDelete( $umn ) {
+    function regulatorDelete( $umn ) {
         db(
             "DELETE FROM
-                techs
+                regulators
             WHERE
                 umn = :umn
             LIMIT 1",
             compact( 'umn' )
         );
     }
-    function techItem( $umn ) {
+    function regulatorItem( $umn ) {
         $res = db(
             "SELECT
                 *
             FROM
-                techs
+                regulators
             WHERE
                 umn = :umn
             LIMIT 1",

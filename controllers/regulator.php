@@ -1,8 +1,8 @@
 <?php
-    class techController extends Controller{
+    class regulatorController extends Controller{
         public static function listing( ) {
-            $techs = techListing( );
-            view( 'tech/listing', array( 'techs' => $techs ) );
+            $regulators = regulatorListing( );
+            view( 'regulator/listing', array( 'regulators' => $regulators ) ); 
         }
         public function createView( $errors ) {
             Redirect( 'employee/create' );
@@ -11,10 +11,10 @@
             $vars = compact( 'umn' );
             $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
-                Redirect( 'tech/listing' );
+                Redirect( 'regulator/listing' );
             }
-            techDelete( $umn );
-            Redirect( 'tech/listing' );
+            regulatorDelete( $umn );
+            Redirect( 'regulator/listing' );
         }
         public static function update( $umn ) {
             Redirect( 'employee/create?umn=' . $umn );
