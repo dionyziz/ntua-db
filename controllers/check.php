@@ -3,8 +3,8 @@
         public static function Listing() {
             $checks = checkListing();
             $checktypes = checktypeListing();
-            $employees = employeeListing( '' );
-            view( 'check/listing', array( 'checks' => $checks , 'checktypes' => $checktypes , 'planes' => $planes , 'employees' => $employees ) );
+            $techs = employeeListing( 'tech' );
+            view( 'check/listing', array( 'checks' => $checks , 'checktypes' => $checktypes , 'planes' => $planes , 'techs' => $employees ) );
         }
         public static function createView( $errors, $chkid, $pid, $umn, $created, $duration, $score ) {
             if ( !empty( $chkid ) ) {

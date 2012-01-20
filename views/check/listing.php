@@ -3,7 +3,7 @@
         <tr>
             <th>Όνομα Ελέγχου</th>
             <th>Κωδικός αεροσκάφους</th>
-            <th>Κωδικός τεχνικού</th>
+            <th>Όνομα τεχνικού</th>
             <th>Ημερομηνία διεξαγωγής</th>
             <th>Σκορ</th>
             <th>Μέγιστο σκορ</th>
@@ -14,6 +14,7 @@
         <?php
             foreach ( $checks as $check ) {
                 $type = $types[ $checks[ 'chkid' ] ];
+                $tech = $techs[ $umn ];
                 ?>
                 <tr>
 
@@ -29,7 +30,7 @@
                     </td>
                     <td>
                         <?php
-                        echo htmlspecialchars( $employees[ $umn ][ 'name' ] );
+                        echo $tech[ 'name' ];
                         ?>
                     </td>
                     <td>
