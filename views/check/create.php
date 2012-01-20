@@ -10,13 +10,26 @@ else {
 ?>
 Πληκτρολογήστε τις πληροφορίες του ελέγχου:
 <form action='check/<?php
-    if ( empty( $chkid ) ) {
+    if ( empty( $chkid ) || empty( $pid ) || empty( $umn ) ) {
         ?>create<?php
     }
     else {
         ?>update<?php
     }
     ?>' method='post'>
+    <?php
+    if ( !(empty( $chkid ) || empty( $pid ) || empty( $umn )) ) {
+        ?><input type='hidden' name='chkid' value='<?php
+        echo $chkid;
+        ?>' />
+        <input type='hidden' name='pid' value='<?php
+        echo $pid;
+        ?>' />
+        <input type='hidden' name='umn' value='<?php
+        echo $umn;
+        ?>' /><?php
+    }
+    ?>
     <div>
     <label>Όνομα Ελέγχου:</label> <select name='chkid'
         <?php
