@@ -18,11 +18,12 @@ else {
         ?>create<?php
     }
     else {
+        $update=True;
         ?>update<?php
     }
     ?>' method='post'>
     <?php
-    if ( !(empty( $chkid ) || empty( $pid ) || empty( $umn )) ) {
+    if ( $update ) {
         ?><input type='hidden' name='chkid' value='<?php
         echo $chkid;
         ?>' />
@@ -39,6 +40,9 @@ else {
         <?php
         if ( isset( $errors[ 'nochkid' ] ) ) {
             ?> class='error' <?php
+        }
+        if ( $update ) {
+            ?> class='update' disabled='disabled'<?php
         }
         ?>>
         <?php
@@ -62,6 +66,9 @@ else {
         if ( isset( $errors[ 'nopid' ] ) ) {
             ?> class='error' <?php
         }
+        if ( $update ) {
+            ?> class='update' disabled='disabled'<?php
+        }
         ?>>
         <?php
         foreach ( $planes as $plane ) {
@@ -84,6 +91,9 @@ else {
         ?>' <?php
         if ( isset( $errors[ 'noumn' ] ) ) {
             ?> class='error' <?php
+        }
+        if ( $update ) {
+            ?> class='update' disabled='disabled'<?php
         }
         ?> />
     </div>
