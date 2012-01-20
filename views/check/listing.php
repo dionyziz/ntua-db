@@ -29,7 +29,7 @@
                     </td>
                     <td>
                         <?php
-                        echo $check[ 'umn' ];
+                        echo htmlspecialchars( $employees[ $umn ][ 'name' ] );
                         ?>
                     </td>
                     <td>
