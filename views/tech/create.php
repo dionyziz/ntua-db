@@ -1,6 +1,6 @@
 <?php
 if ( empty( $umn ) ) {
-    ?><h2>Δημιουργία νέου εργαζομένου</h2><?php
+    ?><h2>Καθορισμός νέου τεχνικού</h2><?php
 }
 else {
     ?><h2>Επεξεργασία εργαζομένου <?php
@@ -9,7 +9,7 @@ else {
 }
 ?>
 Πληκτρολογήστε τις πληροφορίες του νέου εργαζομένου:
-<form action='employee/<?php
+<form action='tech/<?php
     if ( empty( $umn ) ) {
         ?>create<?php
     }
@@ -72,21 +72,5 @@ else {
         }
         ?> />
     </div>
-	<div>
-		<label>Απασχόληση:</label> <select name=''
-	        <?php
-	        if ( isset( $errors[ 'notid' ] ) ) {
-	            ?> class='error'<?php
-	        }
-	        ?>>
-	        <?php
-			$occup = array ('Technician','Regulator', 'Other' );
-	        foreach ( $occup as $occups ) {
-				echo '<option value="'.$value.'">'.$value.'</option>';
-	        }
-	        echo '</select>'
-			?>
-			
-	</div>
     <input type='submit' value='Αποθήκευση' />
 </form>
