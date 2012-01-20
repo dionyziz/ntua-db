@@ -1,8 +1,8 @@
 <?php
     class techController extends Controller{
-        public static function Listing() {
-            $techs = techListing();
-            view( 'employee/listing?occupation=tech', array( 'techs' => $techs ) );
+        public static function listing( ) {
+            $techs = techListing( );
+            view( 'tech/listing', array( 'techs' => $techs ) ); 
         }
         public function createView( $errors ) {
             Redirect( 'employee/create' );

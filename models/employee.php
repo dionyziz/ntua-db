@@ -36,9 +36,9 @@
                     r.umn = e.umn
             WHERE
                 ( :occ = 'tech' AND t.umn IS NOT NULL )
-                OR ( :occ = 'regulator' AND e.umn IS NOT NULL )
+                OR ( :occ = 'regulator' AND r.umn IS NOT NULL )
                 OR ( :occ = '' ) 
-            ORDER BY umn",
+            ORDER BY umn ",
             compact( 'occ' )
         );
         $rows = array();

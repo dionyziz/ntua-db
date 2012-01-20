@@ -9,17 +9,7 @@
 		);
 	}
     function techListing() {
-        $res = db(
-            "SELECT
-                *
-            FROM
-                techs"
-        );
-        $rows = array();
-        while ( $row = mysql_fetch_array( $res ) ) {
-            $rows[ $row[ 'umn' ] ] = $row;
-        }
-        return $rows;
+        return employeeListing( 'tech' );
     }
 	function techDelete( $umn ) {
         db(

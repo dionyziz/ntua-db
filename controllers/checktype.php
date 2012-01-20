@@ -1,6 +1,6 @@
 <?php
     class ChecktypeController extends Controller {
-        public static function Listing() {
+        public static function listing() {
             $checktypes = checktypeListing();
             view( 'checktype/listing', array( 'checktypes' => $checktypes ) );
         }
