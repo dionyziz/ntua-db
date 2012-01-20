@@ -45,6 +45,7 @@ else {
         }
         ?>>
         <?php
+        echo $tid
         foreach ( $types as $type ) {
             ?><option value='<?php
             echo htmlspecialchars( $type[ 'tid' ] );
