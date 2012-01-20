@@ -12,9 +12,13 @@
     function planeListing() {
         $res = db(
             "SELECT
-                *
+                t.name,p.*
             FROM
-                planes"
+                planes p
+            INNER JOIN
+                types t
+            ON
+                t.pid = p.pid"
         );
         $rows = array();
         while ( $row = mysql_fetch_array( $res ) ) {
@@ -47,8 +51,12 @@
     function planeItem( $pid ) {
         $res = db(
             "SELECT
-                *
+                t.name,p.*
             FROM
+                planes p
+            INNER JOIN
+                types t
+            ON
                 planes
             WHERE
                 pid = :pid
