@@ -57,9 +57,7 @@
             INNER JOIN
                 types t
             ON
-                planes
-            WHERE
-                pid = :pid
+                p.pid = t.pid
             LIMIT 1",
             compact( 'pid' )
         );
