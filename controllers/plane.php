@@ -1,6 +1,6 @@
 <?php
     class PlaneController extends Controller {
-        public static function Listing() {
+        public static function listing() {
             $planes = planeListing();
             $types = typeListing();
             view( 'plane/listing', array( 'planes' => $planes , 'types' => $types ) );

@@ -1,7 +1,7 @@
 <?php
     class EmployeeController extends Controller{
-        public static function listing( $occupation ) {
-            $employees = employeeListing( $occupation );
+        public static function listing( ) {
+            $employees = employeeListing( );
             view( 'employee/listing', array( 'employees' => $employees ) );
         }
         public function createView( $errors, $umn, $ssn, $name, $phone, $addr, $salary, $occ ) {
