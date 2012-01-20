@@ -48,18 +48,13 @@
                         ?>
                     </td>
                     <td>
-                        <form action='check/create' method='post' class='update'>
-                            <input type='hidden' name='chkid' value='<?php
-                            echo $check[ 'chkid' ];
-                            ?> ' />
-                            <input type='hidden' name='pid' value='<?php
-                            echo $check[ 'pid' ];
-                            ?> ' />
-                            <input type='hidden' name='umn' value='<?php
-                            echo $check[ 'umn' ];
-                            ?> ' />
-                            <input type='submit' value='Επεξεργασία ελέγχου' title='Επεξεργασία' />
-                        </form>
+                        <a href='check/create?chkid=<?php
+                        echo $check[ 'chkid' ];
+                        ?>&pid=<?php
+                        echo $check[ 'pid' ];
+                        ?>&umn=<?php
+                        echo $check[ 'umn' ];
+                        ?>' class='update' title='Επεξεργασία'>Επεξεργασία ελέγχου</a>
                         <form action='check/delete' method='post' class='delete'>
                             <input type='hidden' name='chkid' value='<?php
                             echo $check[ 'chkid' ];
