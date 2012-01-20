@@ -87,7 +87,7 @@ else {
     </div>
     <div>
         <label>Όνομα τεχνικού:</label> <input type='text' name='umn' value='<?php
-        echo htmlspecialchars( $employees[ $umn ][ 'name' ] );
+        echo htmlspecialchars( $techs[ $umn ][ 'name' ] );
         ?>' <?php
         if ( isset( $errors[ 'noumn' ] ) ) {
             ?> class='error' <?php

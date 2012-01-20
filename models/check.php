@@ -16,9 +16,27 @@
     function checkListing() {
         $res = db(
             "SELECT
-                *
-            FROM
-                checks"
+                e.name, t.name, ct.name, c.score, c.created, c.pid, c.duration, c.chkid, c.umn
+             FROM 
+                 checks c
+             INNER JOIN 
+                 planes p
+             ON 
+                 c.pid = p.pid
+                 INNER JOIN
+                     types t
+                 ON
+                     p.tid = t.tid
+                     INNER JOIN
+                         checktypes ct
+                     ON
+                         c.chkid = ct.chkid
+                         INNER JOIN
+                             employees e
+                         ON
+                             e.umn = c.umn
+                         ORDER BY c.pid",
+            );
         );
         $rows = array();
         while ( $row = mysql_fetch_array( $res ) ) {

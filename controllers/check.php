@@ -3,8 +3,8 @@
         public static function Listing() {
             $checks = checkListing();
             $checktypes = checktypeListing();
-            $techs = employeeListing( 'tech' );
-            view( 'check/listing', array( 'checks' => $checks , 'checktypes' => $checktypes , 'planes' => $planes , 'techs' => $employees ) );
+            $techs = techListing();
+            view( 'check/listing', array( 'checks' => $checks , 'checktypes' => $checktypes , 'planes' => $planes , 'techs' => $techs ) );
         }
         public static function createView( $errors, $chkid, $pid, $umn, $created, $duration, $score ) {
             if ( !empty( $chkid ) ) {
@@ -25,8 +25,8 @@
             $errors = array_flip( explode( ',', $errors ) );
             $checktypes = checktypeListing();
             $planes = planeListing();
-            $employees = employeeListing( '' );
-            view( 'check/create', compact( 'errors', 'chkid', 'pid', 'umn', 'created', 'duration', 'score', 'checktypes', 'planes', 'employees' ) );
+            $techs = techListing();
+            view( 'check/create', compact( 'errors', 'chkid', 'pid', 'umn', 'created', 'duration', 'score', 'checktypes', 'planes', 'techs' ) );
         }
         public static function create( $chkid, $pid, $umn, $created, $duration, $score ) {
             $vars = compact( 'chkid', 'pid', 'umn', 'created', 'duration', 'score' );
