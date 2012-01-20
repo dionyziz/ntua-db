@@ -18,7 +18,7 @@
             INNER JOIN
                 types t
             ON
-                t.pid = p.pid"
+                t.tid = p.tid"
         );
         $rows = array();
         while ( $row = mysql_fetch_array( $res ) ) {
