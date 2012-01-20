@@ -86,8 +86,8 @@ else {
         </select>
     </div>
     <div>
-        <label>Κωδικός τεχνικού:</label> <input type='text' name='umn' value='<?php
-        echo htmlspecialchars( $umn );
+        <label>Όνομα τεχνικού:</label> <input type='text' name='umn' value='<?php
+        echo htmlspecialchars( $employees[ $umn ][ 'name' ] );
         ?>' <?php
         if ( isset( $errors[ 'noumn' ] ) ) {
             ?> class='error' <?php
