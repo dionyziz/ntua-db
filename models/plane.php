@@ -12,7 +12,7 @@
     function planeListing() {
         $res = db(
             "SELECT
-                t.name,p.*
+                t.*, p.*
             FROM
                 planes p
             INNER JOIN
