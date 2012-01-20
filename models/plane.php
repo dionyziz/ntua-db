@@ -57,7 +57,7 @@
             INNER JOIN
                 types t
             ON
-                p.pid = t.pid
+                p.tid = t.tid
             WHERE
                 p.pid = :pid
             LIMIT 1",
