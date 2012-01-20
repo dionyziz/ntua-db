@@ -1,7 +1,7 @@
 <?php
     class EmployeeController extends Controller{
-        public static function Listing( $occ ) {
-            $employees = employeeListing( $occ );
+        public static function listing( $occupation ) {
+            $employees = employeeListing( $occupation );
             view( 'employee/listing', array( 'employees' => $employees ) );
         }
         public function createView( $errors, $umn, $ssn, $name, $phone, $addr, $salary, $occ ) {
@@ -37,7 +37,7 @@
             employeeCreate( $umn, $ssn, $name, $phone, $addr, $salary, $errors );
             if ( $occ == 'Technician' ) {
                 techCreate( $umn );
-                Redirect( 'employee/listing?tech=yes' );
+                Redirect( 'employee/listing?occupation=tech' );
             //} elseif ( $occ == 'Regulator' ) {
             //    regulatorCreate ( $umn );
             //    Redirect( 'employee/listing?regulator=yes' );
