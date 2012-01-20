@@ -37,7 +37,8 @@
             WHERE
                 ( :occ = 'tech' AND t.umn IS NOT NULL )
                 OR ( :occ = 'regulator' AND e.umn IS NOT NULL )
-                OR ( :occ = '' ) ",
+                OR ( :occ = '' ) 
+            ORDER BY umn",
             compact( 'occ' )
         );
         $rows = array();

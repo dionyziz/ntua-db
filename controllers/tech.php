@@ -2,7 +2,7 @@
     class techController extends Controller{
         public static function Listing() {
             $techs = techListing();
-            view( 'tech/listing', array( 'techs' => $techs ) );
+            view( 'employee/listing?occupation=tech', array( 'techs' => $techs ) );
         }
         public function createView( $errors ) {
             Redirect( 'employee/create' );
@@ -11,10 +11,10 @@
             $vars = compact( 'umn' );
             $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
-                Redirect( 'tech/listing' );
+                Redirect( 'employee/listing?occupation=tech' );
             }
             techDelete( $umn );
-            Redirect( 'tech/listing' );
+            Redirect( 'employee/listing?occupation=tech' );
         }
         public static function update( $umn ) {
             Redirect( 'employee/create?umn=' . $umn );
