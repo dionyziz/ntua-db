@@ -32,7 +32,7 @@
             </td>
             <td>
                 <?php
-                echo $employee[ 'phone' ];
+                echo htmlspecialchars( $employee[ 'phone' ] );
                 ?>
             </td>
             <td>
