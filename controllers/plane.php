@@ -13,7 +13,6 @@
                 }
             }
             $errors = array_flip( explode( ',', $errors ) );
-            $types = typeListing();
             view( 'plane/create', compact( 'errors', 'pid', 'tid', 'types' ) );
         }
         public static function create( $pid, $tid ) {
