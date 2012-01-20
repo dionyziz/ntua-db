@@ -23,7 +23,7 @@
     function employeeListing( $occ ) {
         $res = db(
             "SELECT
-                e.*
+                e.*, r.checked
             FROM
                 employees e
             LEFT JOIN
