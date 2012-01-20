@@ -5,11 +5,7 @@
                         "INSERT INTO
                             employees
                         SET
-<<<<<<< Updated upstream
-			    umn = :umn,
-=======
                             umn = :umn,
->>>>>>> Stashed changes
                             ssn = :ssn,
                             name = :name,
                             phone = :phone,
