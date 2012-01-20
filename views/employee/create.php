@@ -24,6 +24,18 @@ else {
         ?>' /><?php
     }
     ?>
+	<div>
+        <label>UMN:</label> <input type='text' name='umn' value='<?php
+        echo htmlspecialchars( $umn );
+        ?>' <?php
+        if ( isset( $errors[ 'noumn' ] ) ) {
+            ?> class='error' <?php
+        }
+        if ( isset( $errors[ 'duplicateumn' ] ) ) {
+            ?> class='error' <?php
+        }
+        ?> />
+    </div>
     <div>
         <label>ΑΦΜ:</label> <input type='text' name='ssn' value='<?php
         echo htmlspecialchars( $ssn );
@@ -73,18 +85,18 @@ else {
         ?> />
     </div>
 	<div>
-		<label>Απασχόληση:</label> <select name=''
+		<label>Απασχόληση:</label> <select name='occ'
 	        <?php
-	        if ( isset( $errors[ 'notid' ] ) ) {
+	        if ( isset( $errors[ 'noocc' ] ) ) {
 	            ?> class='error'<?php
 	        }
 	        ?>>
 	        <?php
-			$occup = array ('Technician','Regulator', 'Other' );
-	        foreach ( $occup as $occups ) {
+			$occup = array ( 'Technician','Regulator', 'Other' );
+	        foreach ( $occup as $occups => $value ) {
 				echo '<option value="'.$value.'">'.$value.'</option>';
 	        }
-	        echo '</select>'
+	        echo '</select>';
 			?>
 			
 	</div>
