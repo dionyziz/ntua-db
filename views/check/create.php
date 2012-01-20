@@ -8,7 +8,7 @@ else {
     ?></h2><?php
 }
 ?>
-Πληκτρολογήστε τις πληροφορίες του νέου ελέγχου:
+Πληκτρολογήστε τις πληροφορίες του ελέγχου:
 <form action='check/<?php
     if ( empty( $tid ) ) {
         ?>create<?php
@@ -97,5 +97,5 @@ else {
         }
         ?> />
     </div>
-    <input type='submit' value='Δημιουργία νέου ελέγχου' />
+    <input type='submit' value='Αποθήκευση' />
 </form>
