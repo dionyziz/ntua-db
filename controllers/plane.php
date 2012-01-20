@@ -2,8 +2,7 @@
     class PlaneController extends Controller {
         public static function listing() {
             $planes = planeListing();
-            $types = typeListing();
-            view( 'plane/listing', array( 'planes' => $planes , 'types' => $types ) );
+            view( 'plane/listing', array( 'planes' => $planes ) );
         }
         public static function createView( $errors, $pid, $tid ) {
             if ( !empty( $pid ) ) {
@@ -12,11 +11,11 @@
                     throw new Exception( 'The plane you are trying to edit does not exist' );
                 }
             }
+            $types = typeListing();
             $errors = array_flip( explode( ',', $errors ) );
             view( 'plane/create', compact( 'errors', 'pid', 'tid', 'types' ) );
         }
         public static function create( $pid, $tid ) {
-            $types = typeListing();
             $vars = compact( 'pid', 'tid', 'types' );
             if ( !empty( $errors ) ) {
                 Redirect( 'plane/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
