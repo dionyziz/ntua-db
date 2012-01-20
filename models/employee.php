@@ -20,12 +20,24 @@
                 }
     }
 
-    function employeeListing() {
+    function employeeListing( $occ ) {
         $res = db(
             "SELECT
                 *
             FROM
-                employees"
+                employees e
+            LEFT JOIN 
+                techs t
+            ON 
+                t.umn = e.umn
+                LEFT JOIN
+                    regulators r
+                ON
+                    r.umn = e.umn
+            WHERE
+                ( :occ = 'tech' AND t.umn IS NOT NULL )
+                OR ( :occ = 'regulator' AND e.umn IS NOT NULL )",
+            compact( 'occ' )
         );
         $rows = array();
         while ( $row = mysql_fetch_array( $res ) ) {

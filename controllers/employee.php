@@ -1,8 +1,7 @@
 <?php
     class EmployeeController extends Controller{
         public static function Listing( $occ ) {
-            if ()
-            $employees = employeeListing();
+            $employees = employeeListing( $occ );
             view( 'employee/listing', array( 'employees' => $employees ) );
         }
         public function createView( $errors, $umn, $ssn, $name, $phone, $addr, $salary, $occ ) {
