@@ -1,17 +1,17 @@
 <?php
     function techCreate( $umn ) {
-		db(
-			"INSERT INTO
-				techs
-			SET
-				umn = :umn",
-			compact( 'umn' )
-		);
-	}
+        db(
+            "INSERT INTO
+                techs
+            SET
+                umn = :umn",
+            compact( 'umn' )
+        );
+    }
     function techListing() {
         return employeeListing( 'tech' );
     }
-	function techDelete( $umn ) {
+    function techDelete( $umn ) {
         db(
             "DELETE FROM
                 techs

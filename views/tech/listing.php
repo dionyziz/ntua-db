@@ -5,8 +5,8 @@
             <th>Όνομα εργαζομένου</th>
             <th>Τηλέφωνο</th>
             <th>Διεύθυνση</th>
-			<th>Μισθός</th>
-			<th class='update'>Ενημέρωση</th>
+            <th>Μισθός</th>
+            <th class='update'>Ενημέρωση</th>
         </tr>
     </thead>
     <tbody>
@@ -34,12 +34,12 @@
                         echo htmlspecialchars( $tech[ 'addr' ] );
                         ?>
                     </td>
-					<td>
+                    <td>
                         <?php
                         echo $tech[ 'salary' ];
                         ?>
                     </td>
-					<td>
+                    <td>
                         <a href='tech/create?umn=<?php
                         echo $tech[ 'umn' ];
                         ?>' class='update' title='Επεξεργασία'>Επεξεργασία εργαζομένου</a>

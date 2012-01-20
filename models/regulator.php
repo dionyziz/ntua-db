@@ -1,18 +1,18 @@
 <?php
     function regulatorCreate( $umn, $checked ) {
-		db(
-			"INSERT INTO
-				regulators
-			SET
-				umn = :umn
-				checked = :checked",
-			compact( 'umn' )
-		);
-	}
+        db(
+            "INSERT INTO
+                regulators
+            SET
+                umn = :umn
+                checked = :checked",
+            compact( 'umn' )
+        );
+    }
     function regulatorListing() {
         return employeeListing( 'regulator' );
     }
-	function regulatorDelete( $umn ) {
+    function regulatorDelete( $umn ) {
         db(
             "DELETE FROM
                 regulators

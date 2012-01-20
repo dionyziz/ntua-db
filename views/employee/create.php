@@ -24,7 +24,7 @@ else {
         ?>' /><?php
     }
     ?>
-	<div>
+    <div>
         <label>UMN:</label> <input type='text' name='umn' value='<?php
         echo htmlspecialchars( $umn );
         ?>' <?php
@@ -48,7 +48,7 @@ else {
         }
         ?> />
     </div>
-	<div>
+    <div>
         <label>Όνομα:</label> <input type='text' name='name' value='<?php
         echo htmlspecialchars( $name );
         ?>' <?php
@@ -75,7 +75,7 @@ else {
         }
         ?> />
     </div>
-	<div>
+    <div>
         <label>Μισθός:</label> <input type='text' name='salary' value='<?php
         echo htmlspecialchars( $salary );
         ?>' <?php
@@ -84,21 +84,21 @@ else {
         }
         ?> />
     </div>
-	<div>
-		<label>Απασχόληση:</label> <select name='occ'
-	        <?php
-	        if ( isset( $errors[ 'noocc' ] ) ) {
-	            ?> class='error'<?php
-	        }
-	        ?>>
-	        <?php
-			$occup = array ( 'Technician','Regulator', 'Other' );
-	        foreach ( $occup as $occups => $value ) {
-				echo '<option value="'.$value.'">'.$value.'</option>';
-	        }
-	        echo '</select>';
-			?>
-			
-	</div>
+    <div>
+        <label>Απασχόληση:</label> <select name='occ'
+            <?php
+            if ( isset( $errors[ 'noocc' ] ) ) {
+                ?> class='error'<?php
+            }
+            ?>>
+            <?php
+            $occup = array ( 'Technician','Regulator', 'Other' );
+            foreach ( $occup as $occups => $value ) {
+                echo '<option value="'.$value.'">'.$value.'</option>';
+            }
+            echo '</select>';
+            ?>
+
+    </div>
     <input type='submit' value='Αποθήκευση' />
 </form>

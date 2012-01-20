@@ -2,7 +2,7 @@
     function planeCreate( $pid, $tid ) {
         db(
             "INSERT INTO
-                planes 
+                planes
             SET
                 pid = :pid,
                 tid = :tid",

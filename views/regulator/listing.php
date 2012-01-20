@@ -5,9 +5,9 @@
             <th>Όνομα εργαζομένου</th>
             <th>Τηλέφωνο</th>
             <th>Διεύθυνση</th>
-			<th>Μισθός</th>
-			<th>Τελευταίος Έλεγχος</th>
-			<th class='update'>Ενημέρωση</th>
+            <th>Μισθός</th>
+            <th>Τελευταίος Έλεγχος</th>
+            <th class='update'>Ενημέρωση</th>
         </tr>
     </thead>
     <tbody>
@@ -35,7 +35,7 @@
                         echo htmlspecialchars( $regulator[ 'addr' ] );
                         ?>
                     </td>
-					<td>
+                    <td>
                         <?php
                         echo $regulator[ 'salary' ];
                         ?>
@@ -44,7 +44,7 @@
                         <?php
                         echo $regulator[ 'checked' ];
                         ?>
-					<td>
+                    <td>
                         <a href='regulator/create?umn=<?php
                         echo $regulator[ 'umn' ];
                         ?>' class='update' title='Επεξεργασία'>Επεξεργασία εργαζομένου</a>

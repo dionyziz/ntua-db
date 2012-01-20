@@ -33,7 +33,7 @@
             }
             planeDelete( $pid );
             Redirect( 'plane/listing' );
-        } 
+        }
         public static function update( $pid, $tid ) {
             $vars = compact( 'pid', 'tid' );
             $errors = Controller::validateInput( $vars );
