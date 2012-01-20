@@ -26,9 +26,9 @@
                 e.*
             FROM
                 employees e
-            LEFT JOIN 
+            LEFT JOIN
                 techs t
-            ON 
+            ON
                 t.umn = e.umn
                 LEFT JOIN
                     regulators r
@@ -36,7 +36,8 @@
                     r.umn = e.umn
             WHERE
                 ( :occ = 'tech' AND t.umn IS NOT NULL )
-                OR ( :occ = 'regulator' AND e.umn IS NOT NULL )",
+                OR ( :occ = 'regulator' AND e.umn IS NOT NULL )
+                OR ( :occ = '' ) ",
             compact( 'occ' )
         );
         $rows = array();
