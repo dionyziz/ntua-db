@@ -10,7 +10,7 @@ else {
 ?>
 Πληκτρολογήστε τις πληροφορίες του ελέγχου:
 <form action='check/<?php
-    if ( empty( $tid ) ) {
+    if ( empty( $chkid ) ) {
         ?>create<?php
     }
     else {

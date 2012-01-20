@@ -40,7 +40,7 @@
             compact( 'chkid', 'pid', 'umn' )
         );
     }
-    function checkUpdate( $chkid , $pid , $umn ) {
+    function checkUpdate( $chkid, $pid, $umn, $created, $duration, $score ) {
         db(
             "UPDATE
                 checks
