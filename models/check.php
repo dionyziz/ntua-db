@@ -36,6 +36,7 @@
                          ON
                              e.umn = c.umn
                          ORDER BY c.pid",
+            compact( 'chkid', 'pid', 'umn' )
             );
         $rows = array();
         while ( $row = mysql_fetch_array( $res ) ) {
