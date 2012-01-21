@@ -18,21 +18,21 @@
         );
         $rows = array();
         while ( $row = mysql_fetch_array( $res ) ) {
-            $rows[ $row[ 'chkid' ] ] = $row;
+            $rows[ $row[ 'checktypeid' ] ] = $row;
         }
         return $rows;
     }
-    function checktypeDelete( $chkid ) {
+    function checktypeDelete( $checktypeid ) {
         db(
             "DELETE FROM
                 checktypes
             WHERE
-                chkid = :chkid
+                checktypeid = :checktypeid
             LIMIT 1",
-            compact( 'chkid' )
+            compact( 'checktypeid' )
         );
     }
-    function checktypeUpdate( $chkid, $name, $maxscore ) {
+    function checktypeUpdate( $checktypeid, $name, $maxscore ) {
         db(
             "UPDATE
                 checktypes
@@ -40,21 +40,21 @@
                 name = :name,
                 maxscore = :maxscore
             WHERE
-                chkid = :chkid
+                checktypeid = :checktypeid
             LIMIT 1",
-            compact( 'chkid', 'name', 'maxscore' )
+            compact( 'checktypeid', 'name', 'maxscore' )
         );
     }
-    function checktypeItem( $chkid ) {
+    function checktypeItem( $checktypeid ) {
         $res = db(
             "SELECT
                 *
             FROM
                 checktypes
             WHERE
-                chkid = :chkid
+                checktypeid = :checktypeid
             LIMIT 1",
-            compact( 'chkid' )
+            compact( 'checktypeid' )
         );
         return mysql_fetch_array( $res );
     }

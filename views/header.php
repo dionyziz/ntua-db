@@ -9,9 +9,10 @@
         global $settings;
         echo $settings[ 'url' ];
         ?>" />
+        <meta charset="utf-8" />
         <link type="text/css" rel="stylesheet" href="css/style.css" />
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
-        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="favicon.ico" />
     </head>
     <body>
         <h1><a href=''><img src='images/logo.gif' alt='Athens International Airport'></a></h1>

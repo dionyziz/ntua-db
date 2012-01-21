@@ -1,7 +1,7 @@
 <table>
     <thead>
         <tr>
-            <th>Όνομα ελέγχου</th>
+            <th>Όνομα τύπου ελέγχου</th>
             <th>Μέγιστο σκορ</th>
             <th class='update'>Ενημέρωση</th>
         </tr>
@@ -23,12 +23,12 @@
                         ?>
                     </td>
                     <td>
-                        <a href='checktype/create?chkid=<?php
-                        echo $checktype[ 'chkid' ];
+                        <a href='checktype/create?checktypeid=<?php
+                        echo $checktype[ 'checktypeid' ];
                         ?>' class='update' title='Επεξεργασία'>Επεξεργασία τύπου ελέγχου</a>
                         <form action='checktype/delete' method='post' class='delete'>
-                            <input type='hidden' name='chkid' value='<?php
-                            echo $checktype[ 'chkid' ];
+                            <input type='hidden' name='checktypeid' value='<?php
+                            echo $checktype[ 'checktypeid' ];
                             ?> ' />
                             <input type='submit' value='Διαγραφή εργαζομένου' title='Διαγραφή'/>
                         </form>
@@ -39,3 +39,4 @@
         ?>
     </tbody>
 </table>
+<p class='create'><a href='checktype/create'>Προσθήκη νέου τύπου ελέγχου</a></p>

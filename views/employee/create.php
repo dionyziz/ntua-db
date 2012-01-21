@@ -8,7 +8,7 @@ else {
     ?></h2><?php
 }
 ?>
-Πληκτρολογήστε τις πληροφορίες του νέου εργαζομένου:
+Πληκτρολογήστε τις πληροφορίες του εργαζομένου:
 <form action='employee/<?php
     if ( empty( $umn ) ) {
         ?>create<?php
@@ -92,13 +92,19 @@ else {
             }
             ?>>
             <?php
-            $occup = array ( 'Technician','Regulator', 'Other' );
-            foreach ( $occup as $occups => $value ) {
-                echo '<option value="'.$value.'">'.$value.'</option>';
+            $occupations = array(
+                'tech' => 'Τεχνικός',
+                'reg' => 'Διαχειριστής',
+                '' => 'Χωρίς ειδίκευση'
+            );
+            foreach ( $occupations as $value => $caption ) {
+                ?><option value="<?php
+                echo $value;
+                ?>"><?php
+                echo $caption;
+                ?></option><?php
             }
-            echo '</select>';
-            ?>
-
+            ?></select>
     </div>
     <input type='submit' value='Αποθήκευση' />
 </form>

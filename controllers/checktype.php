@@ -4,9 +4,9 @@
             $checktypes = checktypeListing();
             view( 'checktype/listing', array( 'checktypes' => $checktypes ) );
         }
-        public function createView( $errors, $chkid, $name, $maxscore ) {
-            if ( !empty( $chkid ) ) {
-                $checktype = checktypeItem( $umn );
+        public function createView( $errors, $checktypeid, $name, $maxscore ) {
+            if ( !empty( $checktypeid ) ) {
+                $checktype = checktypeItem( $checktypeid );
                 if ( $checktype === false ) {
                     throw new Exception( 'The checktype you are trying to edit does not exist' );
                 }
@@ -18,7 +18,7 @@
                 }
             }
             $errors = array_flip( explode( ',', $errors ) );
-            view( 'checktype/create', compact( 'errors', 'chkid', 'name', 'maxscore' ) );
+            view( 'checktype/create', compact( 'errors', 'checktypeid', 'name', 'maxscore' ) );
         }
         public static function create( $name, $maxscore ) {
             $vars = compact( 'name', 'maxscore' );
@@ -29,22 +29,22 @@
             checktypeCreate( $name, $maxscore );
             Redirect( 'checktype/listing' );
         }
-        public static function delete( $chkid ) {
-            $vars = compact( 'chkid' );
+        public static function delete( $checktypeid ) {
+            $vars = compact( 'checktypeid' );
             $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
                 Redirect( 'checktype/listing' );
             }
-            checktypeDelete( $chkid );
+            checktypeDelete( $checktypeid );
             Redirect( 'checktype/listing' );
         }
-        public static function update( $chkid, $name, $maxscore ) {
-            $vars = compact( 'chkid', 'name', 'maxscore' );
+        public static function update( $checktypeid, $name, $maxscore ) {
+            $vars = compact( 'checktypeid', 'name', 'maxscore' );
             $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
                 Redirect( 'checktype/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
-            checktypeUpdate ( $chkid, $name, $maxscore );
+            checktypeUpdate ( $checktypeid, $name, $maxscore );
             Redirect( 'checktype/listing' );
         }
     }

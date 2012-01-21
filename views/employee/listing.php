@@ -62,3 +62,4 @@
     ?>
 </tbody>
 </table>
+<p class='create'><a href='employee/create'>Προσθήκη νέου εργαζομένου</a></p>

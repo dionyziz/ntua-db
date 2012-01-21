@@ -95,6 +95,13 @@
         header( 'Location: ' . $url );
     }
     catch ( Exception $e ) {
-        die( $controllername . '::' . $methodname . ' call rejected: ' . $e->getMessage() );
+        if ( !headers_sent() ) {
+            header( 'Content-type: text/plain' );
+        }
+        echo $controllername . '::' . $methodname . ' call rejected: ' . $e->getMessage();
+        echo "\n\n" . str_repeat( '=', 80 ) . "\nCALLTRACE\n";
+        echo str_repeat( '=', 80 ) . "\n";
+
+        echo $e->getTraceAsString();
     }
 ?>
