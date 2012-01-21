@@ -98,3 +98,30 @@ p.create a {
     background-repeat: no-repeat;
     background-position: left;
 }
+label {
+    float: left;
+    display: block;
+    width: 200px;
+    padding: 0 5px;
+}
+form {
+    border: 1px solid #ccc;
+    width: 425px;
+}
+form.delete {
+    border: none;
+    width: auto;
+}
+form div {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+form div:nth-child(even) {
+    background-color: #f5f5f5;
+}
+form input[type=text] {
+    width: 200px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 4px;
+}

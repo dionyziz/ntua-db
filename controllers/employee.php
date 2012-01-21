@@ -35,14 +35,15 @@
                 Redirect( 'employee/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
             employeeCreate( $umn, $ssn, $name, $phone, $addr, $salary, $errors );
-            if ( $occ == 'Technician' ) {
+            if ( $occ == 'tech' ) {
                 techCreate( $umn );
                 Redirect( 'tech/listing' );
-            } elseif ( $occ == 'Regulator' ) {
-                regulatorCreate ( $umn );
+            }
+            else if ( $occ == 'reg' ) {
+                regulatorCreate( $umn );
                 Redirect( 'regulator/listing' );
-            } else {
-                Redirect( 'employee/listing' ); }
+            }
+            Redirect( 'employee/listing' );
         }
         public static function delete( $umn ) {
             $vars = compact( 'umn' );
