@@ -4,13 +4,13 @@
             "INSERT INTO
                 checks
             SET
-                checktypeid = :checkktypeid,
+                checktypeid = :checktypeid,
                 pid = :pid,
                 umn = :umn,
                 created = :created,
                 duration = :duration,
                 score = :score",
-            compact( 'chkid', 'pid', 'umn', 'created', 'duration', 'score')
+            compact( 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score')
         );
     }
     function checkListing() {
@@ -48,7 +48,7 @@
             "DELETE FROM
                 checks
             WHERE
-                chkid = :checktypeid
+                checktypeid = :checktypeid
                 AND pid = :pid
                 AND umn = :umn
             LIMIT 1",
@@ -64,7 +64,7 @@
                 duration = :duration,
                 score = :score
             WHERE
-                chkid = :checktypeid
+                checktypeid = :checktypeid
                 AND pid = :pid
                 AND umn = :umn
             LIMIT 1",
@@ -78,7 +78,7 @@
             FROM
                 checks
             WHERE
-                chkid = :checktypeid
+                checktypeid = :checktypeid
                 AND pid = :pid
                 AND umn = :umn
             LIMIT 1",

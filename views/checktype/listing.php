@@ -39,4 +39,4 @@
         ?>
     </tbody>
 </table>
-<a href='checktype/create' class='create'>Προσθήκη νέου τύπου ελέγχου</a
+<p class='create'><a href='checktype/create'>Προσθήκη νέου τύπου ελέγχου</a></p>

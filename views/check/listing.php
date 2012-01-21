@@ -73,3 +73,4 @@
         ?>
     </tbody>
 </table>
+<p class='create'><a href='check/create'>Προσθήκη νέου ελέγχου</a></p>

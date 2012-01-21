@@ -34,7 +34,7 @@ th.icon, th.update {
 th, td {
     padding: 5px;
 }
-input.error {
+input.error, select.error {
     color: red;
     font-weight: bold;
     border: 2px solid red;
@@ -91,4 +91,10 @@ a:hover {
 }
 #navigation a:hover {
     background-color: #e5e5ff;
+}
+p.create a {
+    padding-left: 20px;
+    background-image: url( '../images/add.png' );
+    background-repeat: no-repeat;
+    background-position: left;
 }

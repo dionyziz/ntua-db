@@ -56,3 +56,4 @@
         ?>
     </tbody>
 </table>
+<p class='create'><a href='plane/create'>Προσθήκη νέου αεροσκάφους</a></p>
