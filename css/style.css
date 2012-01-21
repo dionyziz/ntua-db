@@ -34,7 +34,7 @@ th.icon, th.update {
 th, td {
     padding: 5px;
 }
-input.error {
+input.error, select.error {
     color: red;
     font-weight: bold;
     border: 2px solid red;
@@ -91,4 +91,37 @@ a:hover {
 }
 #navigation a:hover {
     background-color: #e5e5ff;
+}
+p.create a {
+    padding-left: 20px;
+    background-image: url( '../images/add.png' );
+    background-repeat: no-repeat;
+    background-position: left;
+}
+label {
+    float: left;
+    display: block;
+    width: 200px;
+    padding: 0 5px;
+}
+form {
+    border: 1px solid #ccc;
+    width: 425px;
+}
+form.delete {
+    border: none;
+    width: auto;
+}
+form div {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+form div:nth-child(even) {
+    background-color: #f5f5f5;
+}
+form input[type=text] {
+    width: 200px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 4px;
 }

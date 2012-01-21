@@ -4,9 +4,9 @@
             $checks = checkListing();
             view( 'check/listing', array( 'checks' => $checks ) );
         }
-        public static function createView( $errors, $chkid, $pid, $umn, $created, $duration, $score ) {
-            if ( !empty( $chkid ) ) {
-                $check = checkItem( $chkid, $pid, $umn );
+        public static function createView( $errors, $checktypeid, $pid, $umn, $created, $duration, $score ) {
+            if ( !empty( $checktypeid ) ) {
+                $check = checkItem( $checktypeid, $pid, $umn );
                 if  ( $check === false ) {
                     throw new Exception( 'The check you are trying to edit does not exist' );
                 }
@@ -24,33 +24,33 @@
             $checktypes = checktypeListing();
             $planes = planeListing();
             $techs = techListing();
-            view( 'check/create', compact( 'errors', 'chkid', 'pid', 'umn', 'created', 'duration', 'score', 'checktypes', 'planes', 'techs' ) );
+            view( 'check/create', compact( 'errors', 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score', 'checktypes', 'planes', 'techs' ) );
         }
-        public static function create( $chkid, $pid, $umn, $created, $duration, $score ) {
-            $vars = compact( 'chkid', 'pid', 'umn', 'created', 'duration', 'score' );
+        public static function create( $checktypeid, $pid, $umn, $created, $duration, $score ) {
+            $vars = compact( 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score' );
             $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
                 Redirect( 'check/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
-            checkCreate( $chkid, $pid, $umn, $created, $duration, $score);
+            checkCreate( $checktypeid, $pid, $umn, $created, $duration, $score);
             Redirect( 'check/listing' );
         }
-        public static function delete( $chkid, $pid, $umn ) {
-            $vars = compact( 'chkid' );
+        public static function delete( $checktypeid, $pid, $umn ) {
+            $vars = compact( 'checktypeid' );
             $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
                 Redirect( 'check/listing' );
             }
-            checkDelete( $chkid , $pid, $umn);
+            checkDelete( $checktypeid , $pid, $umn);
             Redirect( 'check/listing' );
         } 
-        public static function update( $chkid, $pid, $umn, $created, $duration, $score ) {
-            $vars = compact( 'chkid', 'pid', 'umn', 'created', 'duration', 'score' );
+        public static function update( $checktypeid, $pid, $umn, $created, $duration, $score ) {
+            $vars = compact( 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score' );
             $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
                 Redirect( 'check/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
-            checkUpdate( $chkid, $pid, $umn, $created, $duration, $score );
+            checkUpdate( $checktypeid, $pid, $umn, $created, $duration, $score );
             Redirect( 'check/listing' );
         }
     }

@@ -1,22 +1,22 @@
 <?php
-    function checkCreate( $chkid, $pid, $umn, $created, $duration, $score) {
+    function checkCreate( $checktypeid, $pid, $umn, $created, $duration, $score) {
         db(
             "INSERT INTO
                 checks
             SET
-                chkid = :chkid,
+                checktypeid = :checktypeid,
                 pid = :pid,
                 umn = :umn,
                 created = :created,
                 duration = :duration,
                 score = :score",
-            compact( 'chkid', 'pid', 'umn', 'created', 'duration', 'score')
+            compact( 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score')
         );
     }
     function checkListing() {
         $res = db(
             "SELECT
-                e.name AS techName, t.name AS planeTypeName, ct.name AS  checkTypeName, ct.maxscore, c.*
+                e.name AS techName, t.name AS planeTypeName, ct.name AS checkTypeName, ct.maxscore, c.*
              FROM
                  checks c
              INNER JOIN
@@ -30,7 +30,7 @@
                      INNER JOIN
                          checktypes ct
                      ON
-                         c.chkid = ct.chkid
+                         c.checktypeid = ct.checktypeid
                          INNER JOIN
                              employees e
                          ON
@@ -43,21 +43,19 @@
         }
         return $rows;
     }
-    function checkDelete( $chkid , $pid , $umn ) {
+    function checkDelete( $checktypeid, $pid, $umn ) {
         db(
             "DELETE FROM
                 checks
             WHERE
-                chkid = :chkid
-                AND
-                pid = :pid
-                AND
-                umn = :umn
+                checktypeid = :checktypeid
+                AND pid = :pid
+                AND umn = :umn
             LIMIT 1",
-            compact( 'chkid', 'pid', 'umn' )
+            compact( 'checktypeid', 'pid', 'umn' )
         );
     }
-    function checkUpdate( $chkid, $pid, $umn, $created, $duration, $score ) {
+    function checkUpdate( $checktypeid, $pid, $umn, $created, $duration, $score ) {
         db(
             "UPDATE
                 checks
@@ -66,29 +64,25 @@
                 duration = :duration,
                 score = :score
             WHERE
-                chkid = :chkid
-                AND
-                pid = :pid
-                AND
-                umn = :umn
+                checktypeid = :checktypeid
+                AND pid = :pid
+                AND umn = :umn
             LIMIT 1",
-            compact( 'chkid', 'pid', 'umn', 'created', 'duration', 'score')
+            compact( 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score' )
         );
     }
-    function checkItem( $chkid , $pid , $umn ) {
+    function checkItem( $checktypeid, $pid, $umn ) {
         $res = db(
             "SELECT
                 *
             FROM
                 checks
             WHERE
-                chkid = :chkid
-                AND
-                pid = :pid
-                AND
-                umn = :umn
+                checktypeid = :checktypeid
+                AND pid = :pid
+                AND umn = :umn
             LIMIT 1",
-            compact( 'chkid', 'pid', 'umn' )
+            compact( 'checktypeid', 'pid', 'umn' )
         );
         return mysql_fetch_array( $res );
     }

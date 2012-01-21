@@ -1,10 +1,10 @@
 <?php
-if ( empty( $chkid ) ) {
+if ( empty( $checktypeid ) ) {
     ?><h2>Δημιουργία νέου ελέγχου</h2><?php
 }
 else {
     ?><h2>Επεξεργασία ελέγχου <?php
-    echo htmlspecialchars( $checktypes[ $chkid ][ 'name' ] );
+    echo htmlspecialchars( $checktypes[ $checktypeid ][ 'name' ] );
     ?>, στο σκάφος <?php
     echo htmlspecialchars( $pid );
     ?>, από τον τεχνικό <?php
@@ -14,7 +14,7 @@ else {
 ?>
 Πληκτρολογήστε τις πληροφορίες του ελέγχου:
 <form action='check/<?php
-    if ( empty( $chkid ) || empty( $pid ) || empty( $umn ) ) {
+    if ( empty( $checktypeid ) || empty( $pid ) || empty( $umn ) ) {
         ?>create<?php
     }
     else {
@@ -24,8 +24,8 @@ else {
     ?>' method='post'>
     <?php
     if ( $update ) {
-        ?><input type='hidden' name='chkid' value='<?php
-        echo $chkid;
+        ?><input type='hidden' name='checktypeid' value='<?php
+        echo $checktypeid;
         ?>' />
         <input type='hidden' name='pid' value='<?php
         echo $pid;
@@ -36,21 +36,25 @@ else {
     }
     ?>
     <div>
-    <label>Όνομα Ελέγχου:</label> <select name='chkid'
+    <label>Όνομα Ελέγχου:</label> <select name='checktypeid'
         <?php
-        if ( isset( $errors[ 'nochkid' ] ) ) {
-            ?> class='error' <?php
+        $classes = array();
+        if ( isset( $errors[ 'nochecktypeid' ] ) ) {
+            $classes[] = 'error';
         }
         if ( $update ) {
-            ?> class='update' disabled='disabled'<?php
+            $classes[] = 'update';
+            ?> disabled='disabled'<?php
         }
-        ?>>
+        ?>class='<?php
+        echo implode( ' ', $classes );
+        ?>'>
         <?php
         foreach ( $checktypes as $checktype ) {
             ?><option value='<?php
-            echo htmlspecialchars( $checktype[ 'chkid' ] );
+            echo htmlspecialchars( $checktype[ 'checktypeid' ] );
             ?>'<?php
-            if ( $chkid == $checktype[ 'chkid' ] ) {
+            if ( $checktypeid == $checktype[ 'checktypeid' ] ) {
                 echo ' SELECTED';
             }
             ?>><?php
@@ -76,7 +80,7 @@ else {
             echo htmlspecialchars( $plane[ 'pid' ] );
             ?>'<?php
             if ( $pid == $plane[ 'pid' ] ) {
-                echo ' SELECTED';
+                ?> selected='selected'<?php
             }
             ?>><?php
             echo htmlspecialchars( $plane[ 'pid' ] );
@@ -86,16 +90,27 @@ else {
         </select>
     </div>
     <div>
-        <label>Όνομα τεχνικού:</label> <input type='text' name='umn' value='<?php
-        echo htmlspecialchars( $techs[ $umn ][ 'name' ] );
-        ?>' <?php
+        <label>Τεχνικός:</label> <select name='umn' <?php
+        $classes = array();
         if ( isset( $errors[ 'noumn' ] ) ) {
-            ?> class='error' <?php
+            $classes[] = 'error';
         }
         if ( $update ) {
-            ?> class='update' disabled='disabled'<?php
+            $classes[] = 'update';
+            ?> disabled='disabled'<?php
         }
-        ?> />
+        ?> class="<?php
+        echo implode( ' ', $classes );
+        ?>"><?php
+        foreach ( $techs as $tech ) {
+            ?><option value='<?php
+            echo $tech[ 'umn' ];
+            ?>'><?php
+            echo htmlspecialchars( $tech[ 'name' ] );
+            ?></option><?php
+        }
+        ?>
+        </select>
     </div>
     <div>
         <label>Ημερομηνία διεξαγωγής:</label> <input type='text' name='created' value='<?php
