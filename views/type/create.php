@@ -59,7 +59,7 @@ else {
             ?><input type='submit' value='Ενημέρωση' /><?php
         }
         ?>
-        <a href='checktype/listing' class='cancel'>Άκυρο</a>
+        <a href='types/listing' class='cancel'>Άκυρο</a>
         <div class='eof'></div>
     </div>
 </form>
