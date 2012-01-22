@@ -168,6 +168,7 @@ form input[type=text] {
 }
 form div.actions {
     border-bottom: none;
+    background-color: white;
 }
 form div.eof {
     border-bottom: none;
