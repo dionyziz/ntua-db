@@ -19,7 +19,7 @@
             view( 'plane/create', compact( 'errors', 'pid', 'tid', 'types' ) );
         }
         public static function create( $pid, $tid ) {
-            $vars = compact( 'pid', 'tid', 'types' );
+            $vars = compact( 'pid', 'tid' );
             if ( !empty( $errors ) ) {
                 Redirect( 'plane/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
