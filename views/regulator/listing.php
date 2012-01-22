@@ -45,7 +45,7 @@
                         echo $regulator[ 'checked' ];
                         ?>
                     <td>
-                        <a href='regulator/create?umn=<?php
+                        <a href='employee/create?umn=<?php
                         echo $regulator[ 'umn' ];
                         ?>' class='update' title='Επεξεργασία'>Επεξεργασία εργαζομένου</a>
                         <form action='regulator/delete' method='post' class='delete'>

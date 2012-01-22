@@ -40,8 +40,7 @@
                 Redirect( 'tech/listing' );
             }
             else if ( $occ == 'reg' ) {
-                regulatorCreate( $umn );
-                Redirect( 'regulator/listing' );
+                Redirect( 'regulator/create?&umn=' . $umn );
             }
             Redirect( 'employee/listing' );
         }
