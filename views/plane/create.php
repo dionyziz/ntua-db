@@ -8,7 +8,6 @@ else {
     ?></h2><?php
 }
 ?>
-Πληκτρολογήστε τις πληροφορίες του νέου αεροσκάφους:
 <form action='plane/<?php
     if ( empty( $pid ) ) {
         ?>create<?php
@@ -59,5 +58,16 @@ else {
         ?>
         </select>
     </div>
-    <input type='submit' value='Αποθήκευση' />
+    <div class='actions'>
+        <?php
+        if ( empty( $pid ) ) {
+            ?><input type='submit' value='Δημιουργία' /><?php
+        }
+        else {
+            ?><input type='submit' value='Ενημέρωση' /><?php
+        }
+        ?>
+        <a href='checktype/listing' class='cancel'>Άκυρο</a>
+        <div class='eof'></div>
+    </div>
 </form>

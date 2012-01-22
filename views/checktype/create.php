@@ -1,5 +1,5 @@
 <?php
-if ( empty( $chkid ) ) {
+if ( empty( $checktypeid ) ) {
     ?><h2>Δημιουργία νέου τύπου ελέγχου</h2><?php
 }
 else {
@@ -8,9 +8,8 @@ else {
     ?></h2><?php
 }
 ?>
-Πληκτρολογήστε τις πληροφορίες του νέου τύπου ελέγχου:
 <form action='checktype/<?php
-    if ( empty( $chkid ) ) {
+    if ( empty( $checktypeid ) ) {
         ?>create<?php
     }
     else {
@@ -18,9 +17,9 @@ else {
     }
     ?>' method='post'>
     <?php
-    if ( !empty( $chkid ) ) {
-        ?><input type='hidden' name='chkid' value='<?php
-        echo $chkid;
+    if ( !empty( $checktypeid ) ) {
+        ?><input type='hidden' name='checktypeid' value='<?php
+        echo $checktypeid;
         ?>' /><?php
     }
     ?>
@@ -42,5 +41,16 @@ else {
         }
         ?> />
     </div>
-    <input type='submit' value='Αποθήκευση' />
+    <div class='actions'>
+        <?php
+        if ( empty( $checktypeid ) ) {
+            ?><input type='submit' value='Δημιουργία' /><?php
+        }
+        else {
+            ?><input type='submit' value='Ενημέρωση' /><?php
+        }
+        ?>
+        <a href='checktype/listing' class='cancel'>Άκυρο</a>
+        <div class='eof'></div>
+    </div>
 </form>
