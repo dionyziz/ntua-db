@@ -1,12 +1,12 @@
 <?php
     class PlanetypeController extends Controller {
         public static function listing() {
-            $types = planetypeListing();
-            view( 'planetype/listing', array( 'types' => $types ) );
+            $types = Planetype::listing();
+            view( 'planetype/listing', compact( 'types' ) );
         }
         public static function createView( $errors, $tid, $name, $weight, $capacity ) {
             if ( !empty( $tid ) ) {
-                $type = planetypeItem( $tid );
+                $type = Planetype::item( $tid );
                 if ( $type === false ) {
                     throw new Exception( 'The type you are trying to edit does not exist' );
                 }
@@ -29,7 +29,7 @@
             if ( !empty( $errors ) ) {
                 Redirect( 'planetype/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
-            planetypeCreate( $name, $weight, $capacity );
+            Planetype::create( $name, $weight, $capacity );
             Redirect( 'planetype/listing' );
         }
         public static function delete( $tid ) {
@@ -38,7 +38,7 @@
             if ( !empty( $errors ) ) {
                 Redirect( 'planetype/listing' );
             }
-            planetypeDelete( $tid );
+            Planetype::delete( $tid );
             Redirect( 'planektype/listing' );
         }
         public static function update( $tid, $name, $weight, $capacity ) {
@@ -47,7 +47,7 @@
             if ( !empty( $errors ) ) {
                 Redirect( 'planetype/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
-            planetypeUpdate( $tid, $name, $weight, $capacity );
+            Planetype::update( $tid, $name, $weight, $capacity );
             Redirect( 'planetype/listing' );
         }
     }

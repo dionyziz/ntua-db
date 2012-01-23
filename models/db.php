@@ -136,7 +136,7 @@
         );
         return mysql_affected_rows();
     }
-    function db_select( $table, $where, $select = array( '*' ) ) {
+    function db_select( $table, $where, $select = array( '*' ), $id_column = false ) {
         $wreplace = array();
         $wfields = array();
         foreach ( $where as $field => $value ) {
@@ -150,7 +150,8 @@
                 ' . $table . '
             WHERE
                 ' . implode( ' AND ', $wfields ),
-                $wreplace
+            $wreplace,
+            $id_column
         );
     }
     function db_inner_join( $tables, $joinfields, $where, $select = array( '*' ) ) { // joinfields: array( 'user' => 'id' );

@@ -1,61 +1,23 @@
 <?php
-    function checktypeCreate( $name, $maxscore ) {
-        db(
-            "INSERT INTO
-                checktypes
-            SET
-                name = :name,
-                maxscore = :maxscore",
-            compact( 'name', 'maxscore' )
-        );
-    }
-    function checktypeListing() {
-        $res = db(
-            "SELECT
-                *
-            FROM
-                checktypes"
-        );
-        $rows = array();
-        while ( $row = mysql_fetch_array( $res ) ) {
-            $rows[ $row[ 'checktypeid' ] ] = $row;
+    class Checktype {
+        public static function Create( $name, $maxscore ) {
+            return db_insert( 'checktypes', compact( 'name', 'maxscore' ) );
         }
-        return $rows;
-    }
-    function checktypeDelete( $checktypeid ) {
-        db(
-            "DELETE FROM
-                checktypes
-            WHERE
-                checktypeid = :checktypeid
-            LIMIT 1",
-            compact( 'checktypeid' )
-        );
-    }
-    function checktypeUpdate( $checktypeid, $name, $maxscore ) {
-        db(
-            "UPDATE
-                checktypes
-            SET
-                name = :name,
-                maxscore = :maxscore
-            WHERE
-                checktypeid = :checktypeid
-            LIMIT 1",
-            compact( 'checktypeid', 'name', 'maxscore' )
-        );
-    }
-    function checktypeItem( $checktypeid ) {
-        $res = db(
-            "SELECT
-                *
-            FROM
-                checktypes
-            WHERE
-                checktypeid = :checktypeid
-            LIMIT 1",
-            compact( 'checktypeid' )
-        );
-        return mysql_fetch_array( $res );
+        public static function Listing() {
+            $res = db_select( 'checktypes', array(), array( '*' ), 'checktypeid' );
+        }
+        public static function Delete( $checktypeid ) {
+            db_delete( 'checktypes', compact( 'checktypeid' ) );
+        }
+        public static function Update( $checktypeid, $name, $maxscore ) {
+            db_update(
+                'checktypes',
+                compact( 'checktypeid' ),
+                compact( 'name', 'maxscore' )
+            );
+        }
+        public static function Item( $checktypeid ) {
+            return array_shift( db_select( 'checktypes', compact( 'checktypeid' ) ) );
+        }
     }
 ?>

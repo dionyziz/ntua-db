@@ -1,68 +1,43 @@
 <?php
-    function planeCreate( $pid, $tid ) {
-        db(
-            "INSERT INTO
-                planes
-            SET
-                pid = :pid,
-                tid = :tid",
-            compact( 'pid', 'tid' )
-        );
-    }
-    function planeListing() {
-        $res = db(
-            "SELECT
-                t.*, p.*
-            FROM
-                planes p
-            CROSS JOIN
-                planetypes t
-            ON
-                t.tid = p.tid"
-        );
-        $rows = array();
-        while ( $row = mysql_fetch_array( $res ) ) {
-            $rows[ $row[ 'pid' ] ] = $row;
+    class Plane {
+        public static function Create( $pid, $tid ) {
+            db_insert( 'planes', compact( 'pid', 'tid' ) );
         }
-        return $rows;
-    }
-    function planeDelete( $pid ) {
-        db(
-            "DELETE FROM
-                planes
-            WHERE
-                pid = :pid
-            LIMIT 1",
-            compact( 'pid' )
-        );
-    }
-    function planeUpdate( $pid, $tid ) {
-        db(
-            "UPDATE
-                planes
-            SET
-                tid = :tid
-            WHERE
-                pid = :pid
-            LIMIT 1",
-            compact( 'pid', 'tid' )
-        );
-    }
-    function planeItem( $pid ) {
-        $res = db(
-            "SELECT
-                t.*, p.*
-            FROM
-                planes p
-            INNER JOIN
-                planetypes t
-            ON
-                p.tid = t.tid
-            WHERE
-                p.pid = :pid
-            LIMIT 1",
-            compact( 'pid' )
-        );
-        return mysql_fetch_array( $res );
+        public static function Listing() {
+            return db_array(
+                "SELECT
+                    t.*, p.*
+                FROM
+                    planes p
+                CROSS JOIN
+                    planetypes t ON t.tid = p.tid",
+                array(),
+                'pid'
+            );
+        }
+        public static function Delete( $pid ) {
+            db_delete( 'planes', compact( 'pid' ) );
+        }
+        public static function Update( $pid, $tid ) {
+            db_update( 'planes', compact( 'pid' ), compact( 'tid' ) );
+        }
+        public static function Item( $pid ) {
+            return mysql_fetch_array(
+                db(
+                    "SELECT
+                        t.*, p.*
+                    FROM
+                        planes p
+                    INNER JOIN
+                        planetypes t
+                    ON
+                        p.tid = t.tid
+                    WHERE
+                        p.pid = :pid
+                    LIMIT 1",
+                    compact( 'pid' )
+                )
+            );
+        }
     }
 ?>

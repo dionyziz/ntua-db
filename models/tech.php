@@ -1,37 +1,16 @@
 <?php
-    function techCreate( $umn ) {
-        db(
-            "INSERT INTO
-                techs
-            SET
-                umn = :umn",
-            compact( 'umn' )
-        );
-    }
-    function techListing() {
-        return employeeListing( 'tech' );
-    }
-    function techDelete( $umn ) {
-        db(
-            "DELETE FROM
-                techs
-            WHERE
-                umn = :umn
-            LIMIT 1",
-            compact( 'umn' )
-        );
-    }
-    function techItem( $umn ) {
-        $res = db(
-            "SELECT
-                *
-            FROM
-                techs
-            WHERE
-                umn = :umn
-            LIMIT 1",
-            compact( 'umn' )
-        );
-        return mysql_fetch_array( $res );
+    class Tech {
+        public static function Create( $umn ) {
+            db_insert( 'techs', compact( 'umn' ) );
+        }
+        public static function Listing() {
+            return Employee::Listing( 'tech' );
+        }
+        public static function Delete( $umn ) {
+            db_delete( 'techs', compact( 'umn' ) );
+        }
+        public static function Item( $umn ) {
+            return db_select( 'techs', compact( 'umn' ) );
+        }
     }
 ?>

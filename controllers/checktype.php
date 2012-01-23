@@ -6,7 +6,7 @@
         }
         public function createView( $errors, $checktypeid, $name, $maxscore ) {
             if ( !empty( $checktypeid ) ) {
-                $checktype = checktypeItem( $checktypeid );
+                $checktype = Checktype::item( $checktypeid );
                 if ( $checktype === false ) {
                     throw new Exception( 'The checktype you are trying to edit does not exist' );
                 }
@@ -26,7 +26,7 @@
             if ( !empty( $errors ) ) {
                 Redirect( 'checktype/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
-            checktypeCreate( $name, $maxscore );
+            Checktype::create( $name, $maxscore );
             Redirect( 'checktype/listing' );
         }
         public static function delete( $checktypeid ) {
@@ -35,7 +35,7 @@
             if ( !empty( $errors ) ) {
                 Redirect( 'checktype/listing' );
             }
-            checktypeDelete( $checktypeid );
+            Checktype::delete( $checktypeid );
             Redirect( 'checktype/listing' );
         }
         public static function update( $checktypeid, $name, $maxscore ) {
@@ -44,7 +44,7 @@
             if ( !empty( $errors ) ) {
                 Redirect( 'checktype/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
-            checktypeUpdate ( $checktypeid, $name, $maxscore );
+            Checktype::update( $checktypeid, $name, $maxscore );
             Redirect( 'checktype/listing' );
         }
     }

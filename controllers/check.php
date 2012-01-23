@@ -1,29 +1,29 @@
 <?php
     class CheckController extends Controller {
         public static function listing() {
-            $checks = checkListing();
+            $checks = Check::listing();
             view( 'check/listing', array( 'checks' => $checks ) );
         }
         public static function createView( $errors, $checktypeid, $pid, $umn, $created, $duration, $score ) {
             if ( !empty( $checktypeid ) ) {
-                $check = checkItem( $checktypeid, $pid, $umn );
+                $check = Check::item( $checktypeid, $pid, $umn );
                 if  ( $check === false ) {
                     throw new Exception( 'The check you are trying to edit does not exist' );
                 }
-                if ( empty ( $created ) ) {
+                if ( empty( $created ) ) {
                     $created = $check[ 'created' ];
                 }
-                if ( empty ( $duration ) ) {
+                if ( empty( $duration ) ) {
                     $duration = $check[ 'duration' ];
                 }
-                if ( empty ( $score ) ) {
+                if ( empty( $score ) ) {
                     $score = $check[ 'score' ];
                 }
             }
             $errors = array_flip( explode( ',', $errors ) );
-            $checktypes = checktypeListing();
-            $planes = planeListing();
-            $techs = techListing();
+            $checktypes = Checktype::listing();
+            $planes = Plane::listing();
+            $techs = Tech::listing();
             view( 'check/create', compact( 'errors', 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score', 'checktypes', 'planes', 'techs' ) );
         }
         public static function create( $checktypeid, $pid, $umn, $created, $duration, $score ) {
@@ -32,7 +32,7 @@
             if ( !empty( $errors ) ) {
                 Redirect( 'check/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
-            checkCreate( $checktypeid, $pid, $umn, $created, $duration, $score);
+            Check::create( $checktypeid, $pid, $umn, $created, $duration, $score);
             Redirect( 'check/listing' );
         }
         public static function delete( $checktypeid, $pid, $umn ) {
@@ -41,7 +41,7 @@
             if ( !empty( $errors ) ) {
                 Redirect( 'check/listing' );
             }
-            checkDelete( $checktypeid , $pid, $umn);
+            Check::delete( $checktypeid , $pid, $umn);
             Redirect( 'check/listing' );
         } 
         public static function update( $checktypeid, $pid, $umn, $created, $duration, $score ) {
@@ -50,7 +50,7 @@
             if ( !empty( $errors ) ) {
                 Redirect( 'check/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
-            checkUpdate( $checktypeid, $pid, $umn, $created, $duration, $score );
+            Check::update( $checktypeid, $pid, $umn, $created, $duration, $score );
             Redirect( 'check/listing' );
         }
     }
