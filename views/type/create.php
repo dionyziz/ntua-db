@@ -8,7 +8,6 @@ else {
     ?></h2><?php
 }
 ?>
-Πληκτρολογήστε τις πληροφορίες του τύπου αεροσκάφους:
 <form action='type/<?php
     if ( empty( $tid ) ) {
         ?>create<?php
@@ -51,5 +50,16 @@ else {
         }
         ?> />
     </div>
-    <input type='submit' value='Αποθήκευση' />
+    <div class='actions'>
+        <?php
+        if ( empty( $pid ) ) {
+            ?><input type='submit' value='Δημιουργία' /><?php
+        }
+        else {
+            ?><input type='submit' value='Ενημέρωση' /><?php
+        }
+        ?>
+        <a href='types/listing' class='cancel'>Άκυρο</a>
+        <div class='eof'></div>
+    </div>
 </form>

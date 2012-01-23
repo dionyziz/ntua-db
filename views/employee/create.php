@@ -1,14 +1,13 @@
 <?php
 if ( empty( $umn ) ) {
-    ?><h2>Δημιουργία νέου εργαζομένου</h2><?php
+    ?><h2>Νέος εργαζόμενος</h2><?php
 }
 else {
-    ?><h2>Επεξεργασία εργαζομένου <?php
+    ?><h2><?php
     echo htmlspecialchars( $name );
     ?></h2><?php
 }
 ?>
-Πληκτρολογήστε τις πληροφορίες του εργαζομένου:
 <form action='employee/<?php
     if ( empty( $umn ) ) {
         ?>create<?php
@@ -24,6 +23,15 @@ else {
         ?>' /><?php
     }
     ?>
+    <div>
+        <label>Όνομα και επώνυμο:</label> <input type='text' name='name' value='<?php
+        echo htmlspecialchars( $name );
+        ?>' <?php
+        if ( isset( $errors[ 'noname' ] ) ) {
+            ?> class='error' <?php
+        }
+        ?> />
+    </div>
     <div>
         <label>UMN:</label> <input type='text' name='umn' value='<?php
         echo htmlspecialchars( $umn );
@@ -44,15 +52,6 @@ else {
             ?> class='error' <?php
         }
         if ( isset( $errors[ 'duplicatessn' ] ) ) {
-            ?> class='error' <?php
-        }
-        ?> />
-    </div>
-    <div>
-        <label>Όνομα:</label> <input type='text' name='name' value='<?php
-        echo htmlspecialchars( $name );
-        ?>' <?php
-        if ( isset( $errors[ 'noname' ] ) ) {
             ?> class='error' <?php
         }
         ?> />
@@ -107,10 +106,26 @@ else {
             ?></select>
     </div>
     <div id='reg_check'>
-            <label>Τελευταίο check-up: </label>
-            <input type="text" value='<?php
+        <label>Τελευταίο check-up: </label>
+        <input type="text" <?php
+        if ( isset( $errprs[ 'nosalary' ] ) ) {
+            ?> class='error'<?php
+        }
+        ?>
+        value='<?php
         echo htmlspecialchars( $salary );
-        ?>' name='checked'/>
+        ?>' name='checked' />
     </div>
-    <input type='submit' value='Αποθήκευση' />
+    <div class='actions'>
+        <?php
+        if ( empty( $umn ) ) {
+            ?><input type='submit' value='Δημιουργία' /><?php
+        }
+        else {
+            ?><input type='submit' value='Ενημέρωση' /><?php
+        }
+        ?>
+        <a href='employee/listing' class='cancel'>Άκυρο</a>
+        <div class='eof'></div>
+    </div>
 </form>

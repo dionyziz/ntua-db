@@ -12,7 +12,6 @@ else {
     ?></h2><?php
 }
 ?>
-Πληκτρολογήστε τις πληροφορίες του ελέγχου:
 <form action='check/<?php
     if ( empty( $checktypeid ) || empty( $pid ) || empty( $umn ) ) {
         ?>create<?php
@@ -139,5 +138,16 @@ else {
         }
         ?> />
     </div>
-    <input type='submit' value='Αποθήκευση' />
+    <div class='actions'>
+        <?php
+        if ( empty( $checktypeid ) ) {
+            ?><input type='submit' value='Δημιουργία' /><?php
+        }
+        else {
+            ?><input type='submit' value='Ενημέρωση' /><?php
+        }
+        ?>
+        <a href='check/listing' class='cancel'>Άκυρο</a>
+        <div class='eof'></div>
+    </div>
 </form>
