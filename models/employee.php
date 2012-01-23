@@ -1,6 +1,6 @@
 <?php
     class Employee {
-        public static create( $umn, $ssn, $name, $phone, $addr, $salary ) {
+        public static function create( $umn, $ssn, $name, $phone, $addr, $salary ) {
             try {
                 return db_insert(
                     'employees',
@@ -11,7 +11,7 @@
                 throw new Duplicate();
             }
         }
-        public static listing( $occ ) {
+        public static function listing( $occ ) {
             $res = db(
                 "SELECT
                     e.*, r.checked
@@ -38,10 +38,10 @@
             }
             return $rows;
         }
-        public static delete( $umn ) {
+        public static function delete( $umn ) {
             db_delete( 'employees', compact( 'umn' ) );
         }
-        public static update( $umn, $ssn = false, $name = false, $phone = false, $addr = false, $salary = false, $imageid = false ) {
+        public static function update( $umn, $ssn = false, $name = false, $phone = false, $addr = false, $salary = false, $imageid = false ) {
             $fields = compact( 'ssn', 'name', 'phone', 'addr', 'salary', 'imageid' );
 
             foreach ( $fields as $field => $value ) {
@@ -52,8 +52,8 @@
 
             db_update( 'employees', compact( 'umn' ), $fields );
         }
-        public static item( $umn ) {
-            return db_select( 'employees', compact( 'umn' ) );
+        public static function item( $umn ) {
+            return array_shift( db_select( 'employees', compact( 'umn' ) ) );
         }
     }
 ?>

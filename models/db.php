@@ -1,5 +1,7 @@
 <?php
     /*
+    Version 2
+
     db.php: A slender database wrapper.
 
     Copyright (C) 2011 by Dionysis "dionyziz" Zindros <dionyziz@gmail.com>
@@ -143,13 +145,12 @@
             $wfields[] = "$field = :where_$field";
             $wreplace[ 'where_' . $field ] = $value;
         }
+        $sql = 'SELECT ' . implode( ', ', $select ) . ' FROM ' . $table;
+        if ( !empty( $wfields ) ) {
+            $sql .= ' WHERE ' . implode( ' AND ', $wfields );
+        }
         return db_array(
-            'SELECT
-                ' . implode( ', ', $select ) . '
-            FROM
-                ' . $table . '
-            WHERE
-                ' . implode( ' AND ', $wfields ),
+            $sql,
             $wreplace,
             $id_column
         );

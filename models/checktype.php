@@ -1,15 +1,15 @@
 <?php
     class Checktype {
-        public static function Create( $name, $maxscore ) {
+        public static function create( $name, $maxscore ) {
             return db_insert( 'checktypes', compact( 'name', 'maxscore' ) );
         }
-        public static function Listing() {
-            $res = db_select( 'checktypes', array(), array( '*' ), 'checktypeid' );
+        public static function listing() {
+            return db_select( 'checktypes', array(), array( '*' ), 'checktypeid' );
         }
-        public static function Delete( $checktypeid ) {
+        public static function delete( $checktypeid ) {
             db_delete( 'checktypes', compact( 'checktypeid' ) );
         }
-        public static function Update( $checktypeid, $name, $maxscore ) {
+        public static function update( $checktypeid, $name, $maxscore ) {
             db_update(
                 'checktypes',
                 compact( 'checktypeid' ),

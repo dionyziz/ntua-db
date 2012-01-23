@@ -1,7 +1,7 @@
 <?php
     class ChecktypeController extends Controller {
         public static function listing() {
-            $checktypes = checktypeListing();
+            $checktypes = Checktype::listing();
             view( 'checktype/listing', array( 'checktypes' => $checktypes ) );
         }
         public function createView( $errors, $checktypeid, $name, $maxscore ) {
