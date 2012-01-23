@@ -29,13 +29,6 @@
     function planeDelete( $pid ) {
         db(
             "DELETE FROM
-                checks
-            WHERE
-                pid = :pid",
-            compact( 'pid' )
-            );
-        db(
-            "DELETE FROM
                 planes
             WHERE
                 pid = :pid

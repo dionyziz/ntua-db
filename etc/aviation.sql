@@ -1,14 +1,14 @@
 CREATE TABLE checks (
+    checkid INT AUTO_INCREMENT PRIMARY KEY,
     checktypeid INT NOT NULL,
     pid INT NOT NULL,
-    umn INT NOT NULL,
+    umn INT,
     created DATETIME,
     duration INT NOT NULL,
     score INT NOT NULL,
-    PRIMARY KEY ( checktypeid, pid, umn ),
-    FOREIGN KEY ( checktypeid ) REFERENCES checktypes( checktypeid ),
-    FOREIGN KEY ( pid ) REFERENCES planes( pid ),
-    FOREIGN KEY ( umn ) REFERENCES techs( umn ),
+    FOREIGN KEY ( checktypeid ) REFERENCES checktypes( checktypeid ) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY ( pid ) REFERENCES planes( pid ) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY ( umn ) REFERENCES techs( umn ) ON DELETE CASCADE ON UPDATE CASCADE, -- would prefer ON DELETE SET NULL ON UPDATE CASCADE here
     CHECK score > ( SELECT maxscore FROM checktypes t WHERE checktypeid = t.checktypeid )
 ) ENGINE=InnoDB;
 CREATE TABLE checktypes (
@@ -24,36 +24,36 @@ CREATE TABLE employees (
     phone VARCHAR( 32 ),
     addr TEXT,
     salary INT
-    FOREIGN KEY ( imageid ) REFERENCES images( imageid )
+    FOREIGN KEY ( imageid ) REFERENCES images( imageid ) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 CREATE TABLE planes (
     pid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     tid INT NOT NULL,
-    FOREIGN KEY ( tid ) REFERENCES types( tid )
+    FOREIGN KEY ( tid ) REFERENCES planetypes( tid ) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 CREATE TABLE regulators (
     umn INT NOT NULL PRIMARY KEY,
     checked DATETIME NOT NULL,
-    FOREIGN KEY ( umn ) REFERENCES employees( umn )
+    FOREIGN KEY ( umn ) REFERENCES employees( umn ) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 CREATE TABLE specializations (
     umn INT NOT NULL,
     tid INT NOT NULL,
     PRIMARY KEY ( umn, tid ),
-    FOREIGN KEY umn REFERENCES techs( umn ),
-    FOREIGN KEY tid REFERENCES types( tid )
+    FOREIGN KEY ( umn ) REFERENCES techs( umn ) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY ( tid ) REFERENCES planetypes( tid ) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 CREATE TABLE techs (
     umn INT NOT NULL PRIMARY KEY,
-    FOREIGN KEY umn REFERENCES employees( umn )
+    FOREIGN KEY ( umn ) REFERENCES employees( umn ) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB;
-CREATE TABLE types (
+CREATE TABLE planetypes (
     tid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR( 32 ) NOT NULL,
     capacity INT DEFAULT NULL,
     weight INT DEFAULT NULL,
     imageid INT DEFAULT NULL,
-    FOREIGN KEY ( imageid ) REFERENCES images( imageid )
+    FOREIGN KEY ( imageid ) REFERENCES images( imageid ) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 CREATE TABLE users (
     uid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

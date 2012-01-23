@@ -8,7 +8,7 @@ else {
     ?></h2><?php
 }
 ?>
-<form action='type/<?php
+<form action='planetype/<?php
     if ( empty( $tid ) ) {
         ?>create<?php
     }
@@ -59,7 +59,7 @@ else {
             ?><input type='submit' value='Ενημέρωση' /><?php
         }
         ?>
-        <a href='types/listing' class='cancel'>Άκυρο</a>
+        <a href='planetypes/listing' class='cancel'>Άκυρο</a>
         <div class='eof'></div>
     </div>
 </form>

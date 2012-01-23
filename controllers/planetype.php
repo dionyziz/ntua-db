@@ -1,12 +1,12 @@
 <?php
-    class TypeController extends Controller {
+    class PlanetypeController extends Controller {
         public static function listing() {
-            $types = typeListing();
-            view( 'type/listing', array( 'types' => $types ) );
+            $types = planetypeListing();
+            view( 'planetype/listing', array( 'types' => $types ) );
         }
-        public static function createView( $errors, $tid, $name, $weight, $capacity ) {
+        public static function planecreateView( $errors, $tid, $name, $weight, $capacity ) {
             if ( !empty( $tid ) ) {
-                $type = typeItem( $tid );
+                $type = planetypeItem( $tid );
                 if ( $type === false ) {
                     throw new Exception( 'The type you are trying to edit does not exist' );
                 }
@@ -21,34 +21,34 @@
                 }
             }
             $errors = array_flip( explode( ',', $errors ) );
-            view( 'type/create', compact( 'errors', 'tid', 'name', 'weight', 'capacity' ) );
+            view( 'planetype/create', compact( 'errors', 'tid', 'name', 'weight', 'capacity' ) );
         }
         public static function create( $name, $weight, $capacity ) {
             $vars = compact( 'name', 'weight', 'capacity' );
             $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
-                Redirect( 'type/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
+                Redirect( 'planetype/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
-            typeCreate( $name, $weight, $capacity );
-            Redirect( 'type/listing' );
+            planetypeCreate( $name, $weight, $capacity );
+            Redirect( 'planetype/listing' );
         }
         public static function delete( $tid ) {
             $vars = compact( 'tid' );
             $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
-                Redirect( 'type/listing' );
+                Redirect( 'planetype/listing' );
             }
-            typeDelete( $tid );
-            Redirect( 'type/listing' );
+            planetypeDelete( $tid );
+            Redirect( 'planektype/listing' );
         }
         public static function update( $tid, $name, $weight, $capacity ) {
             $vars = compact( 'tid', 'name', 'weight', 'capacity' );
             $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
-                Redirect( 'type/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
+                Redirect( 'planetype/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
-            typeUpdate( $tid, $name, $weight, $capacity );
-            Redirect( 'type/listing' );
+            planetypeUpdate( $tid, $name, $weight, $capacity );
+            Redirect( 'planetype/listing' );
         }
     }
 ?>
