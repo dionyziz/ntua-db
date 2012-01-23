@@ -112,7 +112,7 @@ else {
         </select>
     </div>
     <div>
-        <label>Ημερομηνία διεξαγωγής:</label> <input type='text' name='created' value='<?php
+        <label>Ημερομηνία διεξαγωγής:</label> <input type='text' id='datecheckcreated' name='created' value='<?php
         echo htmlspecialchars( $created );
         ?>' <?php
         if ( isset( $errors[ 'nocreated' ] ) ) {
