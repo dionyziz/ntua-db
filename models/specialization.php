@@ -37,6 +37,7 @@
                 specializations
             WHERE
                 umn = :umn
+            AND
                 tid = :tid
             LIMIT 1",
             compact( 'umn', 'tid' )
