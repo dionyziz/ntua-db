@@ -91,11 +91,11 @@ else {
                 ?> class='error'<?php
             }
             ?>>
+            <option selected value = "">Χωρίς ειδίκευση</option>
             <?php
             $occupations = array(
                 'tech' => 'Τεχνικός',
-                'reg' => 'Διαχειριστής',
-                '' => 'Χωρίς ειδίκευση'
+                'reg' => 'Διαχειριστής'
             );
             foreach ( $occupations as $value => $caption ) {
                 ?><option value="<?php
