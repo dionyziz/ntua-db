@@ -1,7 +1,7 @@
 <?php
-    class techController extends Controller{
-        public static function listing( ) {
-            $techs = techListing( );
+    class TechController extends Controller{
+        public static function listing() {
+            $techs = Tech::listing();
             view( 'tech/listing', array( 'techs' => $techs ) );
         }
         public function createView( $errors ) {
@@ -13,7 +13,7 @@
             if ( !empty( $errors ) ) {
                 Redirect( 'tech/listing' );
             }
-            techDelete( $umn );
+            Tech::delete( $umn );
             Redirect( 'tech/listing' );
         }
         public static function update( $umn ) {

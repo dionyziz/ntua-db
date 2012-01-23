@@ -1,89 +1,44 @@
 <?php
-    function checkCreate( $checktypeid, $pid, $umn, $created, $duration, $score) {
-        db(
-            "INSERT INTO
-                checks
-            SET
-                checktypeid = :checktypeid,
-                pid = :pid,
-                umn = :umn,
-                created = :created,
-                duration = :duration,
-                score = :score",
-            compact( 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score')
-        );
-    }
-    function checkListing() {
-        $res = db(
-            "SELECT
-                e.name AS techName, t.name AS planeTypeName, ct.name AS checkTypeName, ct.maxscore, c.*
-             FROM
-                 checks c
-             INNER JOIN
-                 planes p
-             ON
-                 c.pid = p.pid
-                 INNER JOIN
-                     planetypes t
-                 ON
-                     p.tid = t.tid
-                     INNER JOIN
-                         checktypes ct
-                     ON
-                         c.checktypeid = ct.checktypeid
-                         INNER JOIN
-                             employees e
-                         ON
-                             e.umn = c.umn
-                         ORDER BY c.pid"
+    class Check {
+        public static function create( $checktypeid, $pid, $umn, $created, $duration, $score) {
+            db_insert(
+                'checks',
+                compact( 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score' )
             );
-        $rows = array();
-        while ( $row = mysql_fetch_array( $res ) ) {
-            $rows[] = $row;
         }
-        return $rows;
-    }
-    function checkDelete( $checktypeid, $pid, $umn ) {
-        db(
-            "DELETE FROM
-                checks
-            WHERE
-                checktypeid = :checktypeid
-                AND pid = :pid
-                AND umn = :umn
-            LIMIT 1",
-            compact( 'checktypeid', 'pid', 'umn' )
-        );
-    }
-    function checkUpdate( $checktypeid, $pid, $umn, $created, $duration, $score ) {
-        db(
-            "UPDATE
-                checks
-            SET
-                created = :created,
-                duration = :duration,
-                score = :score
-            WHERE
-                checktypeid = :checktypeid
-                AND pid = :pid
-                AND umn = :umn
-            LIMIT 1",
-            compact( 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score' )
-        );
-    }
-    function checkItem( $checktypeid, $pid, $umn ) {
-        $res = db(
-            "SELECT
-                *
-            FROM
-                checks
-            WHERE
-                checktypeid = :checktypeid
-                AND pid = :pid
-                AND umn = :umn
-            LIMIT 1",
-            compact( 'checktypeid', 'pid', 'umn' )
-        );
-        return mysql_fetch_array( $res );
+        public static function listing() {
+            return db_array(
+                "SELECT
+                     e.name AS techName, t.name AS planeTypeName,
+                     ct.name AS checkTypeName, ct.maxscore,
+                     c.*
+                 FROM
+                     checks c
+                 CROSS JOIN
+                     planes p ON c.pid = p.pid
+                 CROSS JOIN
+                     planetypes t ON p.tid = t.tid
+                 CROSS JOIN
+                     checktypes ct ON c.checktypeid = ct.checktypeid
+                 CROSS JOIN
+                     employees e ON e.umn = c.umn
+                 ORDER BY c.pid"
+            );
+        }
+        public static function delete( $checktypeid, $pid, $umn ) {
+            db( 'checks', compact( 'checktypeid', 'pid', 'umn' ) );
+        }
+        public static function update( $checktypeid, $pid, $umn, $created, $duration, $score ) {
+            db(
+                'checks',
+                compact( 'checktypeid', 'pid', 'umn' ),
+                compact( 'created', 'duration', 'score' )
+            );
+        }
+        public static function item( $checktypeid, $pid, $umn ) {
+            return array_shift(
+                db_select( 'checks', compact( 'checktypeid', 'pid', 'umn' ) )
+            );
+        }
     }
 ?>

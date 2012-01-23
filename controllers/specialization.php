@@ -1,12 +1,12 @@
 <?php
     class SpecializationController extends Controller {
         public static function listing() {
-            $specializations = specializationListing();
+            $specializations = Specialization::listing();
             view( 'specialization/listing', array( 'specializations' => $specializations ) );
         }
         public static function createView( $errors, $umn, $tid ) {
             if ( !empty( $umn ) ) {
-                $specialization = specializationItem( $umn, $tid );
+                $specialization = Specialization::item( $umn, $tid );
                 if ( $specialization === false ) {
                     throw new Exception( 'The specialization you are trying to edit does not exist' );
                 }
@@ -14,8 +14,8 @@
                     $tid = $specialization[ 'tid' ];
                 }
             }
-            $techs = techListing();
-            $planetypes = planetypeListing();
+            $techs = Tech::listing();
+            $planetypes = Planetype::listing();
             $errors = array_flip( explode( ',', $errors ) );
             view( 'specialization/create', compact( 'errors', 'umn', 'tid', 'techs', 'planetypes' ) );
         }
@@ -24,7 +24,7 @@
             if ( !empty( $errors ) ) {
                 Redirect( 'specialization/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
-            specializationCreate( $umn, $tid );
+            Specialization::create( $umn, $tid );
             Redirect( 'specialization/listing' );
         }
         public static function delete( $umn, $tid ) {
@@ -33,18 +33,8 @@
             if ( !empty( $errors ) ) {
                 Redirect( 'specialization/listing' );
             }
-            specializationDelete( $umn, $tid );
-            Redirect( 'specialization/listing' );
-        }
-        public static function update( $umn, $tid ) {
-            $vars = compact( 'umn', 'tid' );
-            $errors = Controller::validateInput( $vars );
-            if ( !empty( $errors ) ) {
-                Redirect( 'specialization/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
-            }
-            specializationUpdate( $umn, $tid );
+            Specialization::delete( $umn, $tid );
             Redirect( 'specialization/listing' );
         }
     }
-
 ?>

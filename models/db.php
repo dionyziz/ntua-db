@@ -1,5 +1,7 @@
 <?php
     /*
+    Version 2
+
     db.php: A slender database wrapper.
 
     Copyright (C) 2011 by Dionysis "dionyziz" Zindros <dionyziz@gmail.com>
@@ -136,21 +138,21 @@
         );
         return mysql_affected_rows();
     }
-    function db_select( $table, $where, $select = array( '*' ) ) {
+    function db_select( $table, $where, $select = array( '*' ), $id_column = false ) {
         $wreplace = array();
         $wfields = array();
         foreach ( $where as $field => $value ) {
             $wfields[] = "$field = :where_$field";
             $wreplace[ 'where_' . $field ] = $value;
         }
+        $sql = 'SELECT ' . implode( ', ', $select ) . ' FROM ' . $table;
+        if ( !empty( $wfields ) ) {
+            $sql .= ' WHERE ' . implode( ' AND ', $wfields );
+        }
         return db_array(
-            'SELECT
-                ' . implode( ', ', $select ) . '
-            FROM
-                ' . $table . '
-            WHERE
-                ' . implode( ' AND ', $wfields ),
-                $wreplace
+            $sql,
+            $wreplace,
+            $id_column
         );
     }
     function db_inner_join( $tables, $joinfields, $where, $select = array( '*' ) ) { // joinfields: array( 'user' => 'id' );
