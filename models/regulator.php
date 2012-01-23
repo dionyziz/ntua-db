@@ -1,12 +1,13 @@
 <?php
     function regulatorCreate( $umn, $checked ) {
+        $datechk = date_format( ( date_parse( $checked ) ), 'Y-m-d' );
         db(
             "INSERT INTO
                 regulators
             SET
                 umn = :umn
-                checked = :checked",
-            compact( 'umn' )
+                checked = :datechk",
+            compact( 'umn', 'checked' )
         );
     }
     function createView( $umn, $ssn, $name, $phone, $addr, $salary ) {

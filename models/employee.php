@@ -1,23 +1,17 @@
 <?php
-    function employeeCreate( $umn, $ssn, $name, $phone, $addr, $salary, $errors ) {
-                try{
-                    db(
-                        "INSERT INTO
-                            employees
-                        SET
-                            umn = :umn,
-                            ssn = :ssn,
-                            name = :name,
-                            phone = :phone,
-                            addr = :addr,
-                            salary = :salary",
-                            compact( 'umn', 'ssn', 'name', 'phone', 'addr', 'salary' )
-                    );
-                }
-                catch ( DBException $e ) {
-                    $errors[] = 'duplicate';
-                    Redirect( 'employee/create?errors=' . implode( ',', $errors ) . '&name=' . $name . '&phone=' . $phone . '&addr=' . $addr . '&salary=' . $salary );
-                }
+    function employeeCreate( $umn, $ssn, $name, $phone, $addr, $salary ) {
+        db(
+            "INSERT INTO
+                employees
+            SET
+                umn = :umn,
+                ssn = :ssn,
+                name = :name,
+                phone = :phone,
+                addr = :addr,
+                salary = :salary",
+                compact( 'umn', 'ssn', 'name', 'phone', 'addr', 'salary' )
+        );
     }
 
     function employeeListing( $occ ) {
