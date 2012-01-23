@@ -33,7 +33,7 @@ CREATE TABLE planes (
 ) ENGINE=InnoDB;
 CREATE TABLE regulators (
     umn INT NOT NULL PRIMARY KEY,
-    checked DATETIME NOT NULL,
+    checked DATE NOT NULL,
     FOREIGN KEY ( umn ) REFERENCES employees( umn ) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 CREATE TABLE specializations (

@@ -43,12 +43,14 @@
             }
             catch ( Duplicate $e ) {
                 $errors[] = 'duplicate';
+                Redirect( 'employee/create?errors=' . implode( ',', $errors ) . '&name=' . $name . '&phone=' . $phone . '&addr=' . $addr . '&salary=' . $salary );
             }
             if ( $occ == 'tech' ) {
                 techCreate( $umn );
                 Redirect( 'tech/listing' );
             }
             else if ( $occ == 'reg' ) {
+                regulatorCreate( $umn, $checked );
                 Redirect( 'regulator/create?&umn=' . $umn );
             }
             Redirect( 'employee/listing' );

@@ -5,8 +5,8 @@
                 regulators
             SET
                 umn = :umn
-                checked = :checked",
-            compact( 'umn' )
+                checked = checked",
+            compact( 'umn', 'checked' )
         );
     }
     function createView( $umn, $ssn, $name, $phone, $addr, $salary ) {
