@@ -24,7 +24,7 @@
              ON
                  c.pid = p.pid
                  INNER JOIN
-                     types t
+                     planetypes t
                  ON
                      p.tid = t.tid
                      INNER JOIN
