@@ -106,5 +106,11 @@ else {
             }
             ?></select>
     </div>
+    <div id='reg_check'>
+            <label>Τελευταίο check-up: </label>
+            <input type="text" value='<?php
+        echo htmlspecialchars( $salary );
+        ?>' name='checked'/>
+    </div>
     <input type='submit' value='Αποθήκευση' />
 </form>
