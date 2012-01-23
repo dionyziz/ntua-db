@@ -17,3 +17,13 @@ $( function() {
     var dateFormat = $( "#datechecked" ).datepicker( "option", "dateFormat" );
     $( "#datechecked" ).datepicker( "option", "dateFormat", 'dd-mm-yy' );
 } );
+//    datepicker({ dateFormat: 'yy-mm-dd' });
+//    var dateFormat = $( "#datecheckcreated" ).datepicker( "option", "dateFormat" );
+//    $( "#datecheckcreated" ).datepicker( "option", "dateFormat", 'yy-mm-dd' );
+$( function() {
+$ ( "#datecheckcreated" ).AnyTime_picker( "created",
+                        { formatUtcOffset: "%: (%@)",
+                          hideInput: true,
+                          placement: "popup" } 
+                          );
+} );
