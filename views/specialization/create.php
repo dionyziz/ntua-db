@@ -1,15 +1,15 @@
 <?php
-if ( empty( $pid ) ) {
-    ?><h2>Εισαγωγή νέου αεροσκάφους</h2><?php
+if ( empty( $umn ) ) {
+    ?><h2>Εισαγωγή νέας ειδίκευσης</h2><?php
 }
 else {
     ?><h2>Επεξεργασία αεροσκάφους <?php
-    echo htmlspecialchars( $pid );
+    echo htmlspecialchars( $umn );
     ?></h2><?php
 }
 ?>
-<form action='plane/<?php
-    if ( empty( $pid ) ) {
+<form action='specialization/<?php
+    if ( empty( $umn ) ) {
         ?>create<?php
     }
     else {
@@ -18,23 +18,33 @@ else {
     }
     ?>' method='post'>
     <?php
-    if ( !empty( $pid ) ) {
-        ?><input type='hidden' name='pid' value='<?php
-        echo $pid;
+    if ( !empty( $umn ) ) {
+        ?><input type='hidden' name='umn' value='<?php
+        echo $umn;
         ?>' /><?php
     }
     ?>
     <div>
-        <label>Κωδικός αεροσκάφους:</label> <input type='text' name='pid' value='<?php
-        echo htmlspecialchars( $pid );
-        ?>' <?php
-        if ( isset( $errors[ 'nopid' ] ) ) {
-            ?> class='error' <?php
+    <label>Όνομα τεχνικού:</label> <select name='umn'
+        <?php
+        if ( isset( $errors[ 'noumn' ] ) ) {
+            ?> class='error'<?php
         }
-        if ( $update ) {
-            ?> class='update' disabled='disabled'<?
+        ?>>
+        <?php
+        foreach ( $techs as $tech ) {
+            ?><option value='<?php
+            echo htmlspecialchars( $tech[ 'umn' ] );
+            ?>'<?php
+            if ( $umn == $tech[ 'umn' ] ) {
+                echo ' SELECTED';
+            }
+            ?>><?php
+            echo htmlspecialchars( $tech[ 'name' ] );
+            ?></option><?php
         }
-        ?> />
+        ?>
+        </select>
     </div>
     <div>
     <label>Όνομα τύπου:</label> <select name='tid'
@@ -60,14 +70,14 @@ else {
     </div>
     <div class='actions'>
         <?php
-        if ( empty( $pid ) ) {
+        if ( empty( $umn ) ) {
             ?><input type='submit' value='Δημιουργία' /><?php
         }
         else {
             ?><input type='submit' value='Ενημέρωση' /><?php
         }
         ?>
-        <a href='plane/listing' class='cancel'>Άκυρο</a>
+        <a href='specialization/listing' class='cancel'>Άκυρο</a>
         <div class='eof'></div>
     </div>
 </form>

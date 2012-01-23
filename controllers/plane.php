@@ -14,9 +14,9 @@
                     $tid = $plane[ 'tid' ];
                 }
             }
-            $types = planetypeListing();
+            $planetypes = planetypeListing();
             $errors = array_flip( explode( ',', $errors ) );
-            view( 'plane/create', compact( 'errors', 'pid', 'tid', 'types' ) );
+            view( 'plane/create', compact( 'errors', 'pid', 'tid', 'planetypes' ) );
         }
         public static function create( $pid, $tid ) {
             $vars = compact( 'pid', 'tid' );
