@@ -1,8 +1,8 @@
 <?php
-    function typeCreate( $name, $weight, $capacity ) {
+    function planetypeCreate( $name, $weight, $capacity ) {
         db(
             "INSERT INTO
-                types
+                planetypes
             SET
                 name = :name,
                 weight = :weight,
@@ -10,12 +10,12 @@
             compact( 'name', 'weight', 'capacity' )
         );
     }
-    function typeListing() {
+    function planetypeListing() {
         $res = db(
             "SELECT
                 *
             FROM
-                types"
+                planetypes"
         );
         $rows = array();
         while ( $row = mysql_fetch_array( $res ) ) {
@@ -23,20 +23,20 @@
         }
         return $rows;
     }
-    function typeDelete( $tid ) {
+    function planetypeDelete( $tid ) {
         db(
             "DELETE FROM
-                types
+                planetypes
             WHERE
                 tid = :tid
             LIMIT 1",
             compact( 'tid' )
         );
     }
-    function typeUpdate( $tid, $name, $weight, $capacity ) {
+    function planetypeUpdate( $tid, $name, $weight, $capacity ) {
         db(
             "UPDATE
-                types
+                planetypes
             SET
                 name = :name,
                 weight = :weight,
@@ -47,12 +47,12 @@
             compact( 'tid', 'name', 'weight', 'capacity' )
         );
     }
-    function typeItem( $tid ) {
+    function planetypeItem( $tid ) {
         $res = db(
             "SELECT
                 *
             FROM
-                types
+                planetypes
             WHERE
                 tid = :tid
             LIMIT 1",

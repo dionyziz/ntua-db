@@ -34,10 +34,10 @@
                         ?>
                     </td>
                     <td>
-                        <a href='type/create?tid=<?php
+                        <a href='planetype/create?tid=<?php
                         echo $type[ 'tid' ];
                         ?>' class='update' title='Επεξεργασία'>Επεξεργασία τύπου</a>
-                        <form action='type/delete' method='post' class='delete'>
+                        <form action='planetype/delete' method='post' class='delete'>
                             <input type='hidden' name='tid' value='<?php
                             echo $type[ 'tid' ];
                             ?> ' />
