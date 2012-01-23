@@ -107,13 +107,13 @@ else {
     </div>
     <div id='reg_check'>
         <label>Τελευταίο check-up: </label>
-        <input type="text" <?php
-        if ( isset( $errprs[ 'nosalary' ] ) ) {
+        <input type='text' id='datechecked' <?php
+        if ( isset( $errprs[ 'nochecked' ] ) ) {
             ?> class='error'<?php
         }
         ?>
         value='<?php
-        echo htmlspecialchars( $salary );
+        echo htmlspecialchars( $checked );
         ?>' name='checked' />
     </div>
     <div class='actions'>

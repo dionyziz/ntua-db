@@ -194,3 +194,6 @@ form .actions a.cancel {
 a.cancel:hover {
     text-decoration: none;
 }
+div.ui-datepicker {
+    font-size: 75%;
+}
