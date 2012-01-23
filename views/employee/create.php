@@ -24,7 +24,7 @@ else {
     }
     ?>
     <div>
-        <label>Όνομα και επώνυμο:</label> <input type='text' name='name' value='<?php
+        <label>Όνομα και Επώνυμο:</label> <input type='text' name='name' value='<?php
         echo htmlspecialchars( $name );
         ?>' <?php
         if ( isset( $errors[ 'noname' ] ) ) {
