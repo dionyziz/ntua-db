@@ -40,7 +40,7 @@
                         ?>
                     </td>
                     <td>
-                        <a href='tech/create?umn=<?php
+                        <a href='employee/create?umn=<?php
                         echo $tech[ 'umn' ];
                         ?>' class='update' title='Επεξεργασία'>Επεξεργασία εργαζομένου</a>
                         <form action='tech/delete' method='post' class='delete'>

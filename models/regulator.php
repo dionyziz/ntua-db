@@ -9,6 +9,29 @@
             compact( 'umn' )
         );
     }
+    function createView( $umn, $ssn, $name, $phone, $addr, $salary ) {
+        $reg = employeeItem( $umn );
+        if ( $reg === false ) {
+            throw new Exception( 'The employee you are trying to edit does not exist' ); }
+        if ( empty( $ssn ) ) {
+            $ssn = $reg[ 'ssn' ];
+        }
+        if ( empty( $name ) ) {
+            $name = $reg[ 'name' ];
+        }
+        if ( empty( $phone ) ) {
+            $phone = $reg[ 'phone' ];
+        }
+        if ( empty( $addr ) ) {
+            $addr = $reg[ 'addr' ];
+        }
+        if ( empty( $salary ) ) {
+            $salary = $reg[ 'salary' ];
+        }
+        $errors = array_flip( explode( ',', $errors ) );
+        view( 'regulator/create', compact( 'errors', 'umn', 'ssn', 'name', 'phone', 'addr', 'salary' ) );
+    }
+
     function regulatorListing() {
         return employeeListing( 'regulator' );
     }

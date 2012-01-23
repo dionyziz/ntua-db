@@ -84,17 +84,17 @@ else {
         ?> />
     </div>
     <div>
-        <label>Απασχόληση:</label> <select name='occ'
+        <label>Απασχόληση:</label> <select name='occ' id='occ'
             <?php
             if ( isset( $errors[ 'noocc' ] ) ) {
                 ?> class='error'<?php
             }
             ?>>
+            <option selected value = "">Χωρίς ειδίκευση</option>
             <?php
             $occupations = array(
                 'tech' => 'Τεχνικός',
-                'reg' => 'Διαχειριστής',
-                '' => 'Χωρίς ειδίκευση'
+                'reg' => 'Διαχειριστής'
             );
             foreach ( $occupations as $value => $caption ) {
                 ?><option value="<?php
@@ -104,6 +104,17 @@ else {
                 ?></option><?php
             }
             ?></select>
+    </div>
+    <div id='reg_check'>
+        <label>Τελευταίο check-up: </label>
+        <input type="text" <?php
+        if ( isset( $errprs[ 'nosalary' ] ) ) {
+            ?> class='error'<?php
+        }
+        ?>
+        value='<?php
+        echo htmlspecialchars( $salary );
+        ?>' name='checked' />
     </div>
     <div class='actions'>
         <?php
