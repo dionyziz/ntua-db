@@ -44,15 +44,15 @@ else {
         }
         ?>>
         <?php
-        foreach ( $types as $type ) {
+        foreach ( $planetypes as $planetype ) {
             ?><option value='<?php
-            echo htmlspecialchars( $type[ 'tid' ] );
+            echo htmlspecialchars( $planetype[ 'tid' ] );
             ?>'<?php
-            if ( $tid == $type[ 'tid' ] ) {
+            if ( $tid == $planetype[ 'tid' ] ) {
                 echo ' SELECTED';
             }
             ?>><?php
-            echo htmlspecialchars( $type[ 'name' ] );
+            echo htmlspecialchars( $planetype[ 'name' ] );
             ?></option><?php
         }
         ?>

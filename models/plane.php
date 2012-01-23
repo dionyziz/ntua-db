@@ -16,7 +16,7 @@
             FROM
                 planes p
             INNER JOIN
-                types t
+                planetypes t
             ON
                 t.tid = p.tid"
         );
@@ -55,7 +55,7 @@
             FROM
                 planes p
             INNER JOIN
-                types t
+                planetypes t
             ON
                 p.tid = t.tid
             WHERE
