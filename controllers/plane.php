@@ -14,7 +14,7 @@
                     $tid = $plane[ 'tid' ];
                 }
             }
-            $types = typeListing();
+            $types = planetypeListing();
             $errors = array_flip( explode( ',', $errors ) );
             view( 'plane/create', compact( 'errors', 'pid', 'tid', 'types' ) );
         }
@@ -45,5 +45,4 @@
             Redirect( 'plane/listing' );
         }
     }
-
 ?>

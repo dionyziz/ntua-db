@@ -15,8 +15,8 @@
                 t.*, p.*
             FROM
                 planes p
-            INNER JOIN
-                types t
+            CROSS JOIN
+                planetypes t
             ON
                 t.tid = p.tid"
         );

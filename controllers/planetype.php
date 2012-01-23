@@ -4,7 +4,7 @@
             $types = planetypeListing();
             view( 'planetype/listing', array( 'types' => $types ) );
         }
-        public static function planecreateView( $errors, $tid, $name, $weight, $capacity ) {
+        public static function createView( $errors, $tid, $name, $weight, $capacity ) {
             if ( !empty( $tid ) ) {
                 $type = planetypeItem( $tid );
                 if ( $type === false ) {
