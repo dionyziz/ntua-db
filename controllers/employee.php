@@ -28,13 +28,22 @@
             $errors = array_flip( explode( ',', $errors ) );
             view( 'employee/create', compact( 'errors', 'umn', 'ssn', 'name', 'phone', 'addr', 'salary', 'occ' ) );
         }
-        public static function create( $umn, $ssn, $name, $phone, $addr, $salary, $occ ) {
+        public static function create( $umn, $ssn, $name, $phone, $addr, $salary, $occ, $photo ) {
             $vars = compact( 'umn', 'ssn', 'name', 'phone', 'addr', 'salary', 'occ' );
             $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
                 Redirect( 'employee/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
-            employeeCreate( $umn, $ssn, $name, $phone, $addr, $salary, $errors );
+            try {
+                $employeeid = employeeCreate( $umn, $ssn, $name, $phone, $addr, $salary );
+                if ( !empty( $photo ) ) {
+                    $imageid = imageUpload( $photo[ 'tmp_name' ] );
+                }
+                employeeUpdate( $umn, $ssn, $name, $phone, $addr, $salary, $imageid );
+            }
+            catch ( Duplicate $e ) {
+                $errors[] = 'duplicate';
+            }
             if ( $occ == 'tech' ) {
                 techCreate( $umn );
                 Redirect( 'tech/listing' );

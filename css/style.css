@@ -160,11 +160,14 @@ div.eof {
     margin: 0;
     padding: 0;
 }
-form input[type=text] {
+form input[type=text], form input[type=file], form select {
     width: 200px;
     border: 1px solid #bdc7d8;
     border-radius: 4px;
     padding: 4px;
+}
+form select {
+    width: 210px;
 }
 form div.actions {
     border-bottom: none;

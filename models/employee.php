@@ -1,23 +1,23 @@
 <?php
-    function employeeCreate( $umn, $ssn, $name, $phone, $addr, $salary, $errors ) {
-                try{
-                    db(
-                        "INSERT INTO
-                            employees
-                        SET
-                            umn = :umn,
-                            ssn = :ssn,
-                            name = :name,
-                            phone = :phone,
-                            addr = :addr,
-                            salary = :salary",
-                            compact( 'umn', 'ssn', 'name', 'phone', 'addr', 'salary' )
-                    );
-                }
-                catch ( DBException $e ) {
-                    $errors[] = 'duplicate';
-                    Redirect( 'employee/create?errors=' . implode( ',', $errors ) . '&name=' . $name . '&phone=' . $phone . '&addr=' . $addr . '&salary=' . $salary );
-                }
+    function employeeCreate( $umn, $ssn, $name, $phone, $addr, $salary ) {
+        try {
+            db(
+                "INSERT INTO
+                    employees
+                SET
+                    umn = :umn,
+                    ssn = :ssn,
+                    name = :name,
+                    phone = :phone,
+                    addr = :addr,
+                    salary = :salary",
+                    compact( 'umn', 'ssn', 'name', 'phone', 'addr', 'salary' )
+            );
+        }
+        catch ( DBException $e ) {
+            throw new Duplicate();
+        }
+        return mysql_insert_id();
     }
 
     function employeeListing( $occ ) {
@@ -57,21 +57,21 @@
             compact( 'umn' )
         );
     }
-    function employeeUpdate( $umn, $ssn, $name, $phone, $addr, $salary ) {
+    function employeeUpdate( $umn, $ssn, $name, $phone, $addr, $salary, $imageid ) {
         db(
             "UPDATE
                 employees
             SET
-                umn = :umn,
                 ssn = :ssn,
                 name = :name,
                 phone = :phone,
                 addr = :addr,
-                salary = :salary
+                salary = :salary,
+                imageid = :imageid
             WHERE
                 umn = :umn
             LIMIT 1",
-            compact( 'umn', 'ssn', 'name', 'phone', 'addr', 'salary' )
+            compact( 'umn', 'ssn', 'name', 'phone', 'addr', 'salary', 'imageid' )
         );
     }
     function employeeItem( $umn ) {

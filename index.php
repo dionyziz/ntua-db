@@ -80,9 +80,13 @@
             $arguments[] = $http_vars[ $parameter->name ];
         }
         else {
+            if ( isset( $_FILES[ $parameter->name ] ) ) {
+                $arguments[] = $_FILES[ $parameter->name ];
+            }
             $arguments[] = null;
         }
     }
+    unset( $_GET ); unset( $_POST ); unset( $_FILES );
     try {
         call_user_func_array( array( $controllername, $methodname ), $arguments );
     }

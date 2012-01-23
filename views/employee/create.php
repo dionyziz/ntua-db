@@ -15,7 +15,7 @@ else {
     else {
         ?>update<?php
     }
-    ?>' method='post'>
+    ?>' method='post' enctype="multipart/form-data">
     <?php
     if ( !empty( $umn ) ) {
         ?><input type='hidden' name='umn' value='<?php
@@ -23,6 +23,10 @@ else {
         ?>' /><?php
     }
     ?>
+    <div>
+        <label>Φωτογραφία:</label>
+        <input type='file' name='photo' />
+    </div>
     <div>
         <label>Όνομα και επώνυμο:</label> <input type='text' name='name' value='<?php
         echo htmlspecialchars( $name );

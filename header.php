@@ -1,6 +1,7 @@
 <?php
     class NotAuthorized extends Exception {}
     class InvalidInput extends Exception {}
+    class Duplicate extends Exception {}
     class NotImplemented extends Exception {
         private $functionName;
 
