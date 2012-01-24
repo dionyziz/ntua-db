@@ -13,26 +13,7 @@ ul.person li {
     margin: 5px 5px 0 0;
     padding: 5px;
     position: relative;
-}
-ul.person h3 {
-    margin: 0;
-    font-size: 100%;
-}
-ul.person img {
-    border-radius: 3px;
-    float: left;
-    margin-right: 5px;
-    max-width: 100px;
-    max-height: 98px;
-}
-ul.person .delete {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 5px;
-    display: none;
-}
-ul.person li {
+    box-shadow: 0px 0px 5px rgba( 0, 0, 0, 0.2 );
     background-image: linear-gradient(bottom, rgb(245,247,250) 0%, rgb(255,255,255) 80%);
     background-image: -o-linear-gradient(bottom, rgb(245,247,250) 0%, rgb(255,255,255) 80%);
     background-image: -moz-linear-gradient(bottom, rgb(245,247,250) 0%, rgb(255,255,255) 80%);
@@ -47,8 +28,38 @@ ul.person li {
         color-stop(0.8, rgb(255,255,255))
     );
 }
+ul.person h3 {
+    margin: 0;
+    font-size: 100%;
+}
+ul.person img {
+    border-radius: 3px;
+    float: left;
+    margin-right: 5px;
+    max-width: 100px;
+    max-height: 98px;
+    box-shadow: 0 0 4px rgba( 0, 0, 0, 0.4 );
+}
+ul.person .delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    display: none;
+}
 ul.person li:hover .delete {
     display: block;
+}
+ul.person li .delete input[type='submit'] {
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 8px;
+    line-height: 0px;
+}
+ul.person li .delete input[type='submit']:hover {
+    background-color: #456;
+    color: white;
 }
 ul.person li div {
     border-bottom: 1px solid #eee;
@@ -86,15 +97,20 @@ ul.person form.delete input {
     font-size: 100%;
 }
 ul.person li.create {
-    padding-top: 42px;
-    padding-bottom: 42px;
     text-align: center;
-    height: 24px;
-    border: none;
     background: none;
     font-weight: bold;
+    box-shadow: none;
+    border-color: transparent;
 }
 ul.person li.create a {
-    background: transparent url( '../images/add.png' ) no-repeat 0 4px;
+    background: transparent url( '../images/add.png' ) no-repeat 80px 38px;
+    padding-top: 35px;
+    padding-bottom: 42px;
     padding-left: 24px;
+    display: block;
+}
+ul.person li.create:hover {
+    box-shadow: 0px 0px 5px rgba( 0, 0, 0, 0.2 );
+    border: 1px dashed #c4cde0;
 }
