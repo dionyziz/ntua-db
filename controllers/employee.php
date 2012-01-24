@@ -1,14 +1,23 @@
 <?php
     class EmployeeController extends Controller{
         public static function listing( ) {
-            $employees = Employee::listing( '' );
+            global $settings;
+
+            $employees = Employee::listing();
+            foreach ( $employees as $i => $employee ) {
+                if ( !empty( $employee[ 'imageid' ] ) ) {
+                    $url = $settings[ 'uploadurl' ] . $employee[ 'imageid' ] . '.jpg';
+                    $employees[ $i ][ 'imageurl' ] = $url;
+                }
+            }
             view( 'employee/listing', array( 'employees' => $employees ) );
         }
         public function createView( $errors, $umn, $ssn, $name, $phone, $addr, $salary, $occ ) {
             if ( !empty( $umn ) ) {
                 $employee = Employee::item( $umn );
                 if ( $employee === false ) {
-                    throw new Exception( 'The employee you are trying to edit does not exist' ); }
+                    throw new Exception( 'The employee you are trying to edit does not exist' );
+                }
                 if ( empty( $ssn ) ) {
                     $ssn = $employee[ 'ssn' ];
                 }
@@ -36,14 +45,14 @@
             }
             try {
                 $employeeid = Employee::create( $umn, $ssn, $name, $phone, $addr, $salary );
-                if ( !empty( $photo ) ) {
-                    $imageid = imageUpload( $photo[ 'tmp_name' ] );
-                }
-                Employee::update( $umn, $ssn, $name, $phone, $addr, $salary, $imageid );
             }
             catch ( Duplicate $e ) {
                 $errors[] = 'duplicate';
                 Redirect( 'employee/create?errors=' . implode( ',', $errors ) . '&name=' . $name . '&phone=' . $phone . '&addr=' . $addr . '&salary=' . $salary );
+            }
+            if ( !empty( $photo ) ) {
+                $imageid = Image::create( $photo[ 'tmp_name' ], 130, 130 );
+                Employee::update( $umn, false, false, false, false, false, $imageid );
             }
             if ( $occ == 'tech' ) {
                 Tech::create( $umn );
@@ -64,13 +73,17 @@
             Employee::delete( $umn );
             Redirect( 'employee/listing' );
         }
-        public static function update( $umn, $ssn, $name, $phone, $addr, $salary ) {
+        public static function update( $umn, $ssn, $name, $phone, $addr, $salary, $photo ) {
             $vars = compact( 'umn', 'ssn', 'name', 'phone', 'addr', 'salary' );
             $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
                 Redirect( 'employee/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
             Employee::update( $umn, $ssn, $name, $phone, $addr, $salary );
+            if ( !empty( $photo ) ) {
+                $imageid = Image::create( $photo[ 'tmp_name' ], 130, 130 );
+                Employee::update( $umn, false, false, false, false, false, $imageid );
+            }
             Redirect( 'employee/listing' );
         }
     }

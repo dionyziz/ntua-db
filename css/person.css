@@ -1,0 +1,100 @@
+ul.person {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul.person li {
+    float: left;
+    width: 400px;
+    height: 98px;
+    overflow: hidden;
+    border: 1px solid #c4cde0;
+    border-radius: 3px;
+    margin: 5px 5px 0 0;
+    padding: 5px;
+    position: relative;
+}
+ul.person h3 {
+    margin: 0;
+    font-size: 100%;
+}
+ul.person img {
+    border-radius: 3px;
+    float: left;
+    margin-right: 5px;
+    max-width: 100px;
+    max-height: 98px;
+}
+ul.person .delete {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    display: none;
+}
+ul.person li {
+    background-image: linear-gradient(bottom, rgb(245,247,250) 0%, rgb(255,255,255) 80%);
+    background-image: -o-linear-gradient(bottom, rgb(245,247,250) 0%, rgb(255,255,255) 80%);
+    background-image: -moz-linear-gradient(bottom, rgb(245,247,250) 0%, rgb(255,255,255) 80%);
+    background-image: -webkit-linear-gradient(bottom, rgb(245,247,250) 0%, rgb(255,255,255) 80%);
+    background-image: -ms-linear-gradient(bottom, rgb(245,247,250) 0%, rgb(255,255,255) 80%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0, rgb(245,247,250)),
+        color-stop(0.8, rgb(255,255,255))
+    );
+}
+ul.person li:hover .delete {
+    display: block;
+}
+ul.person li div {
+    border-bottom: 1px solid #eee;
+    padding: 4px 0 4px 0;
+}
+ul.person li div:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+ul.person li strong {
+    float: left;
+    width: 70px;
+    text-align: left;
+    padding-right: 5px;
+    color: #999;
+    font-size: 80%;
+    display: block;
+}
+ul.person li span {
+    color: #333;
+    font-size: 80%;
+    display: block;
+}
+ul.person form.delete input {
+    background: none;
+    border: none;
+    color: black;
+    display: block;
+    width: 16px;
+    height: 16px;
+    float: left;
+    padding: 0 5px;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 100%;
+}
+ul.person li.create {
+    padding-top: 42px;
+    padding-bottom: 42px;
+    text-align: center;
+    height: 24px;
+    border: none;
+    background: none;
+    font-weight: bold;
+}
+ul.person li.create a {
+    background: transparent url( '../images/add.png' ) no-repeat 0 4px;
+    padding-left: 24px;
+}
