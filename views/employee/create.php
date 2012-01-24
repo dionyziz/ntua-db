@@ -112,7 +112,7 @@ else {
     <div id='reg_check'>
         <label>Τελευταίο check-up: </label>
         <input type='text' id='datechecked' <?php
-        if ( isset( $errprs[ 'nochecked' ] ) ) {
+        if ( isset( $errors[ 'nochecked' ] ) ) {
             ?> class='error'<?php
         }
         ?>

@@ -51,7 +51,7 @@
             }
             else if ( $occ == 'reg' ) {
                 Regulator::create( $umn, $checked );
-                Redirect( 'regulator/create?&umn=' . $umn );
+                Redirect( 'regulator/listing' );
             }
             Redirect( 'employee/listing' );
         }
