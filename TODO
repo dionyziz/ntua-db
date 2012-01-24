@@ -1,1 +1,2 @@
 * Editing employee doesn't automatically fill-in their specialty --billy
+* Employee and regulator creation is broken since major controller changes --billy
