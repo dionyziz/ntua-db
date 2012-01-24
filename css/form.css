@@ -51,7 +51,7 @@ form input[type=text], form input[type=file], form select {
 form select {
     width: 210px;
 }
-form div.actions {
+form div.actions:nth-child(even), form div.actions:nth-child(odd) {
     border-bottom: none;
     background-color: white;
 }
