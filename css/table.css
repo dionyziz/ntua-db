@@ -1,0 +1,49 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+tbody tr {
+    border-left: 1px solid #ccc;
+}
+tbody tr td:last-child {
+    border-right: 1px solid #ccc;
+}
+th {
+    color: white;
+    text-align: left;
+    background-color: #333;
+    background-image: linear-gradient(bottom, rgb(29,29,31) 32%, rgb(39,44,54) 83%);
+    background-image: -o-linear-gradient(bottom, rgb(29,29,31) 32%, rgb(39,44,54) 83%);
+    background-image: -moz-linear-gradient(bottom, rgb(29,29,31) 32%, rgb(39,44,54) 83%);
+    background-image: -webkit-linear-gradient(bottom, rgb(29,29,31) 32%, rgb(39,44,54) 83%);
+    background-image: -ms-linear-gradient(bottom, rgb(29,29,31) 32%, rgb(39,44,54) 83%);
+
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.32, rgb(29,29,31)),
+        color-stop(0.83, rgb(39,44,54))
+    );
+}
+tr th:first-child {
+    border-top-left-radius: 5px;
+}
+tr th:last-child {
+    border-top-right-radius: 5px;
+}
+tr:nth-child(even) {
+    background-color: #eee;;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+th.icon, th.update {
+    color: transparent;
+    width: 50px;
+    font-size: 0;
+    overflow: hidden;
+}
+th, td {
+    padding: 5px;
+}
