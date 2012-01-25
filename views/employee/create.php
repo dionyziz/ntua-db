@@ -94,7 +94,7 @@ else {
                 ?> class='error'<?php
             }
             ?>>
-            <option selected value = "">Χωρίς ειδίκευση</option>
+            <option selected value = "other">Χωρίς ειδίκευση</option>
             <?php
             $occupations = array(
                 'tech' => 'Τεχνικός',

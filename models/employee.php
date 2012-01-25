@@ -1,6 +1,6 @@
 <?php
     class Employee {
-        public static function create( $umn, $ssn, $name, $phone, $addr, $salary ) {
+        public static function create( $umn, $ssn, $name, $phone, $addr, $salary, $occ, $checked ) {
             try {
                 return db_insert(
                     'employees',
@@ -9,6 +9,12 @@
             }
             catch ( DBException $e ) {
                 throw new Duplicate();
+            }
+            if ( $occ == 'tech' ) {
+                return Tech::Create( $umn );
+            }
+            else if ($occ == 'regulator' ) {
+                return Regulator::Create ( $umn, $checked );
             }
         }
         public static function listing( $occ ) {
