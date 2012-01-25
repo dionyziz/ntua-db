@@ -1,1 +1,3 @@
 * Editing employee doesn't automatically fill-in their specialty --billy
+* Confirm (or undo) delete --dionyziz
+* AJAX delete everywhere --delete
