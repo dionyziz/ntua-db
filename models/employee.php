@@ -11,7 +11,7 @@
                 throw new Duplicate();
             }
         }
-        public static function listing( $occ = '' ) {
+        public static function listing( $occ ) {
             $res = db(
                 "SELECT
                     e.*, i.width, i.height, r.checked
@@ -47,7 +47,6 @@
                     unset( $fields[ $field ] );
                 }
             }
-
             db_update( 'employees', compact( 'umn' ), $fields );
         }
         public static function item( $umn ) {
