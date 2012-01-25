@@ -88,13 +88,8 @@ else {
         ?> />
     </div>
     <div>
-        <label>Απασχόληση:</label> <select name='occ' id='occ'
-            <?php
-            if ( isset( $errors[ 'noocc' ] ) ) {
-                ?> class='error'<?php
-            }
-            ?>>
-            <option selected value = "">Χωρίς ειδίκευση</option>
+        <label>Απασχόληση:</label> <select name='occ' id='occ'>
+            <option selected value = "other">Χωρίς ειδίκευση</option>
             <?php
             $occupations = array(
                 'tech' => 'Τεχνικός',
