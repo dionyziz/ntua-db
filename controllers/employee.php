@@ -1,9 +1,9 @@
 <?php
     class EmployeeController extends Controller{
-        public static function listing( ) {
+        public static function listing( $occ ) {
             global $settings;
 
-            $employees = Employee::listing();
+            $employees = Employee::listing( $occ );
             foreach ( $employees as $i => $employee ) {
                 if ( !empty( $employee[ 'imageid' ] ) ) {
                     $url = $settings[ 'uploadurl' ] . $employee[ 'imageid' ] . '.jpg';
@@ -60,7 +60,7 @@
             }
             else if ( $occ == 'reg' ) {
                 Regulator::create( $umn, $checked );
-                Redirect( 'regulator/create?&umn=' . $umn );
+                Redirect( 'regulator/listing' );
             }
             Redirect( 'employee/listing' );
         }

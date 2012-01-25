@@ -1,3 +1,4 @@
 * Editing employee doesn't automatically fill-in their specialty --billy
 * Confirm (or undo) delete --dionyziz
-* AJAX delete everywhere --delete
+* AJAX delete everywhere --dionyziz
+* Employee and regulator creation is broken since major controller changes --billy

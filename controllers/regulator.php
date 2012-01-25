@@ -4,10 +4,10 @@
             $vars = compact( 'umn' );
             $errors = Controller::validateInput( $vars );
             if ( !empty( $errors ) ) {
-                Redirect( 'regulator/listing' );
+                Redirect( 'employee/listing?occ=regulator' );
             }
             Regulator::delete( $umn );
-            Redirect( 'regulator/listing' );
+            Redirect( 'employee/listing?occ=regulator' );
         }
     }
 ?>

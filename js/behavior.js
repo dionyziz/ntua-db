@@ -3,7 +3,6 @@ $( "#reg_check" ).css( "display", "none" );
 $( '#occ' ).change( function()  {
     $( "select option:selected").each( function () {
         if ( $( this ).text() == 'Διαχειριστής' ) {
-            /* Need to do something here */
             $( "#reg_check" ).slideDown( "fast" ); //Slide Down checked field
         }
         else {
@@ -24,6 +23,6 @@ $( function() {
 $ ( "#datecheckcreated" ).AnyTime_picker( "created",
                         { formatUtcOffset: "%: (%@)",
                           hideInput: true,
-                          placement: "popup" } 
+                          placement: "popup" }
                           );
 } );
