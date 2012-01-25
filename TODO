@@ -2,3 +2,4 @@
 * Employee and regulator creation is broken since major controller changes --billy
 * Need to validate input in check score, bound by maxscore of according checktype --billy
 * @ dio: Fix images to persist (we now get error message) at employee edit --billy
+* @ dio: Red boxes around empty fields no longer showing. Intended or needing fix? --billy

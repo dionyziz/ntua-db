@@ -13,7 +13,7 @@
             if ( $occ == 'tech' ) {
                 return Tech::Create( $umn );
             }
-            else if ($occ == 'regulator' ) {
+            else if ( $occ == 'reg' ) {
                 return Regulator::Create ( $umn, $checked );
             }
         }
