@@ -37,6 +37,12 @@
                 throw new UnitTestFailed( $description );
             }
         }
+        final protected function assertEquals( $expected, $actual, $description = '' ) {
+            $this->assert(
+                $expected === $actual,
+                $description . "\nExpected = " . $expected . " (" . gettype( $expected ) . ")\nActual = " . $actual . " (" . gettype( $actual ) . ")"
+            );
+        }
         public function setUp() {
         }
         public function tearDown() {
@@ -58,7 +64,7 @@
 
     class UnitTestcase {
         public $name;
-        public $passed; 
+        public $passed;
         public $failReason;
 
         public function pass() {

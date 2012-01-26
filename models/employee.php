@@ -56,7 +56,7 @@
             db_update( 'employees', compact( 'umn' ), $fields );
         }
         public static function item( $umn ) {
-            return array_shift( db_select( 'employees', compact( 'umn' ) ) );
+            return db_select_one( 'employees', compact( 'umn' ) );
         }
     }
 ?>
