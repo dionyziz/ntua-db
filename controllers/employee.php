@@ -33,18 +33,44 @@
                 if ( empty( $salary ) ) {
                     $salary = $employee[ 'salary' ];
                 }
+                //insert db_query for occupation? (since it's not saved anywhere as a variable) --bill
             }
             $errors = array_flip( explode( ',', $errors ) );
             view( 'employee/create', compact( 'errors', 'umn', 'ssn', 'name', 'phone', 'addr', 'salary', 'occ' ) );
         }
+        /*
+        public static function inputcheck ( $input ) {
+            $args = array(
+                'umn'       => array( 'filter'  => FILTER_VALIDATE_INT,
+                                      'options' => array( 'min_range' => 0 )
+                                    ),
+                'ssn'       => array( 'filter'  => FILTER_VALIDATE_INT,
+                                      'options' => array( 'min_range' => 0 )
+                                    ),
+                'name'      => FILTER_SANITIZE_ENCODED,
+                'phone'     => array( 'filter'  => FILTER_VALIDATE_REGEXP,
+                                      'options' => array( 'regexp'=> '^([0-9\(\)\/\+ \-]*)$' )
+                                    ),
+                'addr'      => FILTER_SANITIZE_ENCODED,
+                'salary'    => array( 'filter'  => FILTER_VALIDATE_INT,
+                                      'options' => array( 'min_range' => 0 )
+                                    ),
+            );
+            $validated = fiter_var_array( $input, $args );
+            return( $validated );
+        }
+        */
         public static function create( $umn, $ssn, $name, $phone, $addr, $salary, $occ, $photo ) {
             $vars = compact( 'umn', 'ssn', 'name', 'phone', 'addr', 'salary', 'occ' );
             $errors = Controller::validateInput( $vars );
+            //$validated = Employee::inputCheck( $vars );
             if ( !empty( $errors ) ) {
                 Redirect( 'employee/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
             try {
-                $employeeid = Employee::create( $umn, $ssn, $name, $phone, $addr, $salary );
+                //I'm not really sure I know what I'm doing --bill
+                //$employeeid = Employee::create( implode( ',', $validated );
+                $employeeid = Employee::create( $umn, $ssn, $name, $phone, $addr, $salary, $occ, $checked );
             }
             catch ( Duplicate $e ) {
                 $errors[] = 'duplicate';
