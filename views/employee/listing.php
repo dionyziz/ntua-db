@@ -2,7 +2,8 @@
 <form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'>
     <label>Να εμφανίζονται:</label>
     <select name='occupation' onchange="if(this.options.selectedIndex>0) window.location.href = 'employee/listing?occ='+this.options [this.options.selectedIndex].value">
-        <option selected value=''>Όλοι οι εργαζόμενοι</option>
+        <option selected value=''></option> <!--- Default option is blank, couldn't find how to make it stick with the correct --->
+        <option value=''>Όλοι οι εργαζόμενοι</option>
         <option value='tech'>Τεχνικοί</option>
         <option value='regulator'>Ρυθμιστές εναέριας κυκλοφορίας</option>
     </select>
