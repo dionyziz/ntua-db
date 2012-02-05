@@ -5,4 +5,4 @@
 * Need to validate input in check score, bound by maxscore of according checktype --billy
 * Editing Mr. Potato'head makes name part after quote disappear. Reason? -billy
 * Supposedly there's a js but on check create/update, couldn't reproduce - billy
-* Need to make tech name appear in check update rather than umn. - billy
+* Tech selection appears wrong after a mistake in 'submit'
