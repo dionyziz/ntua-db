@@ -3,6 +3,6 @@
 * AJAX delete everywhere --dionyziz
 * Employee and regulator creation is broken since major controller changes --billy
 * Need to validate input in check score, bound by maxscore of according checktype --billy
-* @ dio: Fix images to persist (we now get error message) at employee edit --billy
-* @ dio: Red boxes around empty fields no longer showing. Intended or needing fix? --billy
 * Editing Mr. Potato'head makes name part after quote disappear. Reason? -billy
+* Supposedly there's a js but on check create/update, couldn't reproduce - billy
+* Need to make tech name appear in check update rather than umn. - billy
