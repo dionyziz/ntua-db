@@ -29,7 +29,7 @@
             db_delete( 'checks', compact( 'checktypeid', 'pid', 'umn' ) );
         }
         public static function update( $checktypeid, $pid, $umn, $created, $duration, $score ) {
-            db(
+            db_update(
                 'checks',
                 compact( 'checktypeid', 'pid', 'umn' ),
                 compact( 'created', 'duration', 'score' )
