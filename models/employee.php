@@ -92,7 +92,7 @@
             if ( empty( $ret ) ) {
                 $res = db(
                     "SELECT
-                        '' as occ, e.*, i.width, i.height
+                        'other' as occ, e.*, i.width, i.height
                     FROM
                         employees e
                     LEFT JOIN

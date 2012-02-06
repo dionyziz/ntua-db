@@ -12,7 +12,7 @@
             }
             view( 'employee/listing', array( 'employees' => $employees , 'occ' => $occ) );
         }
-        public function createView( $errors, $umn, $ssn, $name, $phone, $addr, $salary, $occ ) {
+        public function createView( $errors, $umn, $ssn, $name, $phone, $addr, $salary, $checked, $occ ) {
             if ( !empty( $umn ) ) {
                 $employee = Employee::item( $umn );
                 if ( $employee === false ) {
@@ -36,10 +36,13 @@
                 if ( empty( $occ ) ) {
                     $occ = $employee[ 'occ' ];
                 }
+                if ( empty( $checked ) ) {
+                    $checked = $employee[ 'checked' ];
+                }
                 //insert db_query for occupation? (since it's not saved anywhere as a variable) --bill
             }
             $errors = array_flip( explode( ',', $errors ) );
-            view( 'employee/create', compact( 'errors', 'umn', 'ssn', 'name', 'phone', 'addr', 'salary', 'occ' ) );
+            view( 'employee/create', compact( 'errors', 'umn', 'ssn', 'name', 'phone', 'addr', 'salary', 'checked', 'occ' ) );
         }
 
         public static function validateInput( $input ) {

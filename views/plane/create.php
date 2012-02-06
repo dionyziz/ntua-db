@@ -49,7 +49,7 @@ else {
             echo html( $planetype[ 'tid' ] );
             ?>'<?php
             if ( $tid == $planetype[ 'tid' ] ) {
-                echo ' SELECTED';
+            ?> selected <?php
             }
             ?>><?php
             echo html( $planetype[ 'name' ] );

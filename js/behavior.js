@@ -1,20 +1,24 @@
 $( "#reg_check" ).css( "display", "none" );
 
+$( "#occ" ).ready( function()  {
+    if ( $( "#occ" ).val() == "regulator" ) {
+        $( "#reg_check" ).slideDown( "fast" ); //Slide Down
+    }
+} );
+
 $( '#occ' ).change( function()  {
-    $( "select option:selected").each( function () {
-        if ( $( this ).text() == 'Διαχειριστής' ) {
-            $( "#reg_check" ).slideDown( "fast" ); //Slide Down checked field
-        }
-        else {
-            $( "#reg_check" ).slideUp( "fast" ); //Slide Up
-        }
-    } );
+    if ( $( "#occ" ).val() == "regulator" ) {
+        $( "#reg_check" ).slideDown( "fast" ); //Slide Up
+    }
+    else {
+        $( "#reg_check" ).slideUp( "fast" ); //Slide Up
+    }
 } );
 
 $( function() {
-    $( "#datechecked" ).datepicker({ dateFormat: 'dd-mm-yy' });
+    $( "#datechecked" ).datepicker({ dateFormat: 'yy-mm-dd' });
     var dateFormat = $( "#datechecked" ).datepicker( "option", "dateFormat" );
-    $( "#datechecked" ).datepicker( "option", "dateFormat", 'dd-mm-yy' );
+    $( "#datechecked" ).datepicker( "option", "dateFormat", 'yy-mm-dd' );
 } );
 //    datepicker({ dateFormat: 'yy-mm-dd' });
 //    var dateFormat = $( "#datecheckcreated" ).datepicker( "option", "dateFormat" );

@@ -3,9 +3,10 @@
 * Need to validate input in check score, bound by maxscore of according checktype --billy
 * Supposedly there's a js bug on check create/update, couldn't reproduce - billy
 * Tech selection appears wrong after a mistake in 'submit'
-* Editing employee - regulator doesn't automatically show last checked --greg
+* Editing employee - regulator doesn't save last checked/occupation --greg
 * model/employee::Item requires a SQL view --dionyziz
 
+* Editing employee - regulator doesn't automatically show last checked --greg       --FIXED
 * Check delete not functional yet --greg                                            --FIXED
 * Editing employee doesn't automatically fill-in their specialty --billy            --FIXED
 * Editing Mr. Potato'head makes name part after quote disappear. --dionyziz         --FIXED
