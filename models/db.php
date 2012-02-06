@@ -138,6 +138,13 @@
         );
         return mysql_affected_rows();
     }
+    function db_select_one( $table, $where, $select = array( '*' ) ) {
+        $rows = db_select( $table, $where, $select );
+        if ( empty( $rows ) ) {
+            return false;
+        }
+        return $rows[ 0 ];
+    }
     function db_select( $table, $where, $select = array( '*' ), $id_column = false ) {
         $wreplace = array();
         $wfields = array();

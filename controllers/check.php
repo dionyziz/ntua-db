@@ -24,7 +24,8 @@
             $checktypes = Checktype::listing();
             $planes = Plane::listing();
             $techs = Tech::listing();
-            view( 'check/create', compact( 'errors', 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score', 'checktypes', 'planes', 'techs' ) );
+            $employees = Employee::listing( 'tech' );
+            view( 'check/create', compact( 'errors', 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score', 'checktypes', 'planes', 'techs', 'employees' ) );
         }
         public static function create( $checktypeid, $pid, $umn, $created, $duration, $score ) {
             $vars = compact( 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score' );
@@ -43,7 +44,7 @@
             }
             Check::delete( $checktypeid , $pid, $umn);
             Redirect( 'check/listing' );
-        } 
+        }
         public static function update( $checktypeid, $pid, $umn, $created, $duration, $score ) {
             $vars = compact( 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score' );
             $errors = Controller::validateInput( $vars );

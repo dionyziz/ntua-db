@@ -28,7 +28,7 @@
                                 ?><h2><?php
                                 echo $result->name;
                                 ?></h2>
-                                
+
                                 <ul><?php
                                 foreach ( $result->testcases as $testcase ) {
                                     ?><li><?php
@@ -39,7 +39,7 @@
                                     }
                                     else {
                                         ?><strong>FAIL:</strong> <?php
-                                        echo $testcase->failReason;
+                                        echo nl2br( $testcase->failReason );
                                     }
                                     ?></li><?php
                                 }

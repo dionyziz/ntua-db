@@ -1,4 +1,4 @@
-input.error, select.error {
+form input[type='text'].error, form select.error {
     color: red;
     font-weight: bold;
     border: 2px solid red;

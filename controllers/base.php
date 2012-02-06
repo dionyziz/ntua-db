@@ -1,5 +1,8 @@
 <?php
     abstract class Controller {
+        protected static function validUpload( $file ) {
+            return !empty( $file ) && !empty( $file[ 'tmp_name' ] );
+        }
         protected static function validateInput( $input ) {
             $errors = array();
             foreach ( $input as $variable => $value ) {

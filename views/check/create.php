@@ -8,7 +8,7 @@ else {
     ?>, στο σκάφος <?php
     echo htmlspecialchars( $pid );
     ?>, από τον τεχνικό <?php
-    echo htmlspecialchars( $umn );
+    echo htmlspecialchars( $employees[ $umn ][ 'name' ] );
     ?></h2><?php
 }
 ?>
