@@ -2,10 +2,10 @@
 * AJAX delete everywhere --dionyziz
 * Employee and regulator creation is broken since major controller changes --billy
 * Need to validate input in check score, bound by maxscore of according checktype --billy
-* Editing Mr. Potato'head makes name part after quote disappear. Reason? -billy
 * Supposedly there's a js but on check create/update, couldn't reproduce - billy
 * Tech selection appears wrong after a mistake in 'submit'
 * Editing employee - regulator doesn't automatically show last checked --greg
+* model/employee::Item requires a SQL view --dionyziz
 
 * Editing employee doesn't automatically fill-in their specialty --billy --greg --FIXED
-* Filtering employees Appearing resets to All employees -- greg --FIXED
+* Editing Mr. Potato'head makes name part after quote disappear. --dionyziz --FIXED

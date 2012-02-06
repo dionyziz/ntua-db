@@ -4,7 +4,7 @@ if ( empty( $tid ) ) {
 }
 else {
     ?><h2>Επεξεργασία τύπου αεροσκάφους <?php
-    echo htmlspecialchars( $name );
+    echo html( $name );
     ?></h2><?php
 }
 ?>
@@ -25,7 +25,7 @@ else {
     ?>
     <div>
         <label>Όνομα:</label> <input type='text' name='name' value='<?php
-        echo htmlspecialchars( $name );
+        echo html( $name );
         ?>' <?php
         if ( isset( $errors[ 'noname' ] ) ) {
             ?> class='error' <?php
@@ -34,7 +34,7 @@ else {
     </div>
     <div>
         <label>Χωρητικότητα:</label> <input type='text' name='capacity' value='<?php
-        echo htmlspecialchars( $capacity );
+        echo html( $capacity );
         ?>' <?php
         if ( isset( $errors[ 'nocapacity' ] ) ) {
             ?> class='error' <?php
@@ -43,7 +43,7 @@ else {
     </div>
     <div>
         <label>Βάρος:</label> <input type='text' name='weight' value='<?php
-        echo htmlspecialchars( $weight );
+        echo html( $weight );
         ?>' <?php
         if ( isset( $errors[ 'noweight' ] ) ) {
             ?> class='error' <?php

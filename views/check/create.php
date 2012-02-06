@@ -4,11 +4,11 @@ if ( empty( $checktypeid ) ) {
 }
 else {
     ?><h2>Επεξεργασία ελέγχου <?php
-    echo htmlspecialchars( $checktypes[ $checktypeid ][ 'name' ] );
+    echo html( $checktypes[ $checktypeid ][ 'name' ] );
     ?>, στο σκάφος <?php
-    echo htmlspecialchars( $pid );
+    echo html( $pid );
     ?>, από τον τεχνικό <?php
-    echo htmlspecialchars( $employees[ $umn ][ 'name' ] );
+    echo html( $employees[ $umn ][ 'name' ] );
     ?></h2><?php
 }
 ?>
@@ -51,13 +51,13 @@ else {
         <?php
         foreach ( $checktypes as $checktype ) {
             ?><option value='<?php
-            echo htmlspecialchars( $checktype[ 'checktypeid' ] );
+            echo html( $checktype[ 'checktypeid' ] );
             ?>'<?php
             if ( $checktypeid == $checktype[ 'checktypeid' ] ) {
                 echo ' SELECTED';
             }
             ?>><?php
-            echo htmlspecialchars( $checktype[ 'name' ] );
+            echo html( $checktype[ 'name' ] );
             ?></option><?php
         }
         ?>
@@ -76,13 +76,13 @@ else {
         <?php
         foreach ( $planes as $plane ) {
             ?><option value='<?php
-            echo htmlspecialchars( $plane[ 'pid' ] );
+            echo html( $plane[ 'pid' ] );
             ?>'<?php
             if ( $pid == $plane[ 'pid' ] ) {
                 ?> selected='selected'<?php
             }
             ?>><?php
-            echo htmlspecialchars( $plane[ 'pid' ] );
+            echo html( $plane[ 'pid' ] );
             ?></option><?php
         }
         ?>
@@ -105,7 +105,7 @@ else {
             ?><option value='<?php
             echo $tech[ 'umn' ];
             ?>'><?php
-            echo htmlspecialchars( $tech[ 'name' ] );
+            echo html( $tech[ 'name' ] );
             ?></option><?php
         }
         ?>
@@ -113,7 +113,7 @@ else {
     </div>
     <div>
         <label>Ημερομηνία διεξαγωγής:</label> <input type='text' id='datecheckcreated' name='created' value='<?php
-        echo htmlspecialchars( $created );
+        echo html( $created );
         ?>' <?php
         if ( isset( $errors[ 'nocreated' ] ) ) {
             ?> class='error' <?php
@@ -122,7 +122,7 @@ else {
     </div>
     <div>
         <label>Χρόνος διεξαγωγής:</label> <input type='text' name='duration' value='<?php
-        echo htmlspecialchars( $duration );
+        echo html( $duration );
         ?>' <?php
         if ( isset( $errors[ 'noduration' ] ) ) {
             ?> class='error' <?php
@@ -131,7 +131,7 @@ else {
     </div>
     <div>
         <label>Σκορ:</label> <input type='text' name='score' value='<?php
-        echo htmlspecialchars( $score );
+        echo html( $score );
         ?>' <?php
         if ( isset( $errors[ 'noscore' ] ) ) {
             ?> class='error' <?php

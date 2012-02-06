@@ -14,12 +14,12 @@
 
                     <td>
                         <?php
-                        echo htmlspecialchars( $checktype[ 'name' ] );
+                        echo html( $checktype[ 'name' ] );
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo htmlspecialchars( $checktype[ 'maxscore' ] );
+                        echo html( $checktype[ 'maxscore' ] );
                         ?>
                     </td>
                     <td>

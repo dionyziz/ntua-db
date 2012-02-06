@@ -4,7 +4,7 @@ if ( empty( $umn ) ) {
 }
 else {
     ?><h2>Επεξεργασία αεροσκάφους <?php
-    echo htmlspecialchars( $umn );
+    echo html( $umn );
     ?></h2><?php
 }
 ?>
@@ -34,13 +34,13 @@ else {
         <?php
         foreach ( $techs as $tech ) {
             ?><option value='<?php
-            echo htmlspecialchars( $tech[ 'umn' ] );
+            echo html( $tech[ 'umn' ] );
             ?>'<?php
             if ( $umn == $tech[ 'umn' ] ) {
                 echo ' SELECTED';
             }
             ?>><?php
-            echo htmlspecialchars( $tech[ 'name' ] );
+            echo html( $tech[ 'name' ] );
             ?></option><?php
         }
         ?>
@@ -56,13 +56,13 @@ else {
         <?php
         foreach ( $planetypes as $planetype ) {
             ?><option value='<?php
-            echo htmlspecialchars( $planetype[ 'tid' ] );
+            echo html( $planetype[ 'tid' ] );
             ?>'<?php
             if ( $tid == $planetype[ 'tid' ] ) {
                 echo ' SELECTED';
             }
             ?>><?php
-            echo htmlspecialchars( $planetype[ 'name' ] );
+            echo html( $planetype[ 'name' ] );
             ?></option><?php
         }
         ?>

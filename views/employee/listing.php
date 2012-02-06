@@ -27,7 +27,7 @@
                     ?><img src='<?php
                     echo $employee[ 'imageurl' ];
                     ?>' alt='<?php
-                    echo htmlspecialchars( $employee[ 'name' ] );
+                    echo html( $employee[ 'name' ] );
                     ?>' /><?php
                 }
                 ?>
@@ -41,19 +41,19 @@
                     <a href='employee/create?umn=<?php
                         echo $employee[ 'umn' ];
                         ?>'><?php
-                        echo htmlspecialchars( $employee[ 'name' ] );
+                        echo html( $employee[ 'name' ] );
                     ?></a>
                 </h3>
                 <div>
                     <strong>Τηλέφωνο</strong>
                     <span><?php
-                        echo htmlspecialchars( $employee[ 'phone' ] );
+                        echo html( $employee[ 'phone' ] );
                     ?></span>
                 </div>
                 <div>
                     <strong>Διεύθυνση</strong>
                     <span><?php
-                        echo htmlspecialchars( $employee[ 'addr' ] );
+                        echo html( $employee[ 'addr' ] );
                     ?></span>
                 </div>
                 <div>
