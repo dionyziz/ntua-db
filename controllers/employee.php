@@ -10,7 +10,7 @@
                     $employees[ $i ][ 'imageurl' ] = $url;
                 }
             }
-            view( 'employee/listing', array( 'employees' => $employees ) );
+            view( 'employee/listing', array( 'employees' => $employees , 'occ' => $occ) );
         }
         public function createView( $errors, $umn, $ssn, $name, $phone, $addr, $salary, $occ ) {
             if ( !empty( $umn ) ) {
