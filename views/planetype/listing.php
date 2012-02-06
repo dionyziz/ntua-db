@@ -15,12 +15,12 @@
                 <tr>
                     <td>
                         <?php
-                        echo htmlspecialchars( $type[ 'icon' ] );
+                        echo html( $type[ 'icon' ] );
                         ?>
                     </td>
                     <td>
                         <?php
-                        echo htmlspecialchars( $type[ 'name' ] );
+                        echo html( $type[ 'name' ] );
                         ?>
                     </td>
                     <td>

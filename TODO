@@ -1,8 +1,13 @@
-* Editing employee doesn't automatically fill-in their specialty --billy
-* Confirm (or undo) delete --dionyziz
 * AJAX delete everywhere --dionyziz
 * Employee and regulator creation is broken since major controller changes --billy
 * Need to validate input in check score, bound by maxscore of according checktype --billy
-* Editing Mr. Potato'head makes name part after quote disappear. Reason? -billy
-* Supposedly there's a js but on check create/update, couldn't reproduce - billy
+* Supposedly there's a js bug on check create/update, couldn't reproduce - billy
 * Tech selection appears wrong after a mistake in 'submit'
+* Editing employee - regulator doesn't automatically show last checked --greg
+* model/employee::Item requires a SQL view --dionyziz
+
+* Editing employee doesn't automatically fill-in their specialty --billy            --FIXED
+* Editing Mr. Potato'head makes name part after quote disappear. --dionyziz         --FIXED
+* Fix images to persist (we now get error message) at employee edit --billy         --FIXED
+* Red boxes around empty fields no longer showing. Intended or needing fix? --billy --FIXED
+* Confirm (or undo) delete --dionyziz                                               --FIXED

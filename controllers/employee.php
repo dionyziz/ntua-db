@@ -10,7 +10,7 @@
                     $employees[ $i ][ 'imageurl' ] = $url;
                 }
             }
-            view( 'employee/listing', array( 'employees' => $employees ) );
+            view( 'employee/listing', array( 'employees' => $employees , 'occ' => $occ) );
         }
         public function createView( $errors, $umn, $ssn, $name, $phone, $addr, $salary, $occ ) {
             if ( !empty( $umn ) ) {
@@ -32,6 +32,9 @@
                 }
                 if ( empty( $salary ) ) {
                     $salary = $employee[ 'salary' ];
+                }
+                if ( empty( $occ ) ) {
+                    $occ = $employee[ 'occ' ];
                 }
                 //insert db_query for occupation? (since it's not saved anywhere as a variable) --bill
             }

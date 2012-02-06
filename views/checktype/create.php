@@ -4,7 +4,7 @@ if ( empty( $checktypeid ) ) {
 }
 else {
     ?><h2>Επεξεργασία τύπου ελέγχου <?php
-    echo htmlspecialchars( $name );
+    echo html( $name );
     ?></h2><?php
 }
 ?>
@@ -25,7 +25,7 @@ else {
     ?>
     <div>
         <label>Όνομα Ελέγχου:</label> <input type='text' name='name' value='<?php
-        echo htmlspecialchars( $name );
+        echo html( $name );
         ?>' <?php
         if ( isset( $errors[ 'noname' ] ) ) {
             ?> class='error' <?php
@@ -34,7 +34,7 @@ else {
     </div>
     <div>
         <label>Μέγιστο Σκορ:</label> <input type='text' name='maxscore' value='<?php
-        echo htmlspecialchars( $maxscore );
+        echo html( $maxscore );
         ?>' <?php
         if ( isset( $errors[ 'nomaxscore' ] ) ) {
             ?> class='error' <?php

@@ -4,7 +4,7 @@ if ( empty( $pid ) ) {
 }
 else {
     ?><h2>Επεξεργασία αεροσκάφους <?php
-    echo htmlspecialchars( $pid );
+    echo html( $pid );
     ?></h2><?php
 }
 ?>
@@ -26,7 +26,7 @@ else {
     ?>
     <div>
         <label>Κωδικός αεροσκάφους:</label> <input type='text' name='pid' value='<?php
-        echo htmlspecialchars( $pid );
+        echo html( $pid );
         ?>' <?php
         if ( isset( $errors[ 'nopid' ] ) ) {
             ?> class='error' <?php
@@ -46,13 +46,13 @@ else {
         <?php
         foreach ( $planetypes as $planetype ) {
             ?><option value='<?php
-            echo htmlspecialchars( $planetype[ 'tid' ] );
+            echo html( $planetype[ 'tid' ] );
             ?>'<?php
             if ( $tid == $planetype[ 'tid' ] ) {
                 echo ' SELECTED';
             }
             ?>><?php
-            echo htmlspecialchars( $planetype[ 'name' ] );
+            echo html( $planetype[ 'name' ] );
             ?></option><?php
         }
         ?>

@@ -32,7 +32,7 @@
                                 <ul><?php
                                 foreach ( $result->testcases as $testcase ) {
                                     ?><li><?php
-                                    echo htmlspecialchars( $testcase->name );
+                                    echo html( $testcase->name );
                                     ?>: <?php
                                     if ( $testcase->passed ) {
                                         ?><strong>PASS</strong><?php

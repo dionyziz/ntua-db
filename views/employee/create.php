@@ -4,7 +4,7 @@ if ( empty( $umn ) ) {
 }
 else {
     ?><h2><?php
-    echo htmlspecialchars( $name );
+    echo html( $name );
     ?></h2><?php
 }
 ?>
@@ -29,7 +29,7 @@ else {
     </div>
     <div>
         <label>Όνομα και επώνυμο:</label> <input type='text' name='name' value='<?php
-        echo htmlspecialchars( $name );
+        echo html( $name );
         ?>' <?php
         if ( isset( $errors[ 'noname' ] ) ) {
             ?> class='error' <?php
@@ -38,7 +38,7 @@ else {
     </div>
     <div>
         <label>UMN:</label> <input type='text' name='umn' value='<?php
-        echo htmlspecialchars( $umn );
+        echo html( $umn );
         ?>' <?php
         if ( isset( $errors[ 'noumn' ] ) ) {
             ?> class='error' <?php
@@ -50,7 +50,7 @@ else {
     </div>
     <div>
         <label>ΑΦΜ:</label> <input type='text' name='ssn' value='<?php
-        echo htmlspecialchars( $ssn );
+        echo html( $ssn );
         ?>' <?php
         if ( isset( $errors[ 'nossn' ] ) ) {
             ?> class='error' <?php
@@ -62,7 +62,7 @@ else {
     </div>
     <div>
         <label>Τηλέφωνο:</label> <input type='text' name='phone' value='<?php
-        echo htmlspecialchars( $phone );
+        echo html( $phone );
         ?>' <?php
         if ( isset( $errors[ 'nophone' ] ) ) {
             ?> class='error' <?php
@@ -71,7 +71,7 @@ else {
     </div>
     <div>
         <label>Διεύθυνση:</label> <input type='text' name='addr' value='<?php
-        echo htmlspecialchars( $addr );
+        echo html( $addr );
         ?>' <?php
         if ( isset( $errors[ 'noaddr' ] ) ) {
             ?> class='error' <?php
@@ -80,7 +80,7 @@ else {
     </div>
     <div>
         <label>Μισθός:</label> <input type='text' name='salary' value='<?php
-        echo htmlspecialchars( $salary );
+        echo html( $salary );
         ?>' <?php
         if ( isset( $errors[ 'nosalary' ] ) ) {
             ?> class='error' <?php
@@ -89,20 +89,19 @@ else {
     </div>
     <div>
         <label>Απασχόληση:</label> <select name='occ' id='occ'>
-            <option selected value = "other">Χωρίς ειδίκευση</option>
-            <?php
-            $occupations = array(
-                'tech' => 'Τεχνικός',
-                'reg' => 'Διαχειριστής'
-            );
-            foreach ( $occupations as $value => $caption ) {
-                ?><option value="<?php
-                echo $value;
-                ?>"><?php
-                echo $caption;
-                ?></option><?php
+        <option <?php if ( empty( $occ ) ) {
+            ?>selected<?php
             }
-            ?></select>
+            ?> value = "other">Χωρίς ειδίκευση</option>
+        <option <?php if ( $occ == 'tech' ) {
+            ?>selected<?php
+            }
+            ?> value = "tech">Τεχνικός</option>
+        <option <?php if ( $occ == 'regulator' ) {
+            ?>selected<?php
+            }
+            ?> value = "regulator">Διαχειριστής</option>
+            </select>
     </div>
     <div id='reg_check'>
         <label>Τελευταίο check-up: </label>
@@ -112,7 +111,7 @@ else {
         }
         ?>
         value='<?php
-        echo htmlspecialchars( $checked );
+        echo html( $checked );
         ?>' name='checked' />
     </div>
     <div class='actions'>
