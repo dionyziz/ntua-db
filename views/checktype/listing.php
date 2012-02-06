@@ -26,7 +26,7 @@
                         <a href='checktype/create?checktypeid=<?php
                         echo $checktype[ 'checktypeid' ];
                         ?>' class='update' title='Επεξεργασία'>Επεξεργασία τύπου ελέγχου</a>
-                        <form action='checktype/delete' method='post' class='delete'>
+                        <form action='checktype/delete' method='post' class='delete' onclick="return confirm('Είστε σίγουρος ότι θέλετε να πραγματοποιήσετε τη διαγραφή; (Η ενέργεια αυτή δεν αντιστρέφεται)')">
                             <input type='hidden' name='checktypeid' value='<?php
                             echo $checktype[ 'checktypeid' ];
                             ?> ' />

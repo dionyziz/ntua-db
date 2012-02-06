@@ -43,7 +43,7 @@
                         <a href='plane/create?pid=<?php
                         echo $plane[ 'pid' ];
                         ?>' class='update' title='Επεξεργασία'>Επεξεργασία αεροσκάφους</a>
-                        <form action='plane/delete' method='post' class='delete'>
+                        <form action='plane/delete' method='post' class='delete' onclick="return confirm('Είστε σίγουρος ότι θέλετε να πραγματοποιήσετε τη διαγραφή; (Η ενέργεια αυτή δεν αντιστρέφεται)')">
                             <input type='hidden' name='pid' value='<?php
                             echo $plane[ 'pid' ];
                             ?> ' />

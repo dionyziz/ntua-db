@@ -54,7 +54,7 @@
                         ?>&amp;umn=<?php
                         echo $check[ 'umn' ];
                         ?>' class='update' title='Επεξεργασία'>Επεξεργασία ελέγχου</a>
-                        <form action='check/delete' method='post' class='delete'>
+                        <form action='check/delete' method='post' class='delete' onclick="return confirm('Είστε σίγουρος ότι θέλετε να πραγματοποιήσετε τη διαγραφή; (Η ενέργεια αυτή δεν αντιστρέφεται)')">
                             <input type='hidden' name='checktypeid' value='<?php
                             echo $check[ 'checktypeid' ];
                             ?> ' />

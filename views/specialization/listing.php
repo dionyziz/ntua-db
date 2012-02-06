@@ -28,7 +28,7 @@
                         ?>
                     </td>
                     <td>
-                        <form action='specialization/delete' method='post' class='delete'>
+                        <form action='specialization/delete' method='post' class='delete' onclick="return confirm('Είστε σίγουρος ότι θέλετε να πραγματοποιήσετε τη διαγραφή; (Η ενέργεια αυτή δεν αντιστρέφεται)')">
                             <input type='hidden' name='umn' value='<?php
                             echo $specialization[ 'umn' ];
                             ?> ' />
