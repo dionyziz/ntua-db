@@ -4,9 +4,9 @@
 * Supposedly there's a js bug on check create/update, couldn't reproduce - billy
 * Tech selection appears wrong after a mistake in 'submit'
 * Editing employee - regulator doesn't automatically show last checked --greg
-* Check delete not functional yet --greg
 * model/employee::Item requires a SQL view --dionyziz
 
+* Check delete not functional yet --greg                                            --FIXED
 * Editing employee doesn't automatically fill-in their specialty --billy            --FIXED
 * Editing Mr. Potato'head makes name part after quote disappear. --dionyziz         --FIXED
 * Fix images to persist (we now get error message) at employee edit --billy         --FIXED
