@@ -6,3 +6,4 @@
 * Editing Mr. Potato'head makes name part after quote disappear. Reason? -billy
 * Supposedly there's a js but on check create/update, couldn't reproduce - billy
 * Tech selection appears wrong after a mistake in 'submit'
+* Filtering employees Appearing resets to All employees -- greg
