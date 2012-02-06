@@ -56,7 +56,55 @@
             db_update( 'employees', compact( 'umn' ), $fields );
         }
         public static function item( $umn ) {
-            return db_select_one( 'employees', compact( 'umn' ) );
+            //return db_select_one( 'employees', compact( 'umn' ) );
+            $res = db(
+                "SELECT
+                    'tech' as occ, e.*, i.width, i.height
+                FROM
+                    employees e 
+                LEFT JOIN
+                    techs t ON t.umn = e.umn
+                LEFT JOIN
+                    images i USING ( imageid )
+                WHERE
+                    ( :umn = e.umn AND t.umn IS NOT NULL )
+                LIMIT 1",
+                    compact( 'umn' )
+                );
+            $ret = mysql_fetch_array( $res );
+            if ( empty( $ret ) ) {
+            $res = db(
+                "SELECT
+                    'regulator' as occ, e.*, i.width, i.height, r.checked
+                FROM
+                    employees e
+                LEFT JOIN
+                    regulators r ON r.umn = e.umn
+                LEFT JOIN
+                    images i USING ( imageid )
+                WHERE
+                    ( :umn = e.umn AND r.umn IS NOT NULL )
+                LIMIT 1",
+                    compact( 'umn' )
+                );
+            $ret = mysql_fetch_array( $res );
+            }
+            if ( empty( $ret ) ) {
+            $res = db(
+                "SELECT
+                    '' as occ, e.*, i.width, i.height
+                FROM
+                    employees e
+                LEFT JOIN
+                    images i USING ( imageid )
+                WHERE
+                    :umn = e.umn
+                LIMIT 1",
+                    compact( 'umn' )
+                );
+            $ret = mysql_fetch_array( $res );
+            }
+            return $ret;
         }
     }
 ?>

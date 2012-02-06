@@ -89,20 +89,19 @@ else {
     </div>
     <div>
         <label>Απασχόληση:</label> <select name='occ' id='occ'>
-            <option selected value = "other">Χωρίς ειδίκευση</option>
-            <?php
-            $occupations = array(
-                'tech' => 'Τεχνικός',
-                'reg' => 'Διαχειριστής'
-            );
-            foreach ( $occupations as $value => $caption ) {
-                ?><option value="<?php
-                echo $value;
-                ?>"><?php
-                echo $caption;
-                ?></option><?php
+        <option <?php if ( empty( $occ ) ) {
+            ?>selected<?php
             }
-            ?></select>
+            ?> value = "other">Χωρίς ειδίκευση</option>
+        <option <?php if ( $occ == 'tech' ) {
+            ?>selected<?php
+            }
+            ?> value = "tech">Τεχνικός</option>
+        <option <?php if ( $occ == 'regulator' ) {
+            ?>selected<?php
+            }
+            ?> value = "regulator">Διαχειριστής</option>
+            </select>
     </div>
     <div id='reg_check'>
         <label>Τελευταίο check-up: </label>

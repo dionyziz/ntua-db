@@ -1,4 +1,3 @@
-* Editing employee doesn't automatically fill-in their specialty --billy
 * Confirm (or undo) delete --dionyziz
 * AJAX delete everywhere --dionyziz
 * Employee and regulator creation is broken since major controller changes --billy
@@ -6,6 +5,7 @@
 * Editing Mr. Potato'head makes name part after quote disappear. Reason? -billy
 * Supposedly there's a js but on check create/update, couldn't reproduce - billy
 * Tech selection appears wrong after a mistake in 'submit'
+* Editing employee - regulator doesn't automatically show last checked --greg
 
-
+* Editing employee doesn't automatically fill-in their specialty --billy --greg --FIXED
 * Filtering employees Appearing resets to All employees -- greg --FIXED

@@ -33,6 +33,9 @@
                 if ( empty( $salary ) ) {
                     $salary = $employee[ 'salary' ];
                 }
+                if ( empty( $occ ) ) {
+                    $occ = $employee[ 'occ' ];
+                }
                 //insert db_query for occupation? (since it's not saved anywhere as a variable) --bill
             }
             $errors = array_flip( explode( ',', $errors ) );

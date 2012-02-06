@@ -2,7 +2,7 @@
 <form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'>
     <label>Να εμφανίζονται:</label>
     <select name='occupation' onchange="window.location.href = 'employee/listing?occ='+this.options [this.options.selectedIndex].value">
-        <option <?php if ( !isset( $occ ) ) {
+        <option <?php if ( empty( $occ ) ) {
             ?> selected <?php
             }
             ?> value=''>Όλοι οι εργαζόμενοι</option>
