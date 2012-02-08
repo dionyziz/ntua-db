@@ -1,15 +1,15 @@
 <?php
     class Tech {
-        public static function Create( $umn ) {
+        public static function create( $umn ) {
             db_insert( 'techs', compact( 'umn' ) );
         }
-        public static function Listing() {
-            return Employee::Listing( 'tech' );
+        public static function listing() {
+            return Employee::listing( 'tech' );
         }
-        public static function Delete( $umn ) {
+        public static function delete( $umn ) {
             db_delete( 'techs', compact( 'umn' ) );
         }
-        public static function Item( $umn ) {
+        public static function item( $umn ) {
             return db_select( 'techs', compact( 'umn' ) );
         }
     }

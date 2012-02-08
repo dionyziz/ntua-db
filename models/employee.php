@@ -11,10 +11,10 @@
                 throw new Duplicate();
             }
             if ( $occ == 'tech' ) {
-                return Tech::Create( $umn );
+                return Tech::create( $umn );
             }
-            else if ( $occ == 'reg' ) {
-                return Regulator::Create ( $umn, $checked );
+            else if ( $occ == 'regulator' ) {
+                return Regulator::create ( $umn, $checked );
             }
         }
         public static function listing( $occ ) {
@@ -61,7 +61,7 @@
                 "SELECT
                     'tech' as occ, e.*, i.width, i.height
                 FROM
-                    employees e 
+                    employees e
                 LEFT JOIN
                     techs t ON t.umn = e.umn
                 LEFT JOIN

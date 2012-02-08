@@ -88,11 +88,11 @@
             }
             if ( $occ == 'tech' ) {
                 Tech::create( $umn );
-                Redirect( 'tech/listing' );
+                Redirect( 'employee/listing?occ=tech' );
             }
-            else if ( $occ == 'reg' ) {
+            else if ( $occ == 'regulator' ) {
                 Regulator::create( $umn, $checked );
-                Redirect( 'regulator/listing' );
+                Redirect( 'employee/listing?occ=regulator' );
             }
             Redirect( 'employee/listing' );
         }
