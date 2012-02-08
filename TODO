@@ -4,7 +4,9 @@
 * Supposedly there's a js bug on check create/update, couldn't reproduce -- billy
 * Tech selection appears wrong after a mistake in 'submit'
 * Editing employee - regulator doesn't save last checked/occupation --greg
-* model/employee::Item requires a SQL view --dionyziz
+* Model/employee::Item requires a SQL view --dionyziz
+* Add views for Checktypes/planetypes/specializations/etc..     --dionyziz
+* Add MySQL constrain triggers  --dionyziz
 
 * Editing employee - regulator doesn't automatically show last checked --greg       --FIXED
 * Check delete not functional yet --greg                                            --FIXED
