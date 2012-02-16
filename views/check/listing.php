@@ -1,3 +1,4 @@
+<p><a href='checktype/listing'>Προβολή Τύπων Ελέγχων</a></p>
 <table>
     <thead>
         <tr>

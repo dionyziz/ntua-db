@@ -26,6 +26,10 @@
     </form>
 </div>
 </p>
+<p>
+    <?php if ( $occ == 'tech' ) {
+            echo "<a href='specialization/listing'>Προβολή Ειδικοτήτων Τεχνικών</a>"; } ?>
+</p>
 <div>
     <ul class='person'>
         <?php
