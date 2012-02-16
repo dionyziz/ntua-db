@@ -63,8 +63,8 @@
                                     ),
             );
             $validated = filter_var_array( $input, $args );
-            $validated = Controller::validateInput( $validated );
-            return $validated;
+            $validated2 = Controller::validateInput( $validated );
+            return $validated2;
         }
 
         public static function create( $umn, $ssn, $name, $phone, $addr, $salary, $occ, $photo ) {

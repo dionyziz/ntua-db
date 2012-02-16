@@ -7,6 +7,7 @@
 * Add MySQL constrain triggers  --dionyziz
 * Fix employee update to Tech or regulator  --billy
 * We actually need to implement the queries asked by the exercise xD --all
+* ValidateInput on controller/employees fails miserably (doesnt crash, but does nothing)
 
 * Editing employee - regulator doesn't automatically show last checked --greg       --FIXED
 * Check delete not functional yet --greg                                            --FIXED
