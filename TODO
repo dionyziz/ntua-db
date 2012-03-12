@@ -1,7 +1,6 @@
 * AJAX delete everywhere --dionyziz
 * Need to validate input in check score, bound by maxscore of its checktype --dio
 * Supposedly there's a js bug on check create/update, couldn't reproduce --billy
-* Model/employee::Item requires a SQL view --dionyziz
 * Add MySQL constrain triggers  --dionyziz
 * We actually need to implement the queries asked by the exercise xD --all
 * model/employee::Item requires a SQL view --dionyziz
