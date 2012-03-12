@@ -1,11 +1,8 @@
 * AJAX delete everywhere --dionyziz
-* Need to validate input in check score, bound by maxscore of according checktype --billy
-* Supposedly there's a js bug on check create/update, couldn't reproduce -- billy
-* Tech selection appears wrong after a mistake in 'submit'
-* Editing employee - regulator doesn't save last checked/occupation --greg
+* Need to validate input in check score, bound by maxscore of its checktype --dio
+* Supposedly there's a js bug on check create/update, couldn't reproduce --billy
 * Model/employee::Item requires a SQL view --dionyziz
 * Add MySQL constrain triggers  --dionyziz
-* Fix employee update to Tech or regulator  --billy
 * We actually need to implement the queries asked by the exercise xD --all
 * model/employee::Item requires a SQL view --dionyziz
 * Missing employee boxes aren't solid red --dionyziz
@@ -20,3 +17,6 @@
 * Add views for Checktypes/planetypes/specializations/etc.. --billy                 --FIXED
 * ValidateInput on controller/employees fails miserably --billy                     --FIXED
 * Error if umn is left blank while updating employee --billy                        --FIXED
+* Fix employee update to Tech or regulator  --billy                                 --FIXED
+* Editing employee - regulator doesn't save last checked/occupation --billy         --FIXED
+* Tech selection appears wrong after a mistake in 'submit' --billy                  --FIXED

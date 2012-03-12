@@ -47,7 +47,7 @@
 
         public static function validateInput( $input ) {
             $args = array(
-                'umn'       => array( 'filter'  => FILTER_VALIDATE_INT,
+                'newumn'       => array( 'filter'  => FILTER_VALIDATE_INT,
                                       'options' => array( 'min_range' => 1 )
                                     ),
                 'ssn'       => array( 'filter'  => FILTER_VALIDATE_INT,
