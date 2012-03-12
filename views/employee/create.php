@@ -106,6 +106,9 @@ else {
             }
             ?> value = "regulator">Διαχειριστής</option>
             </select>
+        <input type='hidden' value='<?php
+            echo $occ;
+            ?>' name='oldocc' />
     </div>
     <div id='reg_check'>
         <label>Τελευταίο check-up: </label>

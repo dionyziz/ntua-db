@@ -105,8 +105,8 @@
             Employee::delete( $umn );
             Redirect( 'employee/listing' );
         }
-        public static function update( $umn, $newumn, $ssn, $name, $phone, $addr, $salary, $occ, $photo ) {
-            $vars = compact( 'umn', 'newumn', 'ssn', 'name', 'phone', 'addr', 'salary' );
+        public static function update( $umn, $newumn, $ssn, $name, $phone, $addr, $salary, $oldocc, $occ, $checked, $photo ) {
+            $vars = compact( 'umn', 'newumn', 'ssn', 'name', 'phone', 'addr', 'salary', 'oldocc', 'occ', 'checked' );
             $errors = self::validateInput( $vars );
             if ( $newumn == 0 ) {
                 Redirect( 'employee/create?errors=noumn&' . Controller::paramURL( $vars ) );
@@ -118,6 +118,22 @@
             if ( self::validUpload( $photo ) ) {
                 $imageid = Image::create( $photo[ 'tmp_name' ], 130, 130 );
                 Employee::update( $umn, false, false, false, false, false, false, $imageid );
+            }
+            if ( $oldocc != $occ ) {
+                if ( $oldocc == 'tech' ) {
+                    Tech::delete( $umn );
+                }
+                else if ( $oldocc == 'regulator' ) {
+                    Regulator::delete( $umn );
+                }
+                if ( $occ == 'tech' ) {
+                    Tech::create( $umn );
+                    Redirect( 'employee/listing?occ=tech' );
+                }
+                else if ( $occ == 'regulator' ) {
+                    Regulator::create( $umn, $checked );
+                    Redirect( 'employee/listing?occ=regulator' );
+                }
             }
             Redirect( 'employee/listing' );
         }
