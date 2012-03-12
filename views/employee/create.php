@@ -37,7 +37,11 @@ else {
         ?> />
     </div>
     <div>
-        <label>UMN:</label> <input type='text' name='umn' value='<?php
+    <label>UMN:</label> <input type='text' name='<?php
+        if ( !empty( $umn ) ) {
+            ?>new<?php
+        }
+        ?>umn' value='<?php
         echo html( $umn );
         ?>' <?php
         if ( isset( $errors[ 'noumn' ] ) ) {
@@ -120,7 +124,10 @@ else {
             ?><input type='submit' value='Δημιουργία' /><?php
         }
         else {
-            ?><input type='submit' value='Ενημέρωση' /><?php
+            ?><input type='hidden' value='<?php
+            echo $umn;
+            ?>' name='umn' />
+            <input type='submit' value='Ενημέρωση' /><?php
         }
         ?>
         <a href='employee/listing' class='cancel'>Άκυρο</a>

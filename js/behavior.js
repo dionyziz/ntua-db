@@ -69,3 +69,5 @@ $ ( "#datecheckcreated" ).AnyTime_picker( "created",
 //    // Attach the filter to our input and list
 //    My.List.Filter('input#search_filter', '#names>ul>li>a');
 //});
+
+$( '.error' ).select().focus();

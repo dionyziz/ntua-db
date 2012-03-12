@@ -7,7 +7,6 @@
 * Add MySQL constrain triggers  --dionyziz
 * Fix employee update to Tech or regulator  --billy
 * We actually need to implement the queries asked by the exercise xD --all
-* ValidateInput on controller/employees fails miserably (doesnt crash, but does nothing)
 * model/employee::Item requires a SQL view --dionyziz
 * Missing employee boxes aren't solid red --dionyziz
 * Editing employee - regulator doesn't automatically show last checked --greg       --FIXED
@@ -18,4 +17,6 @@
 * Red boxes around empty fields no longer showing. Intended or needing fix? --billy --FIXED
 * Confirm (or undo) delete --dionyziz                                               --FIXED
 * Employee and regulator creation is broken since major controller changes --billy  --FIXED
-* Add views for Checktypes/planetypes/specializations/etc..     --billy             --FIXED
+* Add views for Checktypes/planetypes/specializations/etc.. --billy                 --FIXED
+* ValidateInput on controller/employees fails miserably --billy                     --FIXED
+* Error if umn is left blank while updating employee --billy                        --FIXED

@@ -45,8 +45,9 @@
         public static function delete( $umn ) {
             db_delete( 'employees', compact( 'umn' ) );
         }
-        public static function update( $umn, $ssn = false, $name = false, $phone = false, $addr = false, $salary = false, $imageid = false ) {
+        public static function update( $umn, $newumn = false, $ssn = false, $name = false, $phone = false, $addr = false, $salary = false, $imageid = false ) {
             $fields = compact( 'ssn', 'name', 'phone', 'addr', 'salary', 'imageid' );
+            $fields[ 'umn' ] = $newumn;
 
             foreach ( $fields as $field => $value ) {
                 if ( $value === false ) {
