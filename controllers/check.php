@@ -37,7 +37,7 @@
                                       'options' => array( 'min_range' => 1 )
                                     ),
                 'score'     => array( 'filter'  => FILTER_VALIDATE_INT,
-                                      'options' => array( 'max_range' => $maxscore[ 'maxscore' ] )
+                                      'options' => array( 'min_range' => 0, 'max_range' => $maxscore[ 'maxscore' ] )
                                     ),
             );
             $validated = filter_var_array( $input, $args );
