@@ -4,7 +4,6 @@
 * Add MySQL constrain triggers  --dionyziz
 * We actually need to implement the queries asked by the exercise xD --all
 * model/employee::Item requires a SQL view --dionyziz
-* Add filters EVERYWHERE!! --billy
 * Missing employee boxes aren't solid red --dionyziz
 * Editing employee - regulator doesn't automatically show last checked --greg       --FIXED
 * Check delete not functional yet --greg                                            --FIXED
@@ -20,3 +19,4 @@
 * Fix employee update to Tech or regulator  --billy                                 --FIXED
 * Editing employee - regulator doesn't save last checked/occupation --billy         --FIXED
 * Tech selection appears wrong after a mistake in 'submit' --billy                  --FIXED
+* Add filters EVERYWHERE!! --billy                                                  --FIXED

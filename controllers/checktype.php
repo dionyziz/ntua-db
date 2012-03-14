@@ -20,9 +20,20 @@
             $errors = array_flip( explode( ',', $errors ) );
             view( 'checktype/create', compact( 'errors', 'checktypeid', 'name', 'maxscore' ) );
         }
+        public static function validateInput( $input ) {
+            $args = array(
+                'name'      => FILTER_FILTER_UNSAFE_RAW,
+                'maxscore'  => array( 'filter'  => FILTER_VALIDATE_INT,
+                                      'options' => array( 'min_range' => 1 )
+                                    ),
+            );
+            $validated = filter_var_array( $input, $args );
+            $validated2 = Controller::validateInput( $validated );
+            return $validated2;
+        }
         public static function create( $name, $maxscore ) {
             $vars = compact( 'name', 'maxscore' );
-            $errors = Controller::validateInput( $vars );
+            $errors = self::validateInput( $vars );
             if ( !empty( $errors ) ) {
                 Redirect( 'checktype/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
@@ -40,7 +51,7 @@
         }
         public static function update( $checktypeid, $name, $maxscore ) {
             $vars = compact( 'checktypeid', 'name', 'maxscore' );
-            $errors = Controller::validateInput( $vars );
+            $errors = self::validateInput( $vars );
             if ( !empty( $errors ) ) {
                 Redirect( 'checktype/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }

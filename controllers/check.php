@@ -30,13 +30,12 @@
         public static function validateInput( $input, $checktypeid ) {
             $res = Checktype::getMaxScore( $checktypeid );
             $maxscore = mysql_fetch_array( $res );
-            //var_dump ( $maxscore[ 'maxscore' ] );
-            //die();
             $args = array(
                 'duration'  => array( 'filter'  => FILTER_VALIDATE_INT,
                                       'options' => array( 'min_range' => 1 )
                                     ),
                 'score'     => array( 'filter'  => FILTER_VALIDATE_INT,
+                                      /* min_range not needed if UNSIGNED INT on db */
                                       'options' => array( 'min_range' => 0, 'max_range' => $maxscore[ 'maxscore' ] )
                                     ),
             );
