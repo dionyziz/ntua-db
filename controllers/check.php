@@ -27,9 +27,26 @@
             $employees = Employee::listing( 'tech' );
             view( 'check/create', compact( 'errors', 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score', 'checktypes', 'planes', 'techs', 'employees' ) );
         }
+        public static function validateInput( $input, $checktypeid ) {
+            $res = Checktype::getMaxScore( $checktypeid );
+            $maxscore = mysql_fetch_array( $res );
+            //var_dump ( $maxscore[ 'maxscore' ] );
+            //die();
+            $args = array(
+                'duration'  => array( 'filter'  => FILTER_VALIDATE_INT,
+                                      'options' => array( 'min_range' => 1 )
+                                    ),
+                'score'     => array( 'filter'  => FILTER_VALIDATE_INT,
+                                      'options' => array( 'max_range' => $maxscore[ 'maxscore' ] )
+                                    ),
+            );
+            $validated = filter_var_array( $input, $args );
+            $validated2 = Controller::validateInput( $validated );
+            return $validated2;
+        }
         public static function create( $checktypeid, $pid, $umn, $created, $duration, $score ) {
             $vars = compact( 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score' );
-            $errors = Controller::validateInput( $vars );
+            $errors = self::validateInput( $vars, $checktypeid );
             if ( !empty( $errors ) ) {
                 Redirect( 'check/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
@@ -47,7 +64,7 @@
         }
         public static function update( $checktypeid, $pid, $umn, $created, $duration, $score ) {
             $vars = compact( 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score' );
-            $errors = Controller::validateInput( $vars );
+            $errors = self::validateInput( $vars, $checktypeid );
             if ( !empty( $errors ) ) {
                 Redirect( 'check/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }

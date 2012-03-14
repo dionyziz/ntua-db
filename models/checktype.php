@@ -19,5 +19,14 @@
         public static function Item( $checktypeid ) {
             return array_shift( db_select( 'checktypes', compact( 'checktypeid' ) ) );
         }
+        public static function getMaxScore ( $checktypeid ) {
+            $res = db (
+                'SELECT maxscore
+                FROM checktypes t
+                WHERE t.checktypeid = ' . $checktypeid,
+                compact( 'maxscore' )
+            );
+            return $res;
+        }
     }
 ?>
