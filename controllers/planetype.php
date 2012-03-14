@@ -23,9 +23,19 @@
             $errors = array_flip( explode( ',', $errors ) );
             view( 'planetype/create', compact( 'errors', 'tid', 'name', 'weight', 'capacity' ) );
         }
+        public static function validateInput( $input ) {
+            $args = array(
+                'name'      => FILTER_FILTER_UNSAFE_RAW
+                'weight'       => array( 'filter'  => FILTER_VALIDATE_INT,
+                                      'options' => array( 'min_range' => 1 )
+                                    ),
+                'capacity'       => array( 'filter'  => FILTER_VALIDATE_INT,
+                                      'options' => array( 'min_range' => 1 )
+                                    ),
+            );
         public static function create( $name, $weight, $capacity ) {
             $vars = compact( 'name', 'weight', 'capacity' );
-            $errors = Controller::validateInput( $vars );
+            $errors = self::validateInput( $vars );
             if ( !empty( $errors ) ) {
                 Redirect( 'planetype/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
