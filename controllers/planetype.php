@@ -25,14 +25,18 @@
         }
         public static function validateInput( $input ) {
             $args = array(
-                'name'      => FILTER_FILTER_UNSAFE_RAW
-                'weight'       => array( 'filter'  => FILTER_VALIDATE_INT,
+                'name'      => FILTER_FILTER_UNSAFE_RAW,
+                'weight'    => array( 'filter'  => FILTER_VALIDATE_INT,
                                       'options' => array( 'min_range' => 1 )
                                     ),
-                'capacity'       => array( 'filter'  => FILTER_VALIDATE_INT,
+                'capacity'  => array( 'filter'  => FILTER_VALIDATE_INT,
                                       'options' => array( 'min_range' => 1 )
                                     ),
             );
+            $validated = filter_var_array( $input, $args );
+            $validated2 = Controller::validateInput( $validated );
+            return $validated2;
+        }
         public static function create( $name, $weight, $capacity ) {
             $vars = compact( 'name', 'weight', 'capacity' );
             $errors = self::validateInput( $vars );
@@ -53,7 +57,7 @@
         }
         public static function update( $tid, $name, $weight, $capacity ) {
             $vars = compact( 'tid', 'name', 'weight', 'capacity' );
-            $errors = Controller::validateInput( $vars );
+            $errors = self::validateInput( $vars );
             if ( !empty( $errors ) ) {
                 Redirect( 'planetype/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
