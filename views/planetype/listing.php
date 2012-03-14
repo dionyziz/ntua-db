@@ -50,3 +50,4 @@
         ?>
     </tbody>
 </table>
+<p class='create'><a href='planetype/create'>Προσθήκη νέου τύπου αεροσκάφους</a></p>
