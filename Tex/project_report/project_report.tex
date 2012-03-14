@@ -1,15 +1,103 @@
 \documentclass[a4paper]{article}
 \usepackage{xgreek}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{xltxtra}
 \usepackage{setspace}
 \usepackage{graphicx}
+\usepackage{listings}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\tab}{\hspace*{3em}}
 \setmainfont[Mapping=TeX-text]{CMU Serif}
+
+\lstset{% general command to set parameter(s)
+		% print whole listing small
+		basicstyle=\small,
+		% underlined bold black keywords
+		keywordstyle=\color{Blue}\bfseries,
+		% nothing happens
+		identifierstyle=,
+		% white comments
+		commentstyle=\color{white},
+		% typewriter type for strings
+		stringstyle=\ttfamily,
+		% no special string spaces
+		showstringspaces=false
+		}
+
 \begin{document}
 \include{title/title}
-\newcommand{\tab}{\hspace*{3em}}
 
-%{{{ E-R Model
+
+%{{{ Λεπτομέρειες Υλοποίησης
+
+\section{Λεπτομέρειες Υλοποίησης}
+
+Το project κατασκευάστηκε ως μια εφαρμογή ιστού, με έμφαση στην χρηστικότητα
+των ιστοσελίδων και την εύκολη πρόσβαση στα δεδομένα.
+
+Για την υλοποίηση του χρησιμοποιήθηκε το \emph{LAMP} stack δηλαδή:
+\begin{itemize}
+\item GNU-\textbf{L}inux (διανομή Debian squeeze ως λειτουργικού συστήματος)
+\item \textbf{A}pache (Web Server)
+\item \textbf{M}ySQL (DataBase Management System)
+\item \textbf{P}HP (Scripting Language).
+\end{itemize}
+Ως database (storage) engine επιλέχθηκε η InnoDB.
+Επιπλέον, έγινε χρήση CSS για επεξεργασία της μορφοποίησης των ιστοσελίδων,
+και JavaScript.\\
+Όλο το προαναφερθέν λογισμικό είναι ανοιχτού κώδικα (open source).\\
+
+Κατα τη φάση σχεδίασης, αποφασίστηκε η εφαρμογή της αρχιτεκτονικής \emph{MVC}
+(\textbf{M}odel/\textbf{V}iew/\textbf{C}ontroller), η οποία ορίζει σαφή
+διαχωρισμό μεταξύ των διαφόρων συνιστωσών της εφαρμογής.
+
+Έτσι το project αναλύθηκε σε \underline{models}, οπου εμπεριέχεται όλη η λογική
+επικοινωνίας με τη βάση, \underline{views}, όπου γίνεται η παραγωγή της διεπαφής
+με το χρήστη, και \underline{controllers}, όπου αποφασίζεται ποιο view και model
+θα κληθεί, και υλοποιεί τη σωστή επικοινωνία μεταξύ τους.\\
+
+Με τον τρόπο αυτό, καθίσταται ευκολότερη και ταχύτερη η ανάπτυξη και η
+αποσφαλμάτωση του λογισμικού, ενώ ο κώδικας είναι πιο ευέλικτος, αφού
+αποκρύπτονται οι λεπτομέρειες υλοποίησης μεταξύ των συνιστωσών (αγνωστικό
+μοντέλο - αποσύνδεση).
+
+\subsection{Πλεονεκτήματα}
+Η επιλογή του παραπάνω τρόπου υλοποίησης επιφέρει αρκετά πλεονεκτήματα, τα
+σημαντικότερα των οποίων είναι τα παρακάτω:
+
+\begin{itemize}
+\item Η κατασκευή σε μορφή ιστοσελίδων επιτρέπει πρόσβαση στη βάση από
+οποιονδήποτε υπολογιστή, χωρίς να εμφανίζονται διαφορές από όσους
+χρησιμοποιούν διαφορετικά λειτουργικά συστήματα.
+\item Η διανομή Debian squeeze (stable) διακρίνεται για τη σταθερότητα και την
+ασφάλειά που προσφέρει, επομένως είναι ιδανική για μια εφαρμογή web server.
+\item Εύκολη σύνταξη κώδικα, λόγω της ομαλής καμπύλης εκμάθησης της PHP και της
+MySQL
+\item Εύκολη ανάπτυξη λογισμικού, αφού τα αρχεία της PHP αποθηκεύονται
+και επεξεργάζονται απευθείας σε remote Web server, κάτι που μας επέτρεψε
+απομακρυσμένη και ταυτόχρονη πρόσβαση και εργασία.
+\item Εύκολη κατασκευή της διεπαφής με το χρήστη με χρήση ιστοσελίδων.
+\item Αξιόπιστες συναλλαγές με τη βάση, αφού το InnoDB ικανοποιεί τις ιδιότητες
+\emph{ACID} (\textbf{A}tomicity, \textbf{C}onsistency, \textbf{I}solation,
+\textbf{D}urability).
+\item Γρήγορη (σχεδόν άμεση) ανάκαμψη από crashes ή μη-αναμενόμενα shutdowns,
+αφού το InnoDB απλώς επαναλαμβάνει της ενέργειες στα log files της, αντίθετα με
+το MyISAM, που ελέγχει και επισκευάζει όλους τους δείκτες και πίνακες.
+\end{itemize}
+
+\subsection{Μειονεκτήματα}
+Οι επιλογές μας είχαν και τα μειονεκτήματά τους, όπως αναφέρονται παρακάτω:
+
+\begin{itemize}
+\item Η MySQL δεν υποστηρίζει constraint checking, οπότε οι περιορισμοί που
+θέλαμε να υπάρχουν εφαρμόστηκαν στην host γλώσσα, και απλώς αναφέρονται στα
+DDL κατασκευής της βάσης για λόγους πληρότητας.
+%TODO - Σκέφτεται κανείς κάτιάλλο?
+\end{itemize}
+
+%}}}
+
+%{{{ Σχεδιασμός βάσης
 
 \section{Σχεδιασμός Βάσης}
 
@@ -39,9 +127,17 @@ DELETE' και 'ON UPDATE' που πραγματοποιούν μια ενέργ
 χρησιμοποιήθηκε ως datatype το unsigned int, ώστε να μη συνταχθούν αχρείαστα
 constraints.
 
-Στο σημείο αυτό αναφέρουμε ότι η MySQL δεν υποστηρίζει constraint checking,
-επομένως οι περιορισμοί υλοποιήθηκαν στην host γλώσσα (php) με χρήση φίλτρων,
-όπου χρειαζόταν, εώς ότου υπάρξει υποστήριξη από το DBMS.
+Όπως αναφέραμε, η MySQL δεν υποστηρίζει constraint checking, επομένως οι
+περιορισμοί υλοποιήθηκαν στην host γλώσσα (php) με χρήση φίλτρων, όπου
+χρειάστηκαν, εώς ότου υπάρξει υποστήριξη από το DBMS.
+
+%}}}
+
+%{{{DDL script
+\section{DDL Script κατασκευής βάσης}
+Παρατίθεται το DDL script που χρησιμοποιήθηκε για να κατασκευαστεί η βάση:
+
+\lstinputlisting[language=SQL]{files/aviation2.sql}
 
 %}}}
 
