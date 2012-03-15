@@ -1,5 +1,15 @@
 <?php
     class Employee {
+        public static function aggregates() {
+            return db_array(
+                "SELECT
+                    occ, MIN( salary ) AS minimum, MAX( salary ) AS maximum, AVG( salary ) AS average
+                FROM
+                    workers
+                GROUP BY
+                    occ"
+            );
+        }
         public static function create( $umn, $ssn, $name, $phone, $addr, $salary, $occ, $checked ) {
             try {
                 return db_insert(

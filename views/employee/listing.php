@@ -1,11 +1,12 @@
 <p>
-<!--- This doesnt work, can't figure why, relates to js/behaviour.js
+<!--
+This doesnt work, can't figure why, relates to js/behaviour.js
 <div>
     <label>Όνομα εργαζομένου:</label>
     <input name='filter' id='search_filter' type='text' label='Όνομα εργαζομένου'>
     </input>
 </div>
---->
+-->
 <div>
     <form action='<?php echo $_SERVER['PHP_SELF']; ?>' method='post'>
         <label>Να εμφανίζονται:</label>

@@ -69,3 +69,15 @@ CREATE TABLE images (
     width UNSIGNED INT DEFAULT NULL,
     height UNSIGNED INT DEFAULT NULL
 ) ENGINE=InnoDB;
+CREATE VIEW workers AS
+    SELECT
+        e.*,
+        ( CASE WHEN t.umn IS NOT NULL THEN 'tech'
+               WHEN r.umn IS NOT NULL THEN 'regulator'
+               ELSE '' END ) AS occ
+    FROM
+        employees e
+        LEFT JOIN
+            techs t ON t.umn = e.umn
+        LEFT JOIN
+            regulators r ON r.umn = e.umn;

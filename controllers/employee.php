@@ -39,7 +39,6 @@
                 if ( empty( $checked ) ) {
                     $checked = $employee[ 'checked' ];
                 }
-                //insert db_query for occupation? (since it's not saved anywhere as a variable) --bill
             }
             $errors = array_flip( explode( ',', $errors ) );
             view( 'employee/create', compact( 'errors', 'umn', 'ssn', 'name', 'phone', 'addr', 'salary', 'checked', 'occ' ) );
