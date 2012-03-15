@@ -1,5 +1,7 @@
 * AJAX delete everywhere --dionyziz
 * JS bug on check create/update, appears on chrome 19-dev build
+    --> Bug is caused by jquery.
+    --> Chrome is trolling, bug doesnt appear when DeveloperTools window is up..
 * Add MySQL constrain triggers  --dionyziz
 * We actually need to implement the queries asked by the exercise xD --all
 * model/employee::Item requires a SQL view --dionyziz

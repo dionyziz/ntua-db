@@ -23,6 +23,7 @@ $( function() {
 //    datepicker({ dateFormat: 'yy-mm-dd' });
 //    var dateFormat = $( "#datecheckcreated" ).datepicker( "option", "dateFormat" );
 //    $( "#datecheckcreated" ).datepicker( "option", "dateFormat", 'yy-mm-dd' );
+
 $( function() {
 $ ( "#datecheckcreated" ).AnyTime_picker( "created",
                         { formatUtcOffset: "%: (%@)",

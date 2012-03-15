@@ -18,6 +18,7 @@
             echo implode( ', ', $items );
             ?>.
         </div>
+        <!-- jquery causes page hang on chrome dev build -->
         <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
         <script src="js/anytime.js"></script>
         <script src="js/jquery-ui-1.8.17.custom.min.js"></script>
