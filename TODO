@@ -1,6 +1,5 @@
 * AJAX delete everywhere --dionyziz
-* Need to validate input in check score, bound by maxscore of its checktype --dio
-* Supposedly there's a js bug on check create/update, couldn't reproduce --billy
+* JS bug on check create/update, appears on chrome 19-dev build
 * Add MySQL constrain triggers  --dionyziz
 * We actually need to implement the queries asked by the exercise xD --all
 * model/employee::Item requires a SQL view --dionyziz
@@ -20,3 +19,4 @@
 * Editing employee - regulator doesn't save last checked/occupation --billy         --FIXED
 * Tech selection appears wrong after a mistake in 'submit' --billy                  --FIXED
 * Add filters EVERYWHERE!! --billy                                                  --FIXED
+* Validate input in check score, bound by maxscore of its checktype --billy         --FIXED
