@@ -4,8 +4,8 @@
     --> Chrome is trolling, bug doesnt appear when DeveloperTools window is up..
 * Add MySQL constrain triggers  --dionyziz
 * We actually need to implement the queries asked by the exercise xD --all
-* model/employee::Item requires a SQL view --dionyziz
 * Missing employee boxes aren't solid red --dionyziz
+* model/employee::Item requires a SQL view --dionyziz                               --FIXED
 * Editing employee - regulator doesn't automatically show last checked --greg       --FIXED
 * Check delete not functional yet --greg                                            --FIXED
 * Editing employee doesn't automatically fill-in their specialty --billy            --FIXED
