@@ -1,0 +1,47 @@
+/* -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.
+ * File Name : init_tree.dot
+
+ * Purpose : 2nd assignment on Databases
+
+ * Created By : Vasilis 'indorilftw' Gerakaris <vgerak@gmail.com>
+ _._._._._._._._._._._._._._._._._._._._._.*/
+
+digraph G
+{
+    node [shape = record];
+
+    /* Create the nodes */
+    A [ shape = triangle, style = filled, label ="A"];
+    B [ shape = triangle, style = filled, label ="B"];
+    node0 [ label ="<f0>|<f1> 10 |<f2>|<f3> 30 |<f4>|<f5> 80 |<f6>|<f7> __ |<f8>"];
+    node1 [ label ="<f0>|<f1> 35 |<f2>|<f3> 42 |<f4>|<f5> 50 |<f6>|<f7> 65 |<f8>"];
+    node2 [ label ="<f0>|<f1> 90 |<f2>|<f3> 98 |<f4>|<f5> __ |<f6>|<f7> __ |<f8>"];
+
+    /* Create the leaves */
+    leaf0 [ label ="<f0> 30* |<f1> 31* |<f2> __  |<f4> __  "];
+    leaf1 [ label ="<f0> 36* |<f1> 38* |<f2> __  |<f4> __  "];
+    leaf2 [ label ="<f0> 42* |<f1> 43* |<f2> __  |<f4> __  "];
+    leaf3 [ label ="<f0> 51* |<f1> 52* |<f2> 56* |<f4> __  "];
+    leaf4 [ label ="<f0> 68* |<f1> 69* |<f2> 70* |<f4> 79* "];
+    leaf5 [ label ="<f0> 81* |<f1> 82* |<f2> __  |<f4> __  "];
+    leaf6 [ label ="<f0> 94* |<f1> 95* |<f2> 96* |<f4> 97* "];
+    leaf7 [ label ="<f0> 98* |<f1> 99* |<f2> 100*|<f4> 105*"];
+
+    /* Create the connections */
+
+    //node0
+    "node0":f0 -> "A";
+    "node0":f2 -> "B";
+    "node0":f4 -> "node1";
+    "node0":f6 -> "node2";
+    //node1
+    "node1":f0 -> "leaf0";
+    "node1":f2 -> "leaf1";
+    "node1":f4 -> "leaf2";
+    "node1":f6 -> "leaf3";
+    "node1":f8 -> "leaf4";
+    //node2
+    "node2":f0 -> "leaf5";
+    "node2":f2 -> "leaf6";
+    "node2":f4 -> "leaf7";
+}
