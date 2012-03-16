@@ -65,7 +65,7 @@
     $filename = 'controllers/' . $resource . '.php';
     if ( !file_exists( $filename ) ) {
         // die( 'File not found: ' . $filename );
-        $resource = 'plane';
+        $resource = 'statistic';
         $method = 'listing';
         $filename = 'controllers/' . $resource . '.php';
     }

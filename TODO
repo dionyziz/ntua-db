@@ -1,11 +1,11 @@
+* Report time!!! --all
+* Report: mysql queries --greg
 * AJAX delete everywhere --dionyziz
 * JS bug on check create/update, appears on chrome 19-dev build
     --> Bug is caused by jquery.
     --> Chrome is trolling, bug doesnt appear when DeveloperTools window is up..
 * Add MySQL constrain triggers  --dionyziz
-* We actually need to implement the queries asked by the exercise xD --all
-* model/employee::Item requires a SQL view --dionyziz
-* Missing employee boxes aren't solid red --dionyziz
+* Add a link to the statistics somewhere --greg                                     --FIXED
 * Editing employee - regulator doesn't automatically show last checked --greg       --FIXED
 * Check delete not functional yet --greg                                            --FIXED
 * Editing employee doesn't automatically fill-in their specialty --billy            --FIXED
@@ -22,3 +22,6 @@
 * Tech selection appears wrong after a mistake in 'submit' --billy                  --FIXED
 * Add filters EVERYWHERE!! --billy                                                  --FIXED
 * Validate input in check score, bound by maxscore of its checktype --billy         --FIXED
+* We actually need to implement the queries asked by the exercise xD --all          --FIXED
+* Missing employee boxes aren't solid red --dionyziz                                --FIXED
+* model/employee::Item requires a SQL view --dionyziz                               --FIXED
