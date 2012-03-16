@@ -1,5 +1,23 @@
 <?php
     class Check {
+        public static function aggregates() {
+            return db_array(
+                "SELECT
+                     c.pid AS pid, pt.name AS name, sum( c.score ) AS checkScore, sum( ct.maxscore ) AS maxScore
+                 FROM
+                     checks c
+                 CROSS JOIN
+                     planes p ON c.pid = p.pid
+                 CROSS JOIN
+                     planetypes pt ON p.tid = pt.tid
+                 CROSS JOIN
+                     checktypes ct ON c.checktypeid = ct.checktypeid
+                 GROUP BY
+                    c.pid
+                 HAVING
+                    sum( c.score ) < ( sum( ct.maxscore ) / 2 )"
+            );
+        }
         public static function create( $checktypeid, $pid, $umn, $created, $duration, $score) {
             db_insert(
                 'checks',

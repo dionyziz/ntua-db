@@ -1,5 +1,17 @@
 <?php
     class Plane {
+        public static function aggregates() {
+            return db_array(
+                "SELECT
+                    name, p.tid, count( p.tid ) AS planeCount
+                FROM
+                    planes p
+                CROSS JOIN
+                    planetypes t ON t.tid = p.tid
+                GROUP BY
+                    name"
+            );
+        }
         public static function Create( $pid, $tid ) {
             db_insert( 'planes', compact( 'pid', 'tid' ) );
         }
