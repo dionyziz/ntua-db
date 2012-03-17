@@ -47,6 +47,7 @@
             $vars = compact( 'checktypeid', 'pid', 'umn', 'created', 'duration', 'score' );
             $errors = self::validateInput( $vars, $checktypeid );
             if ( !empty( $errors ) ) {
+                unset( $vars[ 'checktypeid' ] );
                 Redirect( 'check/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
             Check::create( $checktypeid, $pid, $umn, $created, $duration, $score);
