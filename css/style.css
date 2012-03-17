@@ -12,6 +12,14 @@ h1 {
     position: relative;
     left: -6px;
 }
+h2 {
+    margin: 0;
+    float: center;
+    font-family: Helvetica;
+    text-align: center ;
+    center: 0px;
+}
+
 ul#navigation {
     float: right;
     padding: 5px;
