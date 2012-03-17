@@ -15,8 +15,9 @@ h1 {
 h2 {
     margin: 0;
     float: center;
-    font-family: Helvetica;
-    text-align: center ;
+    font-family: Verdana;
+    text-align: center;
+    text-decoration: underline;
     center: 0px;
 }
 
