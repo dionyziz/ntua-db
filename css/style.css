@@ -12,10 +12,11 @@ h1 {
     position: relative;
     left: -6px;
 }
-h2 {
+h4 {
     margin: 0;
     float: center;
     font-family: Verdana;
+    font-size: 1.5em;
     text-align: center;
     text-decoration: underline;
     center: 0px;
