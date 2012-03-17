@@ -27,5 +27,6 @@
             <li><a href='plane/listing'>Αεροσκάφη</a></li>
             <li><a href='check/listing'>Έλεγχοι</a></li>
             <li><a href='employee/listing'>Εργαζόμενοι</a></li>
+            <li><a href='statistic/listing'>Προεπισκόπηση</a></li>
         </ul>
         <div id='universe'>
