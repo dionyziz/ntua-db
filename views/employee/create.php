@@ -104,7 +104,7 @@ else {
         <option <?php if ( $occ == 'regulator' ) {
             ?>selected<?php
             }
-            ?> value = "regulator">Διαχειριστής</option>
+            ?> value = "regulator">Ρυθμιστής εν. κυκλοφορίας</option>
             </select>
         <input type='hidden' value='<?php
             echo $occ;

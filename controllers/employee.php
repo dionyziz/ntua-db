@@ -46,7 +46,7 @@
 
         public static function validateInput( $input ) {
             $args = array(
-                'newumn'       => array( 'filter'  => FILTER_VALIDATE_INT,
+                'umn'       => array( 'filter'  => FILTER_VALIDATE_INT,
                                       'options' => array( 'min_range' => 1 )
                                     ),
                 'ssn'       => array( 'filter'  => FILTER_VALIDATE_INT,
@@ -80,10 +80,10 @@
                 Redirect( 'employee/create?errors=' . implode( ',', $errors ) . '&name=' . $name . '&phone=' . $phone . '&addr=' . $addr . '&salary=' . $salary );
             }
             if ( self::validUpload( $photo ) ) {
-                var_dump( $photo );
-                die;
+                //var_dump( $photo );
+                //die;
                 $imageid = Image::create( $photo[ 'tmp_name' ], 130, 130 );
-                Employee::update( $umn, false, false, false, false, false, $imageid );
+                Employee::update( $umn, false, false, false, false, false, false, $imageid );
             }
             if ( $occ == 'tech' ) {
                 Tech::create( $umn );

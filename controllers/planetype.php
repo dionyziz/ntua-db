@@ -53,7 +53,7 @@
                 Redirect( 'planetype/listing' );
             }
             Planetype::delete( $tid );
-            Redirect( 'planektype/listing' );
+            Redirect( 'planetype/listing' );
         }
         public static function update( $tid, $name, $weight, $capacity ) {
             $vars = compact( 'tid', 'name', 'weight', 'capacity' );
