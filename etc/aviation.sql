@@ -11,7 +11,7 @@ CREATE TABLE employees (
     imageid INT DEFAULT NULL,
     phone VARCHAR( 32 ),
     addr TEXT,
-    salary INT UNSIGNED
+    salary INT UNSIGNED,
     FOREIGN KEY ( imageid ) REFERENCES images( imageid ) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB;
 CREATE TABLE regulators (
@@ -29,12 +29,12 @@ CREATE TABLE checktypes (
     maxscore INT UNSIGNED NOT NULL
 ) ENGINE=InnoDB;
 CREATE TABLE planetypes (
-    tid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    tid INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR( 32 ) NOT NULL,
     capacity INT UNSIGNED DEFAULT NULL,
     weight INT UNSIGNED DEFAULT NULL,
     imageid INT DEFAULT NULL,
-    FOREIGN KEY ( imageid ) REFERENCES images( imageid ) ON DELETE SET NULL ON UPDATE CASCADE
+    FOREIGN KEY ( imageid ) REFERENCES images( imageid ) ON DELETE SET NULL ON UPDATE CASCADE,
 	CONSTRAINT chk_planetypes CHECK ( capacity > 0 AND weight > 0 )
 ) ENGINE=InnoDB;
 CREATE TABLE planes (
@@ -61,13 +61,6 @@ CREATE TABLE checks (
     FOREIGN KEY ( pid ) REFERENCES planes( pid ) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY ( umn ) REFERENCES techs( umn ) ON DELETE SET NULL ON UPDATE CASCADE,
     CONSTRAINT chk_checks CHECK (score > ( SELECT maxscore FROM checktypes t WHERE checktypeid = t.checktypeid ) AND duration > 0 )
-) ENGINE=InnoDB;
-CREATE TABLE users (
-    uid INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(32),
-    password CHAR(64),
-    passwordsalt CHAR(8),
-    email VARCHAR(64)
 ) ENGINE=InnoDB;
 CREATE VIEW workers AS
     SELECT
