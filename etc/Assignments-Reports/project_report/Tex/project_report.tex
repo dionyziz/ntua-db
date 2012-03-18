@@ -176,6 +176,14 @@ H επιλογή των planes, χρησιμοποιεί INNER JOIN με τα pl
 πίνακες employees και planetypes, προκειμένου να εμφανίσουμε χρήσιμες
 πληροφορίες.
     \lstinputlisting[language=SQL]{files/specialization.sql}
+\subsection{Έλεγχοι}
+	Η επιλογή στους ελέγχους πραγματοποιεί CROSS JOIN με 4 διαφορετικές
+	σχέσεις, προκειμένου να αντλήσουμε όλες τις πληροφορίες που θεωρήσαμε
+	χρήσιμες για το χρήστη.\\
+	Επιπλέον, υπάρχει και ένα query ομαδοποίησης με περιορισμό (GROUP BY /
+	HAVING) όπου μας εμφανίζονται τα ελαττωματικά αεροσκάφη, δηλαδή αυτά που
+	έχουν συνολική επίδοση κάτω από 50\% στους ελέγχους που έχουν υποβληθεί.
+    %TODO FIX THIS FILE GREG \lstinputlisting[language=SQL]{files/checks.sql}
 \subsection{Αρχεία Εικόνων}
     \lstinputlisting[language=SQL]{files/image.sql}
 
