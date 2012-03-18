@@ -1,14 +1,14 @@
 --insert
 INSERT INTO 
-    TECHS 
+    techs 
 SET 
-    UMN = $UMN
+    umn = $umn
 
 --delete
 DELETE FROM
-    TECHS 
+    techs 
 WHERE 
-    UMN = $UMN
+    umn = $umn
 
 --select all with info
 SELECT
@@ -31,6 +31,6 @@ ORDER BY umn
 SELECT 
     * 
 FROM 
-    TECHS 
+    techs 
 WHERE 
-    UMN = $UMN
+    umn = $umn

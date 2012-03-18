@@ -1,15 +1,15 @@
 --insert
 INSERT INTO 
-    REGULATORS 
+    regulators 
 SET 
-    UMN = $UMN
-    CHECKED = $CHECKED
+    umn = $umn
+    checked = $checked
 
 --delete
 DELETE FROM
-    REGULATORS 
+    regulators 
 WHERE 
-    UMN = $UMN
+    umn = $umn
 
 --select all with info
 SELECT
@@ -32,6 +32,6 @@ ORDER BY umn
 SELECT 
     * 
 FROM 
-    REGULATORS 
+    regulators 
 WHERE 
-    UMN = $UMN
+    umn = $umn

@@ -1,4 +1,4 @@
 INSERT INTO 
-    IMAGES 
+    images 
 SET 
-    SIZE = $SIZE, WIDTH = $WIDTH HEIGHT = $HEIGHT
+    size = $size, width = $width height = $height
