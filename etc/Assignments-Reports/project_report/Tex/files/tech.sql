@@ -2,13 +2,13 @@
 INSERT INTO 
     techs 
 SET 
-    umn = $umn
+    umn = :umn
 
 --delete
 DELETE FROM
     techs 
 WHERE 
-    umn = $umn
+    umn = :umn
 
 --select all with info
 SELECT
@@ -33,4 +33,4 @@ SELECT
 FROM 
     techs 
 WHERE 
-    umn = $umn
+    umn = :umn

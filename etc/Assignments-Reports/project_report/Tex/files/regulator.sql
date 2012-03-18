@@ -2,14 +2,14 @@
 INSERT INTO 
     regulators 
 SET 
-    umn = $umn
-    checked = $checked
+    umn = :umn
+    checked = :checked
 
 --delete
 DELETE FROM
     regulators 
 WHERE 
-    umn = $umn
+    umn = :umn
 
 --select all with info
 SELECT
@@ -34,4 +34,4 @@ SELECT
 FROM 
     regulators 
 WHERE 
-    umn = $umn
+    umn = :umn
