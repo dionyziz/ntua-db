@@ -1,28 +1,9 @@
---aggregate
-SELECT
-    name, p.tid, count( p.tid ) AS planeCount
-FROM
-    planes p
-CROSS JOIN
-    planetypes t ON t.tid = p.tid
-GROUP BY
-    name
-
 --insert
 INSERT INTO
     planes
 SET
     pid = :pid,
     tid = :tid
-
---select all with characteristics
-SELECT
-    t.*, p.*
-FROM
-    planes p
-CROSS JOIN
-    planetypes t ON t.tid = p.tid
-
 
 --delete
 DELETE FROM
@@ -39,7 +20,6 @@ SET
 WHERE
     pid = :pid
 
-
 --select one item with key
 SELECT
     t.*, p.*
@@ -53,3 +33,20 @@ WHERE
     p.pid = :pid
 LIMIT 1
 
+--select all with characteristics
+SELECT
+    t.*, p.*
+FROM
+    planes p
+CROSS JOIN
+    planetypes t ON t.tid = p.tid
+
+--aggregate
+SELECT
+    name, p.tid, count( p.tid ) AS planeCount
+FROM
+    planes p
+CROSS JOIN
+    planetypes t ON t.tid = p.tid
+GROUP BY
+    name

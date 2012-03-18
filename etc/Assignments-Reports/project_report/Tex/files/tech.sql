@@ -10,6 +10,14 @@ DELETE FROM
 WHERE 
     umn = :umn
 
+--select with key
+SELECT 
+    * 
+FROM 
+    techs 
+WHERE 
+    umn = :umn
+
 --select all with info
 SELECT
     e.*, i.width, i.height, r.checked
@@ -26,11 +34,3 @@ WHERE
     OR ( 'tech' = 'regulator' AND r.umn IS NOT NULL )
     OR ( 'tech' = '' )
 ORDER BY umn
-
---select with key
-SELECT 
-    * 
-FROM 
-    techs 
-WHERE 
-    umn = :umn

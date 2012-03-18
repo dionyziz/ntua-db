@@ -11,6 +11,14 @@ DELETE FROM
 WHERE 
     umn = :umn
 
+--select with key
+SELECT 
+    * 
+FROM 
+    regulators 
+WHERE 
+    umn = :umn
+
 --select all with info
 SELECT
     e.*, i.width, i.height, r.checked
@@ -28,10 +36,3 @@ WHERE
     OR ( 'regulator' = '' )
 ORDER BY umn
 
---select with key
-SELECT 
-    * 
-FROM 
-    regulators 
-WHERE 
-    umn = :umn

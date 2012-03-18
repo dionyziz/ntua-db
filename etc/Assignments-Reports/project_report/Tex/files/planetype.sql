@@ -6,18 +6,6 @@ SET
     weight = :weight,
     capacity = :capacity
 
---delete
-DELETE FROM
-    planetypes
-WHERE 
-    tid = :tid
-
---select all with info
-SELECT
-    *
-FROM
-    planetypes
-
 --update with key
 UPDATE 
     planetypes
@@ -35,3 +23,16 @@ FROM
     planetypes
 WHERE 
     tid = :tid
+
+--delete
+DELETE FROM
+    planetypes
+WHERE 
+    tid = :tid
+
+--select all with info
+SELECT
+    *
+FROM
+    planetypes
+

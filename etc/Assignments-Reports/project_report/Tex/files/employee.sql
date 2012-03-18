@@ -22,23 +22,6 @@ DELETE FROM
 WHERE 
     umn = :umn
 
---select all with info
-SELECT
-    e.*, i.width, i.height, r.checked
-FROM
-    employees e
-LEFT JOIN
-    images i USING ( imageid )
-LEFT JOIN
-    techs t ON t.umn = e.umn
-LEFT JOIN
-    regulators r ON r.umn = e.umn
-WHERE
-    ( '' = 'tech' AND t.umn IS NOT NULL )
-    OR ( '' = 'regulator' AND r.umn IS NOT NULL )
-    OR ( '' = '' )
-ORDER BY umn
-
 --select with key inner join with technicians
 SELECT
     'tech' as occ, e.*, i.width, i.height
@@ -76,3 +59,21 @@ LEFT JOIN
 WHERE
     :umn = e.umn
 LIMIT 1
+
+--select all with info
+SELECT
+    e.*, i.width, i.height, r.checked
+FROM
+    employees e
+LEFT JOIN
+    images i USING ( imageid )
+LEFT JOIN
+    techs t ON t.umn = e.umn
+LEFT JOIN
+    regulators r ON r.umn = e.umn
+WHERE
+    ( '' = 'tech' AND t.umn IS NOT NULL )
+    OR ( '' = 'regulator' AND r.umn IS NOT NULL )
+    OR ( '' = '' )
+ORDER BY umn
+

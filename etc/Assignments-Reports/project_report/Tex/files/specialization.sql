@@ -31,7 +31,6 @@ WHERE
 LIMIT 1
 
 --select all
-
 SELECT
     t.name AS tName, s.* , e.name AS eName
 FROM
