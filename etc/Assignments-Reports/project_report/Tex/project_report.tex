@@ -139,24 +139,42 @@ constraints.
 
 \lstinputlisting[language=SQL]{files/aviation.sql}
 
+Παραπάνω, φαίνεται και η κατασκευή του view "workers", το οποιό αντιστοιχίζει
+σε κάθε εργαζόμενο την ιδιότητά του (και χρησιμοποιήθηκε αργότερα για την
+εξαγωγή στατιστικών των εργαζομένων). Επίσης, φαίνεται και η χρήση nested
+query, προκειμένου να οριστεί ο περιορισμός του πεδίου score από το maxscore
+του αντίστοιχου ελέγχου.
+
 %}}}
 
 %{{{SQL queries and Views
 
-%TODO
 \section{SQL queries}
+Σε όλες τις σχέσεις της βάσεις μας έχουν δημιουργηθεί queries για εισαγωγή,
+ενημέρωση, διαγραφή και επιλογή μίας ή όλων των εγγραφών, τα οποία δε χρειάζονται
+καμία εξήγηση.
 
 \subsection{Εργαζόμενοι}
+Στους εργαζόμενους έχουμε το 1ο ερώτημα με συναθροιστική συνάρτηση καθώς και
+ομαδοποίηση, που μας επιστρέφει τον ελάχιστο, μέσο και μέγιστο μισθό για κάθε
+απασχόληση.
     \lstinputlisting[language=SQL]{files/employee.sql}
 \subsection{Τύποι Αεροσκαφών}
     \lstinputlisting[language=SQL]{files/planetype.sql}
 \subsection{Αεροσκάφη}
+H επιλογή των planes, χρησιμοποιεί INNER JOIN με τα planetypes, προκειμένου να
+εμφανίσουμε πληροφορίες σχετικά με το αεροπλάνο.\\
+Υπάρχει και ένα aggregate query όπου καταμετράται το πλήθος των αεροσκαφών που
+υπάρχουν για κάθε δεδομένο planetype.
     \lstinputlisting[language=SQL]{files/plane.sql}
 \subsection{Ελεγκτές Εναέριας Κυκλοφορίας}
     \lstinputlisting[language=SQL]{files/regulator.sql}
 \subsection{Τεχνικοί}
     \lstinputlisting[language=SQL]{files/tech.sql}
 \subsection{Ειδικότητες}
+Στις επιλογές των specializations πραγματοποιούνται inner joins με τους
+πίνακες employees και planetypes, προκειμένου να εμφανίσουμε χρήσιμες
+πληροφορίες.
     \lstinputlisting[language=SQL]{files/specialization.sql}
 \subsection{Αρχεία Εικόνων}
     \lstinputlisting[language=SQL]{files/image.sql}
