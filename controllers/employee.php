@@ -70,6 +70,7 @@
             $vars = compact( 'umn', 'ssn', 'name', 'phone', 'addr', 'salary', 'occ' );
             $errors = self::validateInput( $vars );
             if ( !empty( $errors ) ) {
+                unset( $vars[ 'umn' ] );
                 Redirect( 'employee/create?errors=' . implode( ',', $errors ) . '&' . Controller::paramURL( $vars ) );
             }
             try {

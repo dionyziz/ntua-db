@@ -102,7 +102,10 @@ else {
         echo implode( ' ', $classes );
         ?>"><?php
         foreach ( $techs as $tech ) {
-            ?><option value='<?php
+            ?><option <?php if ( $tech[ 'umn' ] == $umn ) {
+            ?>selected <?php
+            }
+            ?>value='<?php
             echo $tech[ 'umn' ];
             ?>'><?php
             echo html( $tech[ 'name' ] );

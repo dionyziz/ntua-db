@@ -1,4 +1,4 @@
-<p><h2> <strong> Προεπισκόπηση </strong></h2> </p>
+<p><h4> Προεπισκόπηση </h4> </p>
 <p>
     <table border = "1">
         <caption> Μισθοί Εργαζομένων </caption>
