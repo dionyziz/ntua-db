@@ -101,13 +101,19 @@
                 $ret = mysql_fetch_array( $res );
             }
             if ( empty( $ret ) ) {
-                $res = db(
+                $res = db( // nested query required by exercise (do not change into simple join)
                     "SELECT
-                        'other' as occ, e.*, i.width, i.height
+                        'other' AS occ, e.*, i.width, i.height
                     FROM
-                        employees e
-                    LEFT JOIN
-                        images i USING ( imageid )
+                        employees e,
+                        (
+                            SELECT
+                                width, height
+                            FROM
+                                images
+                            WHERE
+                                imageid = e.imageid
+                        ) i
                     WHERE
                         :umn = e.umn
                     LIMIT 1",
